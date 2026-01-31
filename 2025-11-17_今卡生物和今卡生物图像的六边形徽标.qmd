@@ -33,7 +33,7 @@ packageVersion("hexSticker")
 ![Emilio Xavier Esposito](images/EmilioXavierEsposito.jpg){width="60%"}
 </center>
 
-本着好玩的目的，我们也尝试生成我们公司的两个六边形徽标。
+本着好玩的目的，我们也尝试生成今卡的两个六边形徽标。
 
 ## 3. 今卡生物的hex logo
 

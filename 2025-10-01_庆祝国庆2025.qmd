@@ -1,0 +1,35 @@
+---
+title: 国庆2025
+date: 2025-10-01
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+<center>
+![图源：央视网https://military.cctv.cn/2025/09/22/ARTIlzFH7RQIYQEVpCEz4oyz250922.shtml](images/2025092219003650367.jpg){width="100%"}
+</center>
+
+<center>
+![**QuPath** v0.6.0: Analyze -> Tils & superpixels -> SLIC superpixel segmentation...; File -> Export images... -> Rendered RGG (with overlays)...](images/slic.jpg){width="100%"}
+</center>
+
+```
+// QuPath v0.6.0
+// Some detail
+runPlugin('qupath.imagej.superpixels.SLICSuperpixelsPlugin', '{"sigmaPixels":5.0,"spacingPixels":2.0,"maxIterations":10,"regularization":0.25,"adaptRegularization":false}')
+```
+
+<center>
+![**QuPath** v0.6.0: Analyze -> Calculate features -> Add intensity features...; Measure -> Show measurement maps; File -> Export images... -> Rendered SVG...](images/blue_mean.svg){width="100%"}
+</center>
+
+```
+// QuPath v0.6.0
+// Some detail
+runPlugin('qupath.imagej.superpixels.SLICSuperpixelsPlugin', '{"sigmaPixels":5.0,"spacingPixels":2.0,"maxIterations":10,"regularization":0.25,"adaptRegularization":false}')
+selectDetections();
+runPlugin('qupath.lib.algorithms.IntensityFeaturesPlugin', '{"downsample":1.0,"region":"ROI","tileSizePixels":200.0,"colorRed":false,"colorGreen":false,"colorBlue":true,"colorHue":false,"colorSaturation":false,"colorBrightness":false,"doMean":true,"doStdDev":false,"doMinMax":false,"doMedian":false,"doHaralick":false,"haralickDistance":1,"haralickBins":32}')
+```
+
+[给我买杯茶🍵](给我买杯茶.qmd)

@@ -1,0 +1,15 @@
+{
+  "hash": "1fce4a237d7744f2dca1c48b73905331",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: ImageJ启动\nsubtitle: 启动ImageJ的6种方式\ndate: 2026-01-06\ntoc-depth: 4\ntoc-expand: true\nlang: en\n---\n\n<center>\n![](images/imagej.png){width=\"40%\"}\n</center>\n\n以下方法都是在Windows 11 x64下测试的。\n\n## 方法1：进入文件夹直接启动\n\n\n::: {.cell}\n\n:::\n\n\n```\npath/to/ImageJ/\n├── ij.jar\n├── ImageJ.cfg\n├── ImageJ.exe\n├── jre\n├── luts\n├── macros\n└── plugins\n```\n\n进入ImageJ文件夹，启动ImageJ.exe。\n\n## 方法2：通过Windows PowerShell启动\n\n```\nStart-Process \"path/to/ImageJ/ImageJ.exe\"\n```\n\n## 方法3：把ImageJ launcher固定到任务栏，再启动\n\n打开“path/to/ImageJ/”文件夹 &rarr; 右键ImageJ.exe &rarr; 固定到任务栏(K)。\n\n<center>\n![ImageJ（显微镜图标）被固定在任务栏。](images/task-bar.png){width=\"50%\"}\n</center>\n\n点击任务栏中的ImageJ图标，就可以启动ImageJ了。\n\n## 方法4：创建ImageJ快捷方式，再启动\n\n打开“path/to/ImageJ/”文件夹 &rarr; 右键ImageJ.exe &rarr; 创建快捷方式(S)。\n\n\n::: {.cell}\n\n:::\n\n\n```\npath/to/ImageJ/\n├── ij.jar\n├── ImageJ - 快捷方式.lnk\n├── ImageJ.cfg\n├── ImageJ.exe\n├── jre\n├── luts\n├── macros\n└── plugins\n```\n\n将\"ImageJ - 快捷方式.lnk\"复制到感兴趣的路径（比如桌面） &rarr; 双击就可以启动ImageJ了。\n\n## 方法5：将ImageJ固定到\"开始\"，再启动\n\n打开“path/to/ImageJ/”文件夹 &rarr; 右键ImageJ.exe &rarr; 固定到\"开始\"。\n\n<center>\n![](images/start.png){width=\"100%\"}\n</center>\n\n点击任务栏Windows图标 &rarr; 在搜索框输入imagej &rarr; 回车或点击ImageJ图标，就可以启动ImageJ了。\n\n## 方法6：通过uTools启动（笔者最喜欢的方法）\n\n个人非常喜欢用uTools（<https://www.u-tools.cn/index.html>）启动各种软件。\n\n默认通过alt + space组合键唤起uTools窗口（确保已经运行uTools） &rarr; 拖拽ImageJ.exe到uTools窗口的搜索区 &rarr; 回车即可添加ImageJ到uTools启动列表。\n\n<center>\n![](images/utools.png){width=\"100%\"}\n</center>\n\nAlt + space组合键唤起uTools窗口 &rarr; 在搜索区输入imagej &rarr; 回车即可启动ImageJ。\n\n[给我买杯茶🍵](给我买杯茶.qmd)",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

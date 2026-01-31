@@ -1,0 +1,21 @@
+{
+  "hash": "b9a48aeafcaca5eddad2c4a389493309",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: 今卡六边形徽标\nsubtitle: 今卡生物和今卡生物图像的六边形徽标\ndate: 2025-11-17\ntoc-depth: 4\ntoc-expand: true\nlang: en\n---\n\nR包最早带有六边形徽标（hex logo）可追溯至2014年[@Hadley2025]。\n\n## 1. R包hexSticker\n\n南方医科大学的余光创老师写了一个R包（即hexSticker[@ygc2025]），基于此可以方便的制作六边形徽标。\n\n<center>\n![余光创老师](images/ygc-2024.jpg){width=\"60%\"}\n</center>\n\n## 2. hexSticker的安装\n\n\n::: {.cell}\n\n```{.r .cell-code}\nremotes::install_github(\"emilioxavier/hexSticker\")\npackageVersion(\"hexSticker\")\n[1] ‘0.5.2’\n```\n:::\n\n\n之所以用emilioxavier/hexSticker [@emil2025]的原因是因为Emilio Xavier Esposito解决了如下问题：\n\n**通过CRAN安装，生成的hex sticker的左边缘和下边缘不完整（像被切掉了一点点）。**\n\n<center>\n![Emilio Xavier Esposito](images/EmilioXavierEsposito.jpg){width=\"60%\"}\n</center>\n\n本着好玩的目的，我们也尝试生成我们公司的两个六边形徽标。\n\n## 3. 今卡生物的hex logo\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(hexSticker)\n```\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ngenecard_bio <- \"images/genecard-bio_logo.png\"\ngenecard_bio |> sticker(package = \"GeneCard-Bio\", \n                        s_x = 1, \n                        s_y = .75, \n                        s_width = .4, \n                        h_fill = \"#F2F1EA\", \n                        p_color = \"#692718\", \n                        p_family = \"sans\", \n                        p_fontface = \"italic\", \n                        p_size = 18, \n                        filename = \"images/genecard-bio_hex-logo.png\")\n```\n:::\n\n\n<center>\n![](images/genecard-bio_hex-logo.png){width=\"60%\"}\n</center>\n\n## 4. 今卡生物图像的hex logo\n\n\n::: {.cell}\n\n```{.r .cell-code}\ngenecard_bioimage <- \"images/genecard-bioimage_logo.png\"\ngenecard_bioimage |> sticker(package = \"GeneCard-BioImage\", \n                             s_x = 1, \n                             s_y = .75, \n                             s_width = .6, \n                             h_fill = \"#F2F1EA\", \n                             p_color = \"#692718\", \n                             p_family = \"sans\", \n                             p_fontface = \"italic\", \n                             p_size = 13, \n                             filename = \"images/genecard-bioimage_hex-logo.png\")\n```\n:::\n\n\n<center>\n![](images/genecard-bioimage_hex-logo.png){width=\"60%\"}\n</center>\n\n[给我买杯茶🍵](给我买杯茶.qmd)\n\n## References",
+    "supporting": [
+      "2025-11-17_今卡生物和今卡生物图像的六边形徽标_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}

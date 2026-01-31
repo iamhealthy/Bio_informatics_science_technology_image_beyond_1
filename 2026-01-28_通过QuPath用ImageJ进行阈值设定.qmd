@@ -1,0 +1,66 @@
+---
+title: 通过ImageJ定阈值
+subtitle: 通过QuPath用ImageJ进行阈值设定
+date: 2026-01-28
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+## 1. 阈值选择应该客观些
+
+QuPath (v0.6.0) &rarr; Classify &rarr; Pixel classification &rarr; Train pixel classifier...或Create thresholder...可以用于阈值设定，但感觉还是偏主观的人为设定。
+
+<center>
+![](images/55_qupath_pixel-classification.png){width="80%"}
+</center>
+
+这样对于单独一张图片（比如HE图片），可能还可以。但如果一个项目含有多个图片（需要相互比较分析），且不同图片之间存在不同程度的整体颜色/染色差异，这样设定阈值可能就不太客观了。
+
+这时候需要一个相对客观的方法用于阈值设定。
+
+## 2. QuPath和ImageJ的关系
+
+如QuPath的说明文件所述[@QuPath_ImageJ]：
+
+> QuPath was created by someone who was (and is) a big fan of ImageJ.
+
+> In fact, QuPath started life as a collection of ImageJ plugins for digital pathology.
+
+> Over time ... QuPath was rewritten from scratch as a completely new application, which [uses ImageJ as an extension]{.mark}.
+
+## 3. 通过QuPath用ImageJ进行阈值设定
+
+所用示例图片为HE图片。
+
+首先，通过QuPath将已经进行color deconvolution的hemotoxylin通道图片发送到ImageJ。
+
+<center>
+![](images/55_send-to-imagej.png){width="100%"}
+
+![](images/55_send_panel.png){width="50%"}
+</center>
+
+发送到ImageJ后，通过`Plugins` &rarr; `Macros` &rarr; `Record...`记录在ImageJ的操作。
+
+<center>
+![该示例默认使用`Default`方法（[自动选择`32`为阈值]{.mark}）。也可以通过下拉箭头选择其它方法测试。](images/55_threshold_record.png){width="100%"}
+
+![](images/55_imagej_record.png){width="100%"}
+
+![将ImageJ ROI发回QuPath。](images/55_back-to-qupath.png){width="100%"}
+</center>
+
+感觉还不赖。
+
+## 4. 使用QuPath的ImageJ script runner
+
+通过ImageJ的`Record...`记录了在ImageJ的操作过程/ImageJ Macro，这时候可以把这个过程代码复制到QuPath的ImageJ script runner（见图1）。同样可以实现上面的操作。
+
+<center>
+![`Select channels: Hematoxylin`。勾选`Add script to command history`（这样可以构建groovy script，用于基于代码的批量操作。）](images/55_imagej_script_runner.png){width="100%"}
+</center>
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

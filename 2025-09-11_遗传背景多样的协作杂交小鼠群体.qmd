@@ -1,0 +1,50 @@
+---
+title: 背景多样小鼠
+subtitle: 遗传背景多样的协作杂交小鼠群体
+date: 2025-09-11
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+读到一篇文献[@Rachel2025]，里面提到了“The genetically diverse Collaborative Cross mouse panel/遗传背景多样的协作杂交小鼠群体”，笔者大概清楚是什么意思，但不是特别清楚，因此大概再了解了一下。
+
+## 1. Outbred（远系繁殖、非亲缘繁殖） vs. inbred（同系繁殖、近亲繁殖）
+
+<mark>人类是outbred</mark>，而<mark>常用的小鼠品系是inbred</mark>（比如C57BL/6和Balb/C）。
+
+但是inbred小鼠同一个品系内几乎是遗传上完全一致的。
+
+通过<mark>inbred小鼠做的疾病模型探索可能不能反应outbred人类的疾病症状和机理</mark>，因为忽略了遗传多样性和疾病的相互关系...（此处隐去很多字😃）。
+
+因此，就有了<mark>遗传背景多样的协作杂交小鼠群体</mark>。
+
+## 2. 遗传背景多样的协作杂交小鼠群体
+
+> The Collaborative Cross (CC) is a <mark>multiparental recombinant inbred panel derived from eight laboratory mouse inbred strains</mark>. Breeding of the CC lines was initiated at multiple international sites using mice from The Jackson Laboratory. Currently, this innovative project is breeding independent CC lines at the University of North Carolina (UNC), at Tel Aviv University (TAU), and at Geniad in Western Australia (GND). [@2012]
+
+> 协作杂交小鼠品系（简称CC）​​ 是一个来源于<mark>八种实验室近交系小鼠​的多亲本重组近交系小鼠群体</mark>。CC品系的培育工作最初是在多个国际研究机构启动的，所用的小鼠来自​美国杰克逊实验室（The Jackson Laboratory）​。目前，这一创新性项目正在以下机构独立培育CC品系：University of North Carolina（简称UNC）、​​Tel Aviv University（简称TAU）、​以及Geniad in Western Australia（简称GND）。[@2012]
+
+### 2.1 八种实验室近交系小鼠及其育种方案
+
+![](images/breeding_scheme.png){width="100%"}
+
+图片引自[@2012]。
+
+### 2.2 一个CC小鼠品系的遗传背景组成
+
+<center>
+![**Haplotype mosaic for the sequenced representative of the CC001/Unc strain.**[@Srivastava2017]](images/mosaic.png){width="100%"}
+</center>
+
+### 2.3 CC小鼠的网站
+
+<center>
+![UNC SYSTEMS GENETICS](images/unc.png){width="100%"}
+</center>
+
+网址：https://csbio.unc.edu/CCstatus/index.py
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

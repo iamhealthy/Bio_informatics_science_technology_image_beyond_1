@@ -1,0 +1,15 @@
+{
+  "hash": "642f8aa87fb1ca010dd41dbcc3f888fd",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Happy New Year\ndate: 2026-01-02\ntoc-depth: 4\ntoc-expand: true\nlang: en\n---\n\n<center>\n![](images/happy_new_year.png){width=\"60%\"}\n</center>\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# ***** Load packages *****\nggplot2 |> library()\nggforce |> library() # for geom_circle\nggstar |> library() # for geom_star\n\n# ***** Set the coordinates for a magnifying len *****\n# Prepare a data frame for a circle/glass\ncircle <- data.frame(\n    x = 50, # x coordinate\n    y = 50, # y coordinate\n    r = 40 # radius\n)\n\n# Prepare a data frame for a line (i.e. the handle of magnifying len)\nline <- data.frame(\n    x = c(73, 90),\n    y = c(20, 0)\n)\n\n# Prepare a data frame for the text \"Happy New Year\"\ntext <- data.frame(\n    x = c(50, 50, 50),\n    y = c(70, 50, 30),\n    label = c(\"Happy\", \"New\", \"Year\")\n)\n\n# Prepare a data frame for two stars (left and right)\nstars <- data.frame(\n    x = c(22, 78),\n    y = c(50, 50)\n)\n\n# ***** Plot *****\ndf <- data.frame(\n    x = seq(1, 100),\n    y = seq(1, 100)    \n)\n\nhappy_new_year <- df |> \n    ggplot(aes(x = x, y = y)) +\n    geom_point(alpha = 0) +\n    geom_line(\n        data = line,\n        aes(x = x, y = y),\n        linewidth = 4,\n        color = \"black\"\n    ) +\n    ggforce::geom_circle(\n        data = circle,\n        aes(x0 = x, y0 = y, r = r, linewidth = 8),\n        color = \"#3674C1\"\n    ) +\n    geom_text(\n        data = text,\n        aes(x = x, y = y, label = label),\n        size = 4.2,\n        color = \"red\",\n        fontface = \"italic\"\n    ) +\n    ggstar::geom_star(\n        data = stars,\n        aes(x = x, y = y, ),\n        starshape = 14,\n        size = 2.5,\n        color = \"gold\",\n        fill = \"gold\"\n    ) +\n    theme_void() +\n    theme(\n        legend.position = \"none\"\n    )\n\nhappy_new_year |> ggsave(\n    filename = \"images/happy_new_year.png\",\n    width = 3,\n    height = 3,\n    units = \"cm\",\n    dpi = 300\n)\n```\n:::\n\n\n[给我买杯茶🍵](给我买杯茶.qmd)",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

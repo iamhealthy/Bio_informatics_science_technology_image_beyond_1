@@ -1,0 +1,32 @@
+---
+title: 干扰素
+subtitle: 干扰素种类、诱导、和信号传导
+date: 2025-08-22
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+<img src="images/cell.png" style="width: 100%; height: auto">
+
+## 干扰素种类
+
+> IFN-Is (<mark>type I interferons</mark>) include 13 IFN-α (14 in mice), IFN-β, IFN-ε, IFN-κ, and IFN-ω.
+
+> IFN-γ is the <mark>only</mark> described IFN-II (<mark>type II interferon</mark>).
+
+> IFN-IIIs (<mark>type III interferons</mark>) include IFN-λ1-3 (also known as interleukin [IL]-29, IL-28A, and IL-28B) and IFN-λ4 (only IFN-λ2 and -λ3 exist in mice).
+
+> A fourth family of IFNs, named <mark>type IV interferons</mark> (or IFN-υ), has been identified in zebrafish and is present in other non-placental vertebrates but is <mark>absent in mice and humans</mark>.
+
+## 干扰素的诱导和信号传导
+
+<img src="images/ifn-induction-signaling.jpg" style="width: 100%; height: auto">
+
+这个图信息量比较大，算<mark>“工具”图片</mark>。
+
+想深入了解，还是阅读原文[@Boehmer2025]吧。
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

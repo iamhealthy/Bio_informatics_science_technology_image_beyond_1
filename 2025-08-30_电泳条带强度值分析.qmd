@@ -1,0 +1,44 @@
+---
+title: DNA条带分析
+subtitle: 电泳条带强度值分析
+date: 2025-08-30
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+## 1. 电泳条带强度值分析是常规
+
+核酸和蛋白的电泳是生物学中常用/常规的实验方法。
+
+通过对电泳胶上条带的强度值进行分析，可以定量比较不同条带的（相对）表达水平。
+
+但电泳胶的拍照，涉及到<mark>曝光时间</mark>的选择。曝光时间越长，条带越清晰，但也可能出现<mark>条带过曝</mark>的情况。
+
+比如曝光时间过长，条带颜色饱和（即，组成条带的有些<mark>像素光强度达到最大值</mark>），会不会影响基于光强度的定量分析，特别是<mark>涉及不同条带的相对光强度分析比较</mark>时？
+
+## 2. 流程和实例测试
+
+<img src="images/Band_ratio_qupath_2025-08-29-1.png" style="width: 100%; height: auto;">
+
+**通过该流程可知：**
+
+- 随着曝光时间的增加，upper_band的光强度逐渐增加，但在Exposure 5达到完全饱和（第2个方框的表格的“Upper_band_sum_corrected”列）。
+
+- 随着曝光时间的增加，lower_band的光强度逐渐增加（第2个方框的表格“Lower_band_sum_corrected”列））。
+
+- 随着曝光时间的增加，upper_band与lower_band的<mark>光强度比值逐渐减小</mark>（第2个方框的表格“Band_ratio”列，第3个方框的柱状图）。
+
+    - 同一个胶，upper_band和lower_band的<mark>光强度比值应该是恒定的，不应该随着曝光时间的增加而变化</mark>。
+
+**通过分析upper_band和lower_band像素光强度**（第4个方框），发现：
+
+说明：若像素达到饱和（即，像素光强度达到最大值），则该像素显示为白色；否则，显示为黑色。
+
+- Exposure 1的像素光强度均较低，<mark>几乎未出现像素光强度饱和现象</mark>。
+
+- Exposure 2 - 5的<mark>像素出现严重的像素光强度饱和问题</mark>，导致基于此的光强度无法真实反映条带的实际水平。
+
+因此，exposure 1的upper_band与lower_band的光强度比值，最接近真实值。
+
+[给我买杯茶🍵](给我买杯茶.qmd)

@@ -1,0 +1,40 @@
+---
+title: Hadley对Posit评价
+subtitle: Hadley Wickham（ggplot2作者）对RStudio PBC/Posit PBC公司的一种评价
+date: 2025-08-27
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+## 1. 一种评价
+
+> RStudio, the company, which makes money by selling professional products to teams of R users, and turns around and invests much of that money back into the open source community (<mark>over 50% of software engineers at RStudio work on open source projects</mark>). I work for RStudio because I fundamentally believe in its mission.
+
+> RStudio这家公司通过向R用户团队销售专业产品来盈利，并将其中很大一部分资金重新投入到开源社区（<mark>RStudio超过50%的软件工程师从事开源项目的开发</mark>）。我之所以在RStudio工作，是因为我从根本上认同它的使命。
+
+——Hadley Wickham, 来自[《Advanced R》](https://adv-r.hadley.nz/)
+
+<center>
+![图源：<https://hadley.nz/>](images/hadley.jpg){width="40%"}
+</center>s
+
+## 2. 大家常接触的来自Posit公司的集成开发环境（IDE）
+
+### 2.1 RStudio IDE
+
+<center>
+![图源：<https://en.wikipedia.org/wiki/RStudio>](images/RStudio_IDE_screenshot.png){width="100%"}
+</center>
+
+### 2.2 Positron IDE
+
+<img src="images/Positron_IDE_screenshot.png" style="width: 100%; height: auto;">
+
+Positron IDE今年刚发布不久。Positron IDE是：
+
+> a free, next-generation data science IDE that <mark>makes it easy to work in both R and Python</mark>.
+
+引自：<https://posit.co/blog/a-quick-tour-of-positron/>
+
+[给我买杯茶🍵](给我买杯茶.qmd)

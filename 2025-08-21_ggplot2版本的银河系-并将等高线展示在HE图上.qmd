@@ -1,0 +1,163 @@
+---
+title: ggplot2“银河系”等高线&HE
+subtitle: ggplot2版本的“银河系”，并将等高线展示在H&E图上
+date: 2025-08-21
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+在2025-07-29，我们展示过H&E起源版本的“银河系”（[QuPath：“银河系”起源于H&E](2025-07-29_银河系起源于HE.qmd)）。在2025-08-12，我们通过R的ggplot2来展示该“银河系”（[R：ggplot2等高线图版本的“银河系”](2025-08-12_ggplot2等高线图版本的银河系.qmd)）。在2025-08-15，我们进一步计算特定等高线的面积（[R：ggplot2版本的“银河系”，并计算特定等高线的面积](2025-08-15_ggplot2版本的银河系-并计算特定等高线的面积.qmd)）。
+
+这次，我们进一步将等高线和特定等高线的面积展示在H&E图上。
+
+## 1. Load packages and read data/加载包和读取数据
+
+加载包。
+
+```{r}
+#| message: false
+#| warning: false
+# load packages
+library(tidyverse) # for data manipulation and visualization
+library(RColorBrewer) # for color palettes
+library(patchwork) # for combining plots
+library(pracma) # for calculating the area of a polygon
+library(terra) # for raster manipulation
+library(grid) # for working with grid graphics
+```
+
+读取数据。
+
+```{r}
+# read the table
+txt_file <- "raw_data/2025-08-12_QuPath_InstanSeg.txt" # specify the path to the text file
+df <- txt_file |> read_delim(delim = "\t", col_names = TRUE, show_col_types = FALSE) # read the text file as a data frame
+txt_file |> rm() # remove the txt_file variable to free up memory
+
+df <- df |> 
+    dplyr::select(`Centroid X µm`, `Centroid Y µm`) # select the columns specifying the coordinates of nuclei
+df |> head() # display the first few rows of the data frame
+```
+
+## 2. Plot the nuclei as points and add contour lines/绘制细胞核和添加等高线
+
+Plot the nuclei as points and add contour lines./绘制细胞核和等高线。
+
+```{r}
+nuclei_contour_plot <- ggplot(df, aes(x = `Centroid X µm`, y = `Centroid Y µm`)) +
+  geom_point(color = "#0072B2") + # scatter plot
+  geom_density_2d(aes(color = after_stat(level)), bins = 15) + # add contour lines
+  scale_color_viridis_c(option = "H") + # set color scale for contour lines
+  scale_x_continuous(limits = c(0, 1000)) + # set x limits
+  scale_y_continuous(limits = c(0, 900)) + # set y limits  
+  theme_classic() # apply classic theme
+
+nuclei_contour_plot
+```
+
+## 3. Claculate the area of a contour level/计算一个等高线的面积
+
+Extract the data used to create the contour plot and display its distinct levels./提取用于创建等高线图的数据并显示它的不同等级。
+
+```{r}
+plot_data <- nuclei_contour_plot |> 
+  ggplot_build() |> 
+  pluck("data", 2) # extract the data used to create the contour plot
+
+plot_data |> dim() # display the dimensions of the contour plot data
+plot_data |> distinct(level) # display distinct levels in the contour plot
+```
+
+Select a level (e.g. 9th level)./选择一个等高线（比如第9个level）
+
+```{r}
+levels <- plot_data |> distinct(level) # select the unique levels
+plot_data_9 <- plot_data |> 
+  filter(level == levels$level[9]) # filter the data for the 8th level
+```
+
+Plot the 9th contour level./绘制第9个等高线。
+
+```{r}
+ggplot(plot_data_9, aes(x = x, y = y, group = group)) +
+  geom_polygon(color = "blue", fill = "lightblue", alpha = 0.5) + # draw the polygon with specified fill and border color
+  theme_classic() + # apply classic theme
+  scale_x_continuous(limits = c(0, 1000)) + # set x limits
+  scale_y_continuous(limits = c(0, 900)) # set y limits
+```
+
+Calculate the area and center of the 9th contour level using the `pracma` package./计算第9个等高线的面积和中心坐标。
+
+```{r}
+# set a function to calculate the area of a polygon
+calculate_polygon_area_pracma <- function(df) {
+  x <- df$x
+  y <- df$y
+  n <- length(x)  
+  
+  area <- polyarea(x, y)
+  center <- poly_center(x, y) 
+  return(c(area, center))
+}
+
+# use the function to calculate the area and center position of each polygon of 9th contour level
+area_each_polygon <- plot_data_9 |> 
+  group_by(group) |>
+  group_map(~ calculate_polygon_area_pracma(.x))
+
+area_each_polygon
+```
+
+Plot the area of the 9th contour level.
+
+```{r} 
+
+ggplot(plot_data_9, aes(x = x, y = y, group = group)) +
+  geom_polygon(color = "blue", fill = "lightblue", alpha = 0.5) + # draw the polygon with specified fill and border color
+  theme_classic() + # apply classic theme
+  scale_x_continuous(limits = c(0, 1000)) + # set x limits
+  scale_y_continuous(limits = c(0, 900)) + # set y limits
+  annotate("text", x = area_each_polygon[[1]][2], y = area_each_polygon[[1]][3], label = round(area_each_polygon[[1]][1], 2), size = 5, color = "red") + # add the area and center label
+  annotate("text", x = area_each_polygon[[2]][2], y = area_each_polygon[[2]][3], label = round(area_each_polygon[[2]][1], 2), size = 5, color = "red") + # add the area and center label
+  annotate("text", x = area_each_polygon[[3]][2], y = area_each_polygon[[3]][3], label = round(area_each_polygon[[3]][1], 2), size = 5, color = "red") # add the area and center label
+```
+
+## 4. Read the original H&E/读取原始H&E图片
+
+```{r}
+img_path <- "images/he_normal.tif"
+img <- terra::rast(img_path) # read the TIFF image
+img_path |> rm() # remove the img_path variable to free up memory
+
+img |> dim() # display the dimensions: height x width x channels
+
+img <- as.array(img)/255 # normalize the image (the original tif is 8-bit, so we need to divide by 255 to get the values between 0 and 1)
+
+img_grob <- grid::rasterGrob(img, interpolate = TRUE) # convert raster image to graphical object for ggplot
+```
+
+## 5. Plot contour level、and area of 9th contour level on the H&E image/在H&E图上绘制等高线和9th等高线的面积
+
+```{r}
+ggplot(df, aes(x = `Centroid X µm`, y = `Centroid Y µm`)) +
+  annotation_custom(
+    img_grob, xmin = 0, xmax = 896, ymin = 0, ymax = 768
+  ) + # Since the pixel width was set to 0.5 um, so the size of the image changed to 896 um x 768 um.
+  geom_polygon(data = plot_data_9, aes(x = x, y = y, group = group), fill = "lightblue", alpha = 0.8) +
+  geom_point(color = "#969696") + # scatter plot
+  geom_density_2d(bins = 15, color = "#cbc9e2") + # add contour lines
+  scale_x_continuous(limits = c(0, 1000)) + # set x limits
+  scale_y_continuous(limits = c(0, 900)) + # set y limits  
+  theme_classic() + # apply classic theme
+  coord_fixed() +  # fix the aspect ratio
+  annotate("text", x = area_each_polygon[[1]][2], y = area_each_polygon[[1]][3], label = round(area_each_polygon[[1]][1], 2), size = 6, color = "#f03b20") + # add the area and center label
+  annotate("text", x = area_each_polygon[[2]][2], y = area_each_polygon[[2]][3], label = round(area_each_polygon[[2]][1], 2), size = 6, color = "#f03b20") + # add the area and center label
+  annotate("text", x = area_each_polygon[[3]][2], y = area_each_polygon[[3]][3], label = round(area_each_polygon[[3]][1], 2), size = 6, color = "#f03b20") # add the area and center label
+```
+
+## 6. “银行系”的起源
+
+<img src="images/he_low.png" style="width: 100%; height: auto;">
+
+[给我买杯茶🍵](给我买杯茶.qmd)

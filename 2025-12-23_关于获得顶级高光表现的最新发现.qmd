@@ -1,0 +1,56 @@
+---
+title: 顶级高光表现
+subtitle: 关于获得顶级高光表现的最新发现：也许可以输在人生“起跑线”上
+date: 2025-12-23
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+直接展示这个2025年底的Science综述[@Gllich2025]的图片和结论，不做解读。
+
+> ... findings on the development of more than 34,000 adult international top performers in different domains, including Nobel laureates, the most renowned classical music composers, Olympic champions, and the world's best chess players.
+
+> 结论基于34000多名国际级的成年人员，他们包括诺贝尔奖得主、著名古典音乐作曲家、奥林匹克冠军、和世界最好的国际象棋选手。
+
+<center>
+![**顶级高光表现者的时间脉络。**在科学领域、国际象棋领域、音乐领域、和体育领域，和同龄人相比，顶级高光表现的成年人员（有相对更广泛的跨学科实践）在其早期阶段的表现相对较低。](images/early-vs-adult.png){width="100%"}
+</center>
+
+> **1. Early exceptional performers and later exceptional performers within a domain are rarely the same individuals but are largely discrete populations over time.** For example,
+
+> **1. 在同一领域内，早期的高光表现者与后期的高光表现者极少为同一群人。**比如：
+
+> world top-10 youth chess players and later world top-10 adult chess players are nearly 90% different individuals across time.
+
+> 世界青年棋手排名前十的选手，与日后成为世界成人排名前十的选手，在时间跨度上重合率仅为约10%。
+
+> <mark>Top secondary students and later top university students are also nearly 90% different people.</mark>
+
+> <mark>最顶尖的中学生与日后最顶尖的大学生，其重合率仅为约10%。</mark>
+
+> Likewise, international-level youth athletes and later international-level adult athletes are nearly 90% different individuals.
+
+> 同样，国际级青年运动员与后来的国际级成年运动员，其重合率约为10%。
+
+> **2. Most top achievers (Nobel laureates and world-class musicians, athletes, and chess players) demonstrated lower performance than many peers during their early years.**
+
+> **2. 大多数顶级高光表现者（包括诺贝尔奖得主、世界级音乐家、运动员、和国际象棋选手）在早期阶段的表现往往劣于许多同龄人。**
+
+> Across the highest adult performance levels, peak performance is negatively correlated with early performance.
+
+> 在成人顶级高光表现者中，其高光表现与早期表现呈负相关。
+
+> **3. The pattern of predictors that distinguishes among the highest levels of adult performance is different from the pattern of predictors of early performance.**
+
+> **3. 区分成年顶级高光表现的关键预测因子模式，与早期高光表现的预测模式存在差异。**
+
+> Higher early performance in a domain is associated with larger amounts of discipline-specific practice, smaller amounts of multidisciplinary practice, and faster early discipline-specific performance progress. 
+
+> 早期在特定领域内的高光表现者通常与更多该领域的专门训练、更少的跨学科实践以及更快的早期专项进步速度相关。
+
+> By contrast, across high levels of adult performance, world-class performance in a domain is associated with smaller amounts of discipline-specific practice, larger amounts of early multidisciplinary practice, and more gradual early discipline-specific performance progress.
+
+> 与此相反，在成年阶段的顶级高光表现者则与较少的专项训练、更多的早期跨学科实践以及更平缓的早期专项进步轨迹相关联。
+
+[给我买杯茶🍵](给我买杯茶.qmd)

@@ -1,0 +1,17 @@
+{
+  "hash": "9efb19e21bc34eb02152510617a1bf74",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: 改变通道名称和颜色\nsubtitle: 通过groovy script改变多通道图片的通道名称和颜色\"\nauthor: 今卡-生物图像\ndate: 2025-12-16\ntoc-depth: 4\ntoc-expand: true\nlang: en\n---\n\n## 1. 通过groovy script改变多通道图片的通道名称\n\n有时候，基于某种需要，要改变多通道图片的通道名称。\n\n具体见https://qupath.readthedocs.io/en/0.6/docs/tutorials/multiplex_analysis.html。该链接介绍了手动和自动策略。\n\n比如我们针对示例图片（4通道），groovy script脚本如下：\n\n\n::: {.cell}\n\n```{.r .cell-code}\n// QuPath v0.6.0\n// Set channel names\n// Relevant to specific study (e.g. for a four channel image)\nsetChannelNames( // in the sequence of C1 (channel 1), C2, C3, C4\n        'C1_Blue',\n        'C2_Green',\n        'C3_Red',\n        'C4_Magenta' // 洋红\n)\n\n// Get the image name of the current image\ndef imageName = getCurrentImageName()\n\n// Print the finished information\nprintln \"${imageName}'s channel names are renamed!\"\n```\n:::\n\n<center>\n::: {.columns}\n::: {.column width=\"48%\"}\n![原通道名。](images/channel_names_prior.png){width=\"100%\" height=\"300px\"}\n:::\n:::{.column width=\"2%\"}\n:::\n::: {.column width=\"48%\"}\n![改变后的通道名。](images/channel_names_post.png){width=\"100%\" height=\"300px\"}\n:::\n:::\n</center>\n\n如果一个项目中的多个多通道图片相关设置相同（比如通道数量、通道名称、通道颜色），则通过groovy script批量更改更方便（Automate -> Script editor -> 点击右下角的三点按钮 -> Run for project）。\n\n## 2. 通过groovy script改变多通道图片的通道颜色\n\n有时候，基于某种需要，也要改变多通道图片的通道颜色。\n\n比如我们针对示例图片（4通道），groovy script脚本如下：\n\n\n::: {.cell}\n\n```{.r .cell-code}\n// QuPath v0.6.0\ndef color_C1 = makeARGB(255, 0, 0, 255) // blue\n// The \"ARGB\" in makeARGB stands for Alpha (transparency), Red, Green, and Blue.\ndef color_C2 = makeARGB(255, 0, 255, 0) // green\ndef color_C3 = makeARGB(255, 255, 0, 0) // red\ndef color_C4 = makeARGB(255, 255, 0, 255) // magenta/洋红\n\nsetChannelColors( // in the sequence of C1 (channel 1), C2, C3, C4\n        color_C1,\n        color_C2,\n        color_C3,\n        color_C4\n)\n\n// Get the image name of the current image\ndef imageName = getCurrentImageName()\n\n// Print the finished information\nprintln \"${imageName}'s channel colors are changed!\"\n```\n:::\n\n\n<center>\n::: {.columns}\n::: {.column width=\"48%\"}\n![原通道颜色。](images/channel_colors_prior.png){width=\"100%\" height=\"150px\"}\n:::\n::: {.column width=\"2%\"}\n:::\n::: {.column width=\"48%\"}\n![改变后的通道颜色。](images/channel_colors_post.png){width=\"100%\" height=\"150px\"}\n:::\n:::\n</center>\n\n[给我买杯茶](给我买杯茶.qmd)",
+    "supporting": [
+      "2025-12-16_通过groovy-script改变多通道图片的通道名称和颜色_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

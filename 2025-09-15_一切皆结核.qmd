@@ -1,0 +1,148 @@
+---
+title: 一切皆结核
+date: 2025-09-15
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+## 1. 一个小短文
+
+看到一个科学小短文[@Robert2025]，题目是：
+
+> Everything Is Tuberculosis: The History and Persistence of Our Deadliest Infection
+
+> 一切皆结核：人类最致命传染病的历史与顽疾
+
+里面有一句概括的结论，笔者眼前一亮，所以分享：
+
+<center>
+> <mark>Tuberculosis has killed about one in seven people who have ever lived.</mark>
+
+> <mark>结核病已夺走了大约每七名曾生活在地球上的人中一人的生命。</mark>​
+</center>
+
+这个小短文主要是提及一本书*Everything is Tuberculosis*/《一切皆结核》。
+
+写这个推文时，也留意到这本书亦被柳叶刀系列杂志[@Burki2025]提及。
+
+## 2.《一切皆结核》
+
+<center>
+![By John Green, 2025.](images/everything-is-tb.jpg){width="50%"}
+</center>
+
+这本书面向普通读者。
+
+## 3. John Green
+
+<center>
+![**John Green** grew up in Orlando, Florida before attending Indian Springs School and then Kenyon College. John Green is the New York Times bestselling author of... https://www.johngreenbooks.com/bio](images/john-green.png){width="50%"}
+</center>
+
+## 4. 结核分枝杆菌感染（*Mtb*，结核的主要病原菌）的地球
+
+### 4.1 下载地球
+
+1. 从https://bioicons.com/?query=earth通过点击复制“earth”矢量图。
+
+2. 在Adobe Illustrator中新建A4文档。
+
+3. 粘贴该brain到A4文档。
+
+4. 通过画板工具调整空白区域。
+
+5. 导出为png图片（150 ppi、消除锯齿：无、背景色：透明）。
+
+<center>
+![](images/earth.png){width="50%"}
+</center>
+
+### 4.2 下载结核分枝杆菌
+
+1. 从https://bioart.niaid.nih.gov/discover?q=tuberculosis&sort=relevance通过下载结核分枝杆菌矢量图素材。
+
+2. 用Adobe Illustrator打开。
+
+3. 去掉多余的元素，只留下结核分枝杆菌的矢量图，并调整分枝杆菌的填充色为红色。
+
+4. 通过画板工具调整空白区域。
+
+5. 导出为png图片（150 ppi、消除锯齿：无、背景色：透明）。
+
+<center>
+![](images/Tuberculosis0001-grey.svg){width="50%"}
+</center>
+
+### 4.3 结核分枝杆菌感染的地球（just for fun）
+
+1. 加载包
+
+```{r}
+#| message: false
+#| warning: false
+
+library(tidyverse) # for ggplot2
+library(tidyplots) # for plotting
+library(terra) # for putting earch and mycobacterium tuberculosis on the plot
+library(grid) # for putting earch and mycobacterium tuberculosis on the plot
+```
+
+2. 生成一个数据，目的是为了产生一个空plot
+
+```{r}
+df <- as_tibble(
+    data.frame(x = 1:100, y = 1:100)
+)
+```
+
+3. 读取地球
+
+```{r}
+#| message: false
+#| warning: false
+
+earch <- terra::rast("images/earth.png") # read earth
+earth <- terra::flip(earch, direction = "vertical") # flip
+earth |> dim() # check dimensions
+earth <- terra::as.array(earth)/255 # convert to array and normalize to [0, 1], the original values are 0-255 (8 bit image)
+earth <- grid::rasterGrob(earth) # convert to raster grob
+```
+
+4. 读取结核分枝杆菌
+
+```{r}
+#| message: false
+#| warning: false
+
+mtb <- terra::rast("images/Tuberculosis0001-grey.png") # read mtb
+mtb <- terra::flip(mtb, direction = "vertical") # flip
+mtb |> dim() # check dimensions
+mtb <- terra::as.array(mtb)/255 # convert to array and normalize to [0, 1], the original values are 0-255 (8 bit image)
+mtb <- grid::rasterGrob(mtb) # convert to raster grob
+```
+
+5. 在这个空plot上绘制地球和结核分枝杆菌
+
+```{r}
+df |> 
+    tidyplot(x = x, y = y) |> 
+    add(ggplot2::annotation_custom(
+        earth, xmin = 2, xmax = 98, ymin = 2, ymax = 98
+    )) |> 
+    add(ggplot2::annotation_custom(
+        mtb, xmin = 10, xmax = 90, ymin = 10, ymax = 90
+    )) |> 
+    add_data_points(alpha = 0) |> # do not show data points
+    add(ggplot2::labs(title = "The earth infected by" ~ italic("Mtb"))) |> 
+    adjust_title(fontsize = 12) |> 
+    adjust_size(width = 10, height = 10, unit = "cm")
+```
+
+*Mtb*是胞内菌[@RankineWilson2021]，即其可生活在细胞内。
+
+*Mtb*感染地球这幅图即暗含结核病依然很严峻，又暗含*Mtb*感染细胞（想象地球是个细胞）。
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

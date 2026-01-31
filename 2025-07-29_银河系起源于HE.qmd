@@ -1,0 +1,35 @@
+---
+title: “银河系”&HE
+subtitle: QuPath：“银河系”起源于H&E
+date: 2025-07-29
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+笔者在用QuPath（v0.6.0）处理H&E图片时，发现一个区域的衍生图片很漂亮，有点像“银河系/galaxy”，于是决定分享出来，给严谨的科学研究工作提供一点“艺术气息”。
+
+## “银河系”1号🤓
+
+<img src="images/he_i_r_d_low.png" style="width: 100%; height: auto;">
+
+## “银河系”2号😃
+
+<img src="images/he_c-d_r_e-m_d_low.png" style="width: 100%; height: auto;">
+
+## “银河系”3号😇
+
+<img src="images/he_c-d_r_d_low.png" style="width: 100%; height: auto;">
+
+## “银河系”的“起源”🤪
+
+<img src="images/he_low.png" style="width: 100%; height: auto;">
+
+## 声明😉
+
+本文图片均来自笔者的工作，**未经许可，可随意使用和转载。**😉
+
+高清图片下载地址：通过网盘分享的文件：2025-07-29_HE_galaxy
+链接: https://pan.baidu.com/s/1LTdyc__XSqBQ2QxA3zF6zw?pwd=pwkw 提取码: pwkw
+
+[给我买杯茶🍵](给我买杯茶.qmd)

@@ -1,0 +1,104 @@
+---
+title: 图书逾期费
+subtitle: 图书馆借的书产生了逾期费
+date: 2026-01-21
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+## 1. 图书馆借的书逾期了将近半年
+
+<center>
+![](images/return-certificate.jpg){width="100%"}
+</center>
+
+```{r}
+#| eval: false
+#| message: false
+#| warning: false
+# Load packages
+ggplot2 |> library() # for plotting
+magick |> library() # for reading image
+grid |> library() # for changing image to graphic object
+
+# Read the image of book return receipt
+book_return_receipt <- "images/return-certificate.jpg" |> 
+    magick::image_read()
+
+book_return_receipt_grob <- book_return_receipt |>
+    grid::rasterGrob() # change to graphic object
+
+book_return_receipt_dimention <- book_return_receipt |> 
+    magick::image_info() # get the width, height, and beyond
+book_return_receipt_dimention |> print()
+
+# Plot and mask
+df <- data.frame(
+    x = seq(1, 827, by = 1), # the width of receipt is 827
+    y = seq(1, 827, by = 1) # the height of receipt is 479
+)
+
+book_return_receipt_plot <- df |> 
+    ggplot(aes(x = x, y = y)) +
+    annotation_custom(
+        book_return_receipt_grob,
+        xmin = 1,
+        xmax = 827,
+        ymin = 1,
+        ymax = 479
+    ) +
+    geom_point(alpha = 0) +
+    annotate("rect", xmin = 45, xmax = 160, ymin = 400, ymax = 417, alpha = 1) + # mask library name
+    annotate("rect", xmin = 465, xmax = 575, ymin = 402, ymax = 419, alpha = 1) + # mask library name
+    annotate("segment", x = 45, xend = 245, y = 373, yend = 373, colour  = "red") + # mark return date
+    annotate("segment", x = 465, xend = 660, y = 373, yend = 373, colour = "red") + # mark return date
+    annotate("segment", x = 230, xend = 330, y = 249, yend = 249, colour = "blue") + # mark due date
+    annotate("segment", x = 45, xend = 145, y = 226, yend = 226, colour = "blue") +
+    annotate("segment", x = 650, xend = 750, y= 255, yend = 255, colour = "blue") + # mark due date
+    annotate("segment", x = 468, xend = 568, y = 230, yend = 230, colour = "blue") +
+    annotate("rect", xmin = 170, xmax = 345, ymin = 80, ymax = 105, alpha = .2, fill = "yellow") + # mark overdue fee/day
+    annotate("rect", xmin = 45, xmax = 68, ymin = 55, ymax = 80, alpha = .2, fill = "yellow") + 
+    annotate("rect", xmin = 590, xmax = 768, ymin = 84, ymax = 107, alpha = .2, fill = "yellow") + # mark overdue fee/day
+    annotate("rect", xmin = 467, xmax = 488, ymin = 61, ymax = 82, alpha = .2, fill = "yellow") + 
+    scale_x_continuous(limits = c(1, 827)) +
+    scale_y_continuous(limits = c(1, 479)) +
+    theme_void()
+
+"images/return-certificate_mask.png" |> ggsave(
+    book_return_receipt_plot, 
+    width = 8.27, 
+    height = 4.79, 
+    units = "cm")
+```
+
+<center>
+![通过R隐掉了图书馆名；标记了还书日期、应还日期、和每天逾期费。](images/return-certificate_mask.png){width="100%"}
+</center>
+
+能够看出来：
+
+- 应还日期为：2025-07-05。
+- 还书日期为：2026-01-13。
+- 逾期费为：0.2元/天。
+
+## 2. 逾期费计算
+
+```{r}
+due_date <- "2025-07-05" |> 
+    as.Date()
+
+return_date <- "2026-01-13" |> 
+    as.Date()
+
+# Calculate overdue time
+overdue_time <- difftime(return_date, due_date, units = "days")
+paste0("每本书的逾期天数为：", overdue_time, " 天。") |> print()
+
+# Calculate overdue fee
+overdue_fee_per_day <- 0.2
+overdue_fee <- overdue_time * overdue_fee_per_day * 2 # two books
+paste0("两本书的逾期总费用为：", overdue_fee, " 元。") |> print()
+```
+
+[给我买杯茶🍵](给我买杯茶.qmd)

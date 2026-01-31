@@ -1,0 +1,32 @@
+---
+title: mIF距离分析
+subtitle: 多重免疫荧光/空间蛋白组学切片染色的细胞空间距离分析
+date: 2025-08-08
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+## 1. 文献中的一个“多重免疫荧光/空间蛋白组学切片染色的细胞空间距离分析”
+
+<img src="images/Immunity_2024.png" style="width: 80%; height: auto;">
+
+> … expanding CD4+ (CD3e+/CD4+/Ki67+) and CD8+ (CD3e+/CD8+/Ki67+) T cells were more co-localized in tumors receiving anti-PD-L1+anti-CTLA4 than those (patients) receiving anti-PD-L1 alone … [@Franken2024a]👋
+
+> … 扩展的CD4+（CD3e+/CD4+/Ki67+）和CD8+（CD3e+/CD8+/Ki67+）T细胞在接受anti-PD-L1+anti-CTLA4治疗的肿瘤中比单独接受anti-PD-L1治疗的肿瘤中有更多的共定位 …[@Franken2024a]👋
+
+该文献作者就患者肿瘤组织的多重免疫荧光染色/空间蛋白质组学确实发现了<mark>**联合治疗组（anti-PD-L1+anti-CTLA1）中，CD4+ T细胞和CD8+ T细胞的空间距离更近**</mark>（相比于anti-PD-L1治疗）[@Franken2024a]。确实是一个有意义的发现🤩。
+
+实话实说/to be honest😎，该文献作者亦公布了其分析的步骤[@Franken2024b]，该步骤整体上用到了QuPath软件（包括1个深度学习扩展工具）[@Bankhead2017] [@Humphries2021]和R语言（包括另外3个R包）[@R2025]。
+
+今卡-生物图像花了些时间和精力（无法评估算多还是算少😃）了解文献作者的分析思路，并复现了该分析步骤，及做了些许修改。
+
+## 2. 分析步骤示意图：多重免疫荧光/空间蛋白组学切片染色的细胞空间距离分析
+
+<img src="images/Distance.png" style="width: 80%; height: auto;">
+
+**说明**：文献[@Franken2024a] [@Franken2024b]作者未提供原始图片，因此该示例图片下载自别处😎。
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

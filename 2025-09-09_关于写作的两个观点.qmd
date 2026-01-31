@@ -1,0 +1,119 @@
+---
+title: 关于写作
+subtitle: 关于写作的两个观点
+date: 2025-09-09
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+最近留意到两个对于“写作/writing”的观点，反正笔者读进去了，因此分享出来，并不严谨的图示比较。
+
+## 1. 观点1
+
+<center>
+![](images/nrb.png){width="80%"}
+</center>
+
+> Writing compels us to think — not in the chaotic, non-linear way our minds typically wander, but in a structured, intentional manner. [@nrb2025]
+
+> 写作迫使我们思考 - 不是以我们大脑通常混乱、非线性的方式，而是以一种结构化的、有目的的方式。[@nrb2025]
+
+## 2. 观点2
+
+<center>
+![**Wolfgang Huber**, Statistician, Computational Biologist, R | Bioconductor. Love statistics (stats) and machine learning (ML). **Lab website**: https://www.huber.embl.de/group/. **Textbook**: ***Modern Statistics for Modern Biology***, website: www.huber.embl.de/msmb/.](images/Wolfgang_Huber.jpg){width="80%"}
+</center>
+
+> Clear lines of logical argument, precise definitions, often can only be composed in writing. Paper and pencil (or the word processor) are extensions of our brains. [@Humber2025]
+
+> 清晰的逻辑推理语句，精确的定义，通常只能由写作实现。纸和笔（或文字处理器）是我们人脑的扩展。[@Humber2025]
+
+## 3. 没有写作和有写作的人脑
+
+### 3.1 下载人脑
+
+1. 从https://bioicons.com/?query=brain通过点击复制“brain-1”。
+
+2. 在Adobe Illustrator中新建A4文档。
+
+3. 粘贴该brain到A4文档。
+
+4. 通过画板工具调整空白区域。
+
+5. 导出为png图片（150 ppi、消除锯齿：无、背景色：白色）。
+
+<center>
+![](images/brain.png){width="80%"}
+</center>
+
+### 3.2 无写作的人脑？（just for fun）
+
+```{r}
+#| message: false
+library(tidyverse) # for ggplot2 and tibble packages
+library(tidyplots) # for plotting
+library(terra) # for putting brain image on the plot
+library(grid) # for putting brain image on the plot
+```
+
+产生一个数据，用于重叠在人脑上。
+
+```{r}
+set.seed(2025) # Set seed for graph reproducibility
+x <- sample(10:90, 26) # Randomly sample 26 integers between 1 and 100
+
+set.seed(2024) # Set seed for graph reproducibility
+y <- sample(25:70, 26) # Randomly sample 26 integers between 1 and 100
+
+works <- tibble::as_tibble( # Convert to a tibble
+    data.frame( # Create a data frame
+        x = x,
+        y = y   
+    )    
+)
+```
+
+读取人脑图片。
+
+```{r}
+brain <- terra::rast("images/brain.png") # read the image
+brain <- terra::flip(brain, direction="vertical") # flip the image vertically
+brain |> dim() # image dimension
+brain <- as.array(brain)/255 # convert to array and normalize to [0, 1]; the original image is 8-bit RGB
+brain <- grid::rasterGrob(brain) # convert to graphic object
+```
+
+把数据线绘制/重叠在人脑上。
+
+```{r}
+works |> 
+    tidyplot(x = x, y = y) |>
+    add(ggplot2::annotation_custom(
+        brain, xmin = 2, xmax = 100, ymin = 0, ymax = 100
+    )) |> # add the brain
+    add_data_points() |> # add the points
+    add(ggplot2::geom_path()) |> # add the lines
+    adjust_x_axis(limits = c(0, 100)) |> 
+    adjust_y_axis(limits = c(0, 100)) |> 
+    adjust_title("Brain without writing", fontsize = 12)
+```
+
+### 3.3 有写作的人脑？（just for fun）
+
+```{r}
+works |> 
+    tidyplot(x = x, y = y) |>
+    add(ggplot2::annotation_custom(
+        brain, xmin = 2, xmax = 100, ymin = 0, ymax = 100
+    )) |> # add the brain
+    add_data_points() |> # add the points
+    add(ggplot2::geom_step()) |> # add the lines
+    adjust_x_axis(limits = c(0, 100)) |> 
+    adjust_y_axis(limits = c(0, 100)) |> 
+    adjust_title("Brain with writing", fontsize = 12)
+```
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## 4. References

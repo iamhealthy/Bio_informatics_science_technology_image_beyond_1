@@ -1,0 +1,24 @@
+---
+title: 胞内斑点测量
+subtitle: 胞内亮点/斑点的测量
+date: 2025-11-25
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+## 1 理论基础
+
+针对感兴趣分子（比如转录本[@Gyllborg2020]、蛋白[@Sheng2023]、或其它分子）的（免疫）染色研究会在样本中检出很多亮点或斑点。这些亮点就是所感兴趣的分子。对这些亮点的选择和定量对解释科学问题至关重要。
+
+## 2 流程和实例
+
+<div style="text-align: center;">
+  <img src="./images/Intracellular-spots_2025-11-25_cn.png" style="max-width: 100%; height: auto">
+</div>
+
+**说明**：示例图片来自Spotiflow [@DominguezMantes2025]。
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

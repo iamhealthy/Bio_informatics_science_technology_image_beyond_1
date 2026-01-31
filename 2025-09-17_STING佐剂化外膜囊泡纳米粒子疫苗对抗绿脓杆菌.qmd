@@ -1,0 +1,47 @@
+---
+title: STING佐剂化纳米疫苗
+subtitle: STING佐剂化外膜囊泡纳米粒子疫苗对抗绿脓杆菌
+date: 2025-09-17
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+## 1. 一个新颖的纳米颗粒疫苗
+
+![](images/jci.png){width="100%"}
+
+上图这个文献[@Bjnes2025]介绍了一种新颖的抗绿脓杆菌的纳米疫苗：
+
+![](images/nano-vaccine.png){width="100%"}
+
+> ... <mark>STING-adjuvanted nanoparticle cores</mark> from manganese, cyclic di-AMP, and DSPE-H11, a modified phospholipid and then <mark>coated with OMVs isolated from PA14</mark> ...
+
+> ... <mark>STING佐剂化的纳米粒子核心</mark>由锰离子、环二-AMP和DSPE-H11（一种改良的磷脂）组成，然后<mark>覆盖上从PA14分离出的外膜囊泡（OMVs）</mark>...
+
+蛮有意思。
+
+感觉可以从任何病原菌分离外膜囊泡，进而衍生出该病原菌的潜在治疗或预防性外膜囊泡纳米粒子疫苗。😁
+
+## 2. H&E切片的人工主观分析
+
+另外，我们留意到该文章的H&E切片的分析是<mark>人工（兽医病理学家）分析</mark>（当然切片信息对病理学家是保密的）。
+
+<center>
+![**Pa-STING**：STING佐剂化外膜囊泡纳米粒子疫苗；**RBC-STING**：red blood cell–coated STING。](images/he_.png){width="80%"}
+</center>
+
+笔者以前做实验的经历，感觉：
+
+- F和G的代表性图片覆盖区域太小（<mark>这种代表性区域太容易挑选了</mark>，懂的都懂😄）。
+
+    - 最好是整个肺或整个胸腺的全片扫描图片。
+
+- 对于人工分析/评分，对大部分科研人员<mark>不太好执行</mark>，因为：
+    
+    - 需找专业的（兽医）病例学家。
+    - 病理学家需不清楚切片对应的小鼠的组别信息。
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

@@ -1,0 +1,15 @@
+{
+  "hash": "8024b70cd0a00a716f45b234a1f07148",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"QuPath：输出detections的csv和txt格式文件\"\ndate: 2025-07-25\ntoc-depth: 4\ntoc-expand: true\nlang: en\n---\n\n对于QuPath项目图片的detections结果，有时候因为某种需要，就想输出逗号分隔（comma-separated）的csv格式文件，或者就想输出制表符分隔（tab-separated）的txt格式文件。\n\n<center>\n![](images/qupath-csv-txt.png){width=\"100%\"}\n</center>\n\n## 1. 输出csv和txt格式文件\n\n参考如下代码：\n\n\n::: {.cell}\n\n```{.groovy .cell-code}\n// QuPath v0.6.0\n\nimport qupath.lib.gui.tools.MeasurementExporter\n\n// #########################################\n// Export all detections as comma-separated file (.csv)\n// #########################################\n// Make the current image name as a list\ndef entryList = [getProjectEntry()]\n\n// If the folder detections exist, do noting; else create the folder\ndef outputPath = buildFilePath(PROJECT_BASE_DIR, \"detections\")\nmkdirs(outputPath)\n\n// Separate each measurement value in the output file with \",\"\ndef separator = \",\"\n\ndef csvName = getCurrentImageName() + \"_detections.csv\"\ndef csvOutputFile = new File(buildFilePath(outputPath, csvName))\n\n// Create the measurementExporter and start the export\ndef exporter = new MeasurementExporter()\n    .imageList(entryList)\n    .separator(separator)\n    .allDetections()\n    .exportMeasurements(csvOutputFile)\n\nprintln \"${csvOutputFile} saved.\"\n\n// #########################################\n// Export all detections as tab-separated file (.txt)\n// #########################################\ndef txtName = getCurrentImageName() + \"_detections.txt\"\ndef txtOutputFile = new File(buildFilePath(outputPath, txtName))\nsaveDetectionMeasurements(\"${txtOutputFile}\")\n\nprintln \"${txtOutputFile} saved.\"\n\nprintln \"Done.\"\n```\n:::\n\n\n以上代码部分参考自[@MicroscopyRA2020]。\n\n确认下文件已经保存成功：\n\n::: {.cell}\n\n```{.r .cell-code}\n# R v4.5.2\noutputPath <- \"path/to/detections/\"\noutputPath |> fs::dir_tree()\n\npath/to/detections/\n├── image1_detections.csv\n├── image1_detections.txt\n├── image2_detections.csv\n├── image2_detections.txt\n├── image3_detections.csv\n├── image3_detections.txt\n├── image4_detections.csv\n├── image4_detections.txt\n├── image5_detections.csv\n└── image5_detections.txt\n```\n:::\n\n\n## References",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

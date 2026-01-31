@@ -1,0 +1,107 @@
+---
+title: ImageJ启动
+subtitle: 启动ImageJ的6种方式
+date: 2026-01-06
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+<center>
+![](images/imagej.png){width="40%"}
+</center>
+
+以下方法都是在Windows 11 x64下测试的。
+
+## 方法1：进入文件夹直接启动
+
+```{r}
+#| echo: false
+#| eval: false
+# R v4.5.2
+
+imagej_folder <- "path/to/ImageJ/"
+imagej_folder |> 
+    fs::dir_tree(recurse = FALSE)
+```
+
+```
+path/to/ImageJ/
+├── ij.jar
+├── ImageJ.cfg
+├── ImageJ.exe
+├── jre
+├── luts
+├── macros
+└── plugins
+```
+
+进入ImageJ文件夹，启动ImageJ.exe。
+
+## 方法2：通过Windows PowerShell启动
+
+```
+Start-Process "path/to/ImageJ/ImageJ.exe"
+```
+
+## 方法3：把ImageJ launcher固定到任务栏，再启动
+
+打开“path/to/ImageJ/”文件夹 &rarr; 右键ImageJ.exe &rarr; 固定到任务栏(K)。
+
+<center>
+![ImageJ（显微镜图标）被固定在任务栏。](images/task-bar.png){width="50%"}
+</center>
+
+点击任务栏中的ImageJ图标，就可以启动ImageJ了。
+
+## 方法4：创建ImageJ快捷方式，再启动
+
+打开“path/to/ImageJ/”文件夹 &rarr; 右键ImageJ.exe &rarr; 创建快捷方式(S)。
+
+```{r}
+#| echo: false
+#| eval: false
+# R v4.5.2
+
+imagej_folder <- "path/to/ImageJ/"
+imagej_folder |> 
+    fs::dir_tree(recurse = FALSE)
+```
+
+```
+path/to/ImageJ/
+├── ij.jar
+├── ImageJ - 快捷方式.lnk
+├── ImageJ.cfg
+├── ImageJ.exe
+├── jre
+├── luts
+├── macros
+└── plugins
+```
+
+将"ImageJ - 快捷方式.lnk"复制到感兴趣的路径（比如桌面） &rarr; 双击就可以启动ImageJ了。
+
+## 方法5：将ImageJ固定到"开始"，再启动
+
+打开“path/to/ImageJ/”文件夹 &rarr; 右键ImageJ.exe &rarr; 固定到"开始"。
+
+<center>
+![](images/start.png){width="100%"}
+</center>
+
+点击任务栏Windows图标 &rarr; 在搜索框输入imagej &rarr; 回车或点击ImageJ图标，就可以启动ImageJ了。
+
+## 方法6：通过uTools启动（笔者最喜欢的方法）
+
+个人非常喜欢用uTools（<https://www.u-tools.cn/index.html>）启动各种软件。
+
+默认通过alt + space组合键唤起uTools窗口（确保已经运行uTools） &rarr; 拖拽ImageJ.exe到uTools窗口的搜索区 &rarr; 回车即可添加ImageJ到uTools启动列表。
+
+<center>
+![](images/utools.png){width="100%"}
+</center>
+
+Alt + space组合键唤起uTools窗口 &rarr; 在搜索区输入imagej &rarr; 回车即可启动ImageJ。
+
+[给我买杯茶🍵](给我买杯茶.qmd)

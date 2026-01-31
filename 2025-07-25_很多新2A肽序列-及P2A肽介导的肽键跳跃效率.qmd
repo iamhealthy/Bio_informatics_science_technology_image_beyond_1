@@ -1,0 +1,60 @@
+---
+title: 新2A肽
+subtitle: 很多新2A肽序列，及P2A肽介导的肽键跳跃效率
+date: 2025-07-25
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+笔者留意到一个（可能）很实用的文章（2025-06-18发表），系统探讨真核和病毒来源的2A肽序列：
+
+<center>
+![](images/cell_report.png){width="80%"}
+</center>
+
+下面是笔者看完后的“干货”：
+
+## 1. 2A肽是做什么的？
+
+<center>
+![](images/cell_report_2a_it.png){width="60%"}
+</center>
+
+简言之：一条mRNA -> 两个蛋白。
+
+具体原理问AI或者找权威材料😂。
+
+## 2. 最常用的P2A肽，其N端一定要另外含有GSG肽
+
+<center>
+![](images/cell_report_A.png){width="80%"}
+
+![](images/cell_report_DE.png){width="80%"}
+</center>
+
+最右侧的这个绿色柱子的序列是：
+
+[GSG]{.mark}ATNFSLLKQAGDVEENPGP，其中黄色的[GSG]{.mark}是另外的肽/linker，黑色是P2A肽序列。
+
+## 3. 其它可用的新的2A肽？
+
+<center>
+![](images/cell_report_E.png){width="60%"}
+</center>
+
+文章作者新鉴定的B6肽，核糖体跳跃效率>75%。
+
+如果像P2A一样，在B6肽N端也同样引入[GSG]{.mark}，效率会增加多少呢？
+
+同样的问题，也适用于B1和B17肽。还有下图中的A17肽。
+
+可惜笔者没有从文章找到数据（文章作者应该没做）。
+
+<center>
+![](images/cell_report_C.png){width="60%"}
+</center>
+
+大家如果感兴趣，不妨克隆试试？😎
+
+[给我买杯茶🍵](给我买杯茶.qmd)

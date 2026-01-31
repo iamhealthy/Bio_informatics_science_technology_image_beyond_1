@@ -1,0 +1,86 @@
+---
+title: 今卡六边形徽标
+subtitle: 今卡生物和今卡生物图像的六边形徽标
+date: 2025-11-17
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+R包最早带有六边形徽标（hex logo）可追溯至2014年[@Hadley2025]。
+
+## 1. R包hexSticker
+
+南方医科大学的余光创老师写了一个R包（即hexSticker[@ygc2025]），基于此可以方便的制作六边形徽标。
+
+<center>
+![余光创老师](images/ygc-2024.jpg){width="60%"}
+</center>
+
+## 2. hexSticker的安装
+
+```{r, eval = FALSE}
+remotes::install_github("emilioxavier/hexSticker")
+packageVersion("hexSticker")
+[1] ‘0.5.2’
+```
+
+之所以用emilioxavier/hexSticker [@emil2025]的原因是因为Emilio Xavier Esposito解决了如下问题：
+
+**通过CRAN安装，生成的hex sticker的左边缘和下边缘不完整（像被切掉了一点点）。**
+
+<center>
+![Emilio Xavier Esposito](images/EmilioXavierEsposito.jpg){width="60%"}
+</center>
+
+本着好玩的目的，我们也尝试生成我们公司的两个六边形徽标。
+
+## 3. 今卡生物的hex logo
+
+```{r}
+library(hexSticker)
+```
+
+```{r}
+#| warning: false
+genecard_bio <- "images/genecard-bio_logo.png"
+genecard_bio |> sticker(package = "GeneCard-Bio", 
+                        s_x = 1, 
+                        s_y = .75, 
+                        s_width = .4, 
+                        h_fill = "#F2F1EA", 
+                        p_color = "#692718", 
+                        p_family = "sans", 
+                        p_fontface = "italic", 
+                        p_size = 18, 
+                        filename = "images/genecard-bio_hex-logo.png")
+```
+
+<center>
+![](images/genecard-bio_hex-logo.png){width="60%"}
+</center>
+
+## 4. 今卡生物图像的hex logo
+
+```{r}
+#| warning: false
+genecard_bioimage <- "images/genecard-bioimage_logo.png"
+genecard_bioimage |> sticker(package = "GeneCard-BioImage", 
+                             s_x = 1, 
+                             s_y = .75, 
+                             s_width = .6, 
+                             h_fill = "#F2F1EA", 
+                             p_color = "#692718", 
+                             p_family = "sans", 
+                             p_fontface = "italic", 
+                             p_size = 13, 
+                             filename = "images/genecard-bioimage_hex-logo.png")
+```
+
+<center>
+![](images/genecard-bioimage_hex-logo.png){width="60%"}
+</center>
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

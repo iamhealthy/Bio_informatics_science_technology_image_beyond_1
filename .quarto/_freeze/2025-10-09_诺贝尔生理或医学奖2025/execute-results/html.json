@@ -1,0 +1,17 @@
+{
+  "hash": "5c6031ea500d4a03e5910f76f8344d34",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Nobel2025\nsubtitle: 诺贝尔生理或医学奖2025\ndate: 2025-10-09\ntoc-depth: 4\ntoc-expand: true\nlang: en\n\n---\n\n<center>\n![图源：https://www.nobelprize.org/all-nobel-prizes-2025/](images/Carrier_3-2.jpg){width=\"100%\"}\n</center>\n\n<center>\n![The image was exported using a custom groovy script equivalent to: QuPath v0.6.0: Analyze -> Tils & superpixels -> SLIC superpixel segmentation…; File -> Export images… -> Rendered RGB (with overlays)…](images/Carrier_3-2_slic.jpg){width=\"100%\"}\n</center>\n\n\n::: {.cell}\n\n```{.r .cell-code}\n// QuPath v0.6.0\n// Some technical detail\nrunPlugin('qupath.imagej.superpixels.SLICSuperpixelsPlugin', '{\"sigmaPixels\":5.0,\"spacingPixels\":1.0,\"maxIterations\":20,\"regularization\":0.25,\"adaptRegularization\":false}')\n```\n:::\n\n\n<center>\n![The image was exported using a custom groovy script equivalent to: QuPath v0.6.0: Analyze -> Calculate features -> Add intensity features…; Measure -> Show measurement maps; File -> Export images… -> Rendered SVG…](images/Carrier_3-2map.jpg){width=\"100%\"}\n</center>\n\n\n::: {.cell}\n\n```{.r .cell-code}\n// QuPath v0.6.0\n// Some technical detail\nrunPlugin('qupath.lib.algorithms.IntensityFeaturesPlugin', '{\"downsample\":1.0,\"region\":\"ROI\",\"tileSizePixels\":200.0,\"colorRed\":true,\"colorGreen\":false,\"colorBlue\":false,\"colorHue\":false,\"colorSaturation\":false,\"colorBrightness\":false,\"doMean\":true,\"doStdDev\":false,\"doMinMax\":false,\"doMedian\":false,\"doHaralick\":false,\"haralickDistance\":1,\"haralickBins\":32}')\n```\n:::\n\n\n[给我买杯茶](给我买杯茶.qmd)",
+    "supporting": [
+      "2025-10-09_诺贝尔生理或医学奖2025_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

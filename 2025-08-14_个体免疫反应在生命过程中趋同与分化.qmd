@@ -1,0 +1,32 @@
+---
+title: 免疫趋同与分化
+subtitle: 个体免疫反应在生命过程中趋同与分化
+date: 2025-08-14
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+## 人类生命过程中的免疫变异来源
+
+<img src="images/science.ady9543-f1.jpg" style="width: 100%; height: auto;">
+
+> Three ingredients create the strikingly variable immune trajectories observed across human populations: (A) genetic variation, (B) individual-scale generation of additional genetic diversity solely in lymphocytes, and (C) **collision** of these processes with a changing environment through life, triggering plastic responses that can have lasting effects.[@Metcalf2025]
+
+> 三种因素造就了在人类群体中观察到的显著变化的免疫轨迹：（A）遗传变异，（B）个体水平上仅在淋巴细胞中产生的额外遗传多样性，以及（C）这些过程与生命过程中变化的环境的**碰撞**，触发了具有持久影响的可塑性。[@Metcalf2025]
+
+"collision/碰撞"这个词用的好。
+
+一些经商业行为，需要花钱的，本可以避免的环境物质和身体的“collision/碰撞”，无论是思想层面、气味层面、皮肤层面、食物层面、或注射层面，需谨慎。
+
+你的身体与这些环境物质的“collision/碰撞”，到底会对生命过程，或生命过程中的免疫过程，无论是短期还是长期，产生什么影响呢？
+
+<img src="images/peptides.png" style="width: 100%; height: auto;">
+
+<img src="images/nad.png" style="width: 100%; height: auto;">
+
+<img src="images/eric.png" style="width: 100%; height: auto;">
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

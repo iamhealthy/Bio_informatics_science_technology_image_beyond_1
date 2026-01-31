@@ -1,0 +1,86 @@
+---
+title: 输出csv和txt
+subtitle: 输出detections的csv和txt格式文件
+date: 2025-12-26
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+对于QuPath项目图片的detections结果，有时候因为某种需要，就想输出逗号分隔（comma-separated）的csv格式文件，或者就想输出制表符分隔（tab-separated）的txt格式文件。
+
+<center>
+![](images/qupath-csv-txt.png){width="100%"}
+</center>
+
+## 1. 输出csv和txt格式文件
+
+参考如下代码：
+
+```
+// QuPath v0.6.0
+
+import qupath.lib.gui.tools.MeasurementExporter
+
+// #########################################
+// Export all detections as comma-separated file (.csv)
+// #########################################
+// Make the current image name as a list
+def entryList = [getProjectEntry()]
+
+// If the folder detections exist, do noting; else create the folder
+def outputPath = buildFilePath(PROJECT_BASE_DIR, "detections")
+mkdirs(outputPath)
+
+// Separate each measurement value in the output file with ","
+def separator = ","
+
+def csvName = getCurrentImageName() + "_detections.csv"
+def csvOutputFile = new File(buildFilePath(outputPath, csvName))
+
+// Create the measurementExporter and start the export
+def exporter = new MeasurementExporter()
+    .imageList(entryList)
+    .separator(separator)
+    .allDetections()
+    .exportMeasurements(csvOutputFile)
+
+println "${csvOutputFile} saved."
+
+// #########################################
+// Export all detections as tab-separated file (.txt)
+// #########################################
+def txtName = getCurrentImageName() + "_detections.txt"
+def txtOutputFile = new File(buildFilePath(outputPath, txtName))
+saveDetectionMeasurements("${txtOutputFile}")
+
+println "${txtOutputFile} saved."
+
+println "Done."
+```
+
+以上代码部分参考自[@MicroscopyRA2020]。
+
+确认下文件已经保存成功：
+```{r}
+#| eval: false
+# R v4.5.2
+outputPath <- "path/to/detections/"
+outputPath |> fs::dir_tree()
+
+path/to/detections/
+├── image1_detections.csv
+├── image1_detections.txt
+├── image2_detections.csv
+├── image2_detections.txt
+├── image3_detections.csv
+├── image3_detections.txt
+├── image4_detections.csv
+├── image4_detections.txt
+├── image5_detections.csv
+└── image5_detections.txt
+```
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

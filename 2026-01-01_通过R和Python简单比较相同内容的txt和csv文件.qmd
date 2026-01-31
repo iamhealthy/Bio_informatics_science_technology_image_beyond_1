@@ -1,0 +1,122 @@
+---
+title: R vs Python in txt and csv
+subtitle: 通过R和Python简单比较相同内容的txt和csv文件
+date: 2026-01-01
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+在2025-12-26我们通过QuPath的groovy script输出了detections的csv（comma-separated）格式文件和txt（tab-separated）格式文件（[QuPath：输出detections的csv和txt格式文件](2025-12-26_QuPath_输出detections的csv和txt格式文件.qmd)）。
+
+本着严谨的态度，还是应该（简单）比较下csv和txt格式文件的内容是否完全相同。
+
+我们尝试通过R和Python简单比较，另外：
+
+- 比较R代码的两种风格。
+- 比较R代码和Python代码。
+
+<center>
+![](images/qupath-csv-txt-r-python.png){width="60%"}
+</center>
+
+## 1. 通过R简单比较
+
+```{r}
+#| warning: false
+
+# R v4.5.2
+
+# Load packages
+readr |> library()
+# or
+library(readr)
+
+# ===== Read csv file =====
+csv_file_path <- "raw_data/AsPC LZ #1 GEM  Ker488 FN 568 pN 647 _01.vsi - 20x_detections_trimmed.csv"
+
+csv_file <- csv_file_path |> 
+    read_csv(show_col_types = FALSE)
+# or
+csv_file <- read_csv(csv_file_path, show_col_types = FALSE)
+
+# ===== Read txt file =====
+txt_file_path <- "raw_data/AsPC LZ #1 GEM  Ker488 FN 568 pN 647 _01.vsi - 20x_detections_trimmed.txt"
+
+txt_file <- txt_file_path |> 
+    read_tsv(show_col_types = FALSE)
+# or
+txt_file <- read_tsv(txt_file_path, show_col_types = FALSE)
+
+# ===== some comparisons =====
+# Compare dimention
+csv_file |> dim() # rows columns
+# or
+dim(csv_file)
+
+txt_file |> dim()
+# or
+dim(txt_file)
+
+(csv_file |> dim()) == (txt_file |> dim()) # check if they are the same
+# or
+dim(csv_file) == dim(txt_file)
+
+# Compare column names
+(csv_file |> names()) == (txt_file |> names()) # check if the column names are the same
+# or
+names(csv_file) == names(txt_file)
+
+# Compare two specific positions/cells
+csv_file[5, 10] == txt_file[5, 10] # check if the content at row 500 and column 10 is the same
+csv_file[10, 30] == txt_file[10, 30]
+```
+
+## 2. 通过Python简单比较
+
+```{r}
+#| echo: false
+
+# R v4.5.2
+
+# This will ensure that python code will be executed in the conda environment of base.
+
+reticulate |> library() # load reticulate package
+"base" |> use_condaenv() # use conda base environment
+```
+
+```{python}
+#| warning: false
+
+# Python 3.13.9
+
+# Load packages
+import pandas as pd
+
+# ===== Read csv file =====
+csv_file_path = "raw_data/AsPC LZ #1 GEM  Ker488 FN 568 pN 647 _01.vsi - 20x_detections_trimmed.csv"
+
+csv_file = pd.read_csv(csv_file_path)
+
+# ===== Read txt file =====
+txt_file_path = "raw_data/AsPC LZ #1 GEM  Ker488 FN 568 pN 647 _01.vsi - 20x_detections_trimmed.txt"
+
+txt_file = pd.read_table(txt_file_path)
+
+# ===== Some comparisons =====
+# Compare dimention
+print(csv_file.shape)  # (rows, columns)
+print(txt_file.shape)
+csv_file.shape == txt_file.shape # check if they are the same
+
+# Compare column names
+csv_file.columns == txt_file.columns
+
+# Compare two specific position/cell
+csv_file.iloc[4, 10] == txt_file.iloc[4, 11] # check if the content at row 500 and column 10 is the same
+csv_file.iloc[9, 30] == csv_file.iloc[9, 30]
+```
+
+R和Python都说明csv格式和txt格式文件的内容完全相同。
+
+[给我买杯茶🍵](给我买杯茶.qmd)

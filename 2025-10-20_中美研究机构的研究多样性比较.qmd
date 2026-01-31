@@ -1,0 +1,36 @@
+---
+title: 中美研究多样性
+subtitle: 中美研究机构的研究多样性比较
+date: 2025-10-20
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+## 1. 中美研究机构的研究多样性比较
+
+在领英看到一个作者（Chiaki Miura）发布的一条[信息](https://www.linkedin.com/feed/update/urn:li:activity:7385648249640161280/)，特异比较和展示了中美研究机构的研究多样性。
+
+<center>
+![https://www.linkedin.com/in/chiaki-miura-265b15264/](images/author.png)
+</center>
+
+下图是比较后的结果：
+
+<center>
+![我们能否仅通过压缩一个机构的文献库来衡量其研究多样性？如果压缩得容易，说明写作更加集中，即许多论文重复使用相似的短语、方法、和概念。<mark>如果压缩困难，说明写作内容更加多样化，即有一个充满不可预测思想的学术生态系统。</mark>CAS：中国科学院大学；Electronic Science and Technology of China：电子科技大学]。
+</center>
+
+说明：作者收集的是2010-2015年的摘要做的分析[@Miura2025]。
+
+如何解读这个结果？😎
+
+UC Berkeley（加州大学伯克利分校）的论文数量和研究多样性整体都很高，也难怪UC说：
+
+> University of California sets world record with five Nobel Prizes in one week[@UC2025]😄.
+
+> 加利福尼亚大学在一周内创下五个诺贝尔奖的世界纪录[@UC2025]😄。
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

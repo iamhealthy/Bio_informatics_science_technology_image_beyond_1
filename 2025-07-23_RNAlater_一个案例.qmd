@@ -1,0 +1,28 @@
+---
+title: RNAlater案例
+subtitle: RNAlater_一个案例
+date: 2025-07-23
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+小张同学是上海市徐汇区枫林桥地区（感兴趣的话，可以搜搜，看到底是哪个高校）一个学校的在读硕士生，他最近对**组织样本保存和运输对于RNA质量的影响**有了真切的体会。
+
+## 1. 组织RNA降解了😭
+
+小张同学第一次的操作流程：
+
+小鼠皮下植瘤的肿瘤 -> 取样 -> 立即干冰速冻 -> 当天干冰运输 -> 公司进行RNA抽提 -> RNA评级为<mark>**D**（最低等级，质量完全不满足建库测序要求）</mark>。
+
+<img src="images/bad.png" style="width: 100%; height: auto;">
+
+## 2. 使用RNAlater后，组织RNA评级为A😃👋
+
+小张同学重整旗鼓，第二次的操作流程：
+
+小鼠皮下植瘤的肿瘤 -> 取样 -> 立即浸泡于1 mL RNAlater -> 4℃过夜 -> -80℃保存再过夜 -> 干冰运输 -> 公司进行RNA抽提 -> RNA评级为<mark>**A**（最高等级，质量满足建库测序要求）</mark>。
+
+<img src="images/good.png" style="width: 100%; height: auto;">
+
+[给我买杯茶🍵](给我买杯茶.qmd)

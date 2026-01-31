@@ -1,0 +1,111 @@
+project:
+  type: book
+
+book:
+  title: 【生物】信息、科技、和图像分析（1）
+  subtitle: 内容是个人的，因此是片面的
+  author: iAmHealthy
+  date: last-modified
+  favicon: qupath-style.png
+  page-navigation: true
+  cover-image: qupath-style.png
+  page-footer: 
+    center: "Copyright 2026 iAmHealthy"
+    background: dark
+    border: true
+
+  navbar: 
+    logo: qupath-style.png
+
+  chapters:
+    - index.qmd
+
+    - part: R
+      chapters:
+        - 2025-08-12_ggplot2等高线图版本的银河系.qmd
+        - 2025-08-15_ggplot2版本的银河系-并计算特定等高线的面积.qmd
+        - 2025-08-21_ggplot2版本的银河系-并将等高线展示在HE图上.qmd
+        - 2025-08-23_ggplot2版本的银河系-无细胞核面积的加权-vs-细胞核面积的加权.qmd
+        - 2025-09-05_分别基于R的ggplot2和tidyplots包做的一个柱状图.qmd
+        - 2025-09-09_关于写作的两个观点.qmd
+        - 2025-09-15_一切皆结核.qmd
+        - 2025-09-26_mrxs格式切片信息了解.qmd
+        - 2025-10-29_Tidyverse的昨天今天和明天.qmd
+        - 2025-11-17_今卡生物和今卡生物图像的六边形徽标.qmd
+        - 2025-12-03_QuPath风格的logo.qmd
+        - 2026-01-01_通过R和Python简单比较相同内容的txt和csv文件.qmd
+        - 2026-01-02_happy-new-year.qmd
+        - 2026-01-21_图书馆借的书产生了逾期费.qmd
+
+    - part: QuPath
+      chapters:   
+        - 2025-07-29_银河系起源于HE.qmd
+        - 2025-09-30_用QuPath打开mrxs格式切片图像的问题.qmd
+        - 2025-10-01_庆祝国庆2025.qmd
+        - 2025-10-09_诺贝尔生理或医学奖2025.qmd
+        - 2025-10-15_世界上最长寿的啮齿动物种类.qmd
+        - 2025-11-05_QuPath的Omnipose插件的安装和运行.qmd
+        - 2025-12-16_通过groovy-script改变多通道图片的通道名称和颜色.qmd
+        - 2025-12-26_QuPath_输出detections的csv和txt格式文件.qmd
+        - 2026-01-13_格陵兰鲨是最长寿的脊椎动物.qmd
+        - 2026-01-17_（通过script获得）pixel size.qmd
+        - 2026-01-28_通过QuPath用ImageJ进行阈值设定.qmd
+
+    - part: 技术相关
+      chapters:
+        - 2025-07-23_RNAlater_一个案例.qmd
+        - 2025-08-02_做组织病理切片染色时-为什么需要用到尽量大的组织块.qmd
+        - 2025-08-05_画生物医学示意图的在线资源.qmd    
+        - 2025-09-02_文献-Nature-Cell-Biology建议的生物图像存储网站.qmd
+        - 2026-01-06_启动ImageJ的6种方式.qmd
+        - 2026-01-09_Fiji稳定版和最新版的区别.qmd
+
+    - part: 科学相关
+      chapters:
+        - 2025-07-25_很多新2A肽序列-及P2A肽介导的肽键跳跃效率.qmd
+        - 2025-08-01_两个长长长尾巴的病毒.qmd
+        - 2025-08-14_个体免疫反应在生命过程中趋同与分化.qmd
+        - 2025-08-19_一种高效鉴定病原抗原表位的新方法PathMHC.qmd
+        - 2025-08-22_干扰素种类诱导和信号传导.qmd
+        - 2025-08-24_疫苗在抗生素抗性病原细菌的重要性.qmd
+        - 2025-08-25_肿瘤是异质的_非转移精原细胞癌的肿瘤相关巨噬细胞表型和分布.qmd
+        - 2025-09-11_遗传背景多样的协作杂交小鼠群体.qmd
+        - 2025-09-17_STING佐剂化外膜囊泡纳米粒子疫苗对抗绿脓杆菌.qmd
+        - 2025-09-19_3个遗传背景多样的小鼠群体.qmd
+        - 2025-09-20_黑腹果蝇的Dscam1可以产生38016个不同的蛋白.qmd
+        - 2025-12-08_AI在科研文章写作中的贡献-两个实例和现状.qmd
+    
+    - part: 生物图像分析流程
+      chapters:
+        - 2025-07-21_客观的HE或PAS切片图像自动分析.qmd
+        - 2025-07-22_客观的免疫荧光图像自动分析.qmd
+        - 2025-08-08_多重免疫荧光空间蛋白组学切片染色的细胞空间距离分析.qmd
+        - 2025-08-30_电泳条带强度值分析.qmd
+        - 2025-11-11_细菌长度和宽度测量.qmd
+        - 2025-11-25_胞内亮点斑点的测量.qmd
+
+    - part: 其它
+      chapters:
+        - 2025-08-27_Hadley对RStudio公司的一种评价.qmd
+        - 2025-08-31_生物医学文章发表的几个历史干货.qmd
+        - 2025-10-20_中美研究机构的研究多样性比较.qmd
+        - 2025-10-22_对生信分析时间的合理看法.qmd
+        - 2025-12-23_关于获得顶级高光表现的最新发现.qmd
+
+        - 给我买杯茶.qmd
+
+bibliography: references.bib
+csl: science.csl
+
+highlight-style: pygments
+
+format:
+  html:
+    theme:
+      light: Sandstone
+      dark: Solar
+    code-copy: true
+    number-depth: 1
+
+
+

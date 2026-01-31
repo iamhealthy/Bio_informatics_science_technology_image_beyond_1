@@ -1,0 +1,24 @@
+---
+title: 细菌长度和宽度
+subtitle: 细菌长度和宽度测量
+date: 2025-11-11
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+## 1. 理论基础
+
+细菌形态的变化可能受制于营养物质可及性、抗生素暴露、基因突变等因素[@Ojkic2019]，因此可以为一个评价指标[@Ojkic2019],[@Bible2008]。
+
+## 2. 流程和实例
+
+<div style="text-align: center;">
+  <img src="./images/Strain-length_FIJI_2025-11-08_cn.png" style="max-width: 100%; height: auto">
+</div>
+
+**说明**：示例图片来自Omnipose [@Cutler2022]，且未按照等比例展示。流程部分内容参考自[@bsm2025]。
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

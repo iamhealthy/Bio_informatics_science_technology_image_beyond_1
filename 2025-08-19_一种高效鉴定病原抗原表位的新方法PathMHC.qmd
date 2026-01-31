@@ -1,0 +1,44 @@
+---
+title: PathMHC病原表位
+subtitle: 一种高效鉴定病原抗原表位的新方法：PathMHC
+date: 2025-08-19
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+<img src="images/jem_title.png" style="width: 100%; height: auto">
+
+留意到一个鉴定病原抗原表位的新方法流程，即**PathMHC**[@Leddy2025]（这是对应的评论[@Leddy2024]和预印版[@Willems2025]），该方法结合质谱和生信步骤。
+
+通过该方法流程鉴定的病原抗原表位，可以用于之后的疫苗候选抗原测试。
+
+## 1. PathMHC的原理
+
+这个是原文[@Leddy2025]的图。
+
+<img src="images/workflow.png" style="width: 100%; height: auto">
+
+这个来自原文[@Leddy2025]的图片摘要（graphic abstract）。
+
+<img src="images/graphic_abstract.png" style="width: 100%; height: auto">
+
+这个是评论[@Willems2025]的图，特别显示了用于疫苗候选抗原的目的。
+
+<img src="images/workflow_1.png" style="width: 100%; height: auto">
+
+这3个图对比着看，更容易理解。
+
+> <mark>首先</mark>，每个样本被分成两部分，其中一部分（包括感染组和未感染组）通过非靶向质谱（DDA）进行分析。
+
+> <mark>其次</mark>，非靶向质谱数据通过生信流程进行分析，该流程找到感染细胞特异的前体离子，而这些前体在未感染对照组中不存在，并排除了在非靶向分析中已识别的离子（见材料与方法部分）。
+
+> <mark>最后</mark>，这些推测为感染细胞特异的前体离子被视作清单，在剩余的每个样本上进行靶向质谱分析，采用平行反应监测（PRM）来识别先前在非靶向分析中漏掉的病原衍生肽段。
+
+## 2. PathMHC解决的问题
+
+> 一种<mark>新颖</mark>的方法，称为PathMHC，该方法先对非靶向质谱数据进行计算分析，然后进行靶向质谱分析，从而比单独使用非靶向方法<mark>更高效</mark>地发现新型病原体来源的MHC肽段。
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

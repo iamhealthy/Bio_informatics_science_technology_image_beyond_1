@@ -1,0 +1,129 @@
+---
+title: 最长寿鲨
+subtitle: 格陵兰鲨是最长寿的脊椎动物
+date: 2026-01-13
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+<center>
+![图源：<https://commons.wikimedia.org/wiki/File:Greenland_shark_profile.jpg>](images/Greenland_shark_profile.jpg){width="100%"}
+</center>
+
+## 1. 格陵兰鲨的寿命
+
+> The Greenland shark is the <mark>longest-living vertebrate</mark> on Earth, with an estimated lifespan of <mark>up to 400 years</mark>. [@Fogg2026]
+
+> ... the largest animal (502 cm) (i.e. Greenland shark) to be <mark>392 ± 120 years old</mark>. [@Nielsen2016]
+
+## 2. 如何知道格陵兰鲨的寿命？
+
+> <mark>Radiocarbon dating of eye lens nuclei</mark> from 28 female Greenland sharks ...[@Nielsen2016]
+
+## 3. 格陵兰鲨什么时候性成熟？
+
+> the age at <mark>sexual maturity to be at least 156 ± 22 years</mark>, and the largest animal (502 cm) to be 392 ± 120 years old. [@Nielsen2016]
+
+## 4. QuPath groovy script for fun
+
+<center>
+![Images created via QuPath.](images/Greenland_shark_profile.png){width="100%"}
+</center>
+
+<center>
+![Screen recorded via uTools &rarr; 区域录屏。](images/20260113_202844.mp4){width="100%"}
+</center>
+
+这是groovy script of QuPath：
+
+```
+// QuPath v0.6.0
+
+import qupath.lib.common.GeneralTools
+import qupath.lib.objects.PathObjects
+import qupath.lib.roi.ROIs
+
+// Remove all existed objects if there are any
+selectAllObjects()
+removeAllObjects()
+
+// Set image type
+setImageType("OTHER")
+
+// Sleep for 30 seconds for opening screen recording
+//Thread.sleep(30000)
+
+// ****************************************
+// Show self-introduction (i.e. three sentences)
+// ****************************************
+
+// Define image plane
+def plane = getCurrentViewer().getImagePlane()
+
+// Select greenland shark
+def shark_x = [242, 353, 489, 676, 755, 720, 529, 341, 248, 181, 197] as double[]
+def shark_y = [154, 169, 200, 309, 390, 466, 445, 354, 275, 214, 181] as double[]
+
+def shark_roi = ROIs.createPolygonROI(shark_x, shark_y, plane)
+def shark_anno = PathObjects.createAnnotationObject(shark_roi)
+
+addObjects(shark_anno)
+
+// 1st sentence
+Thread.sleep(2000)
+
+def line1_roi = ROIs.createPointsROI(300, 80, plane)
+def line1_anno = PathObjects.createAnnotationObject(line1_roi)
+
+def sentence_1 = "I'm greenland shark."
+line1_anno.setName(sentence_1)
+
+addObject(line1_anno)
+
+// 2nd sentence
+Thread.sleep(2000)
+
+def line2_roi = ROIs.createPointsROI(600, 150, plane)
+def line2_anno = PathObjects.createAnnotationObject(line2_roi)
+
+def sentence_2 = "I can have a lifespan up to 400 years (the longest-living vertebrate)！"
+line2_anno.setName(sentence_2)
+
+addObject(line2_anno)
+
+// 3rd sentence
+Thread.sleep(2000)
+
+def line3_roi = ROIs.createPointsROI(300, 550, plane)
+def line3_anno = PathObjects.createAnnotationObject(line3_roi)
+
+def sentence_3 = "I can start to have kids when I am roughly 156 years old."
+line3_anno.setName(sentence_3)
+
+addObject(line3_anno)
+
+Thread.sleep(2000)
+
+// Select all objects
+selectAllObjects()
+
+// ****************************************
+// Export as raster image with overlays (annotations)
+// ****************************************
+
+def viewer = getCurrentViewer()
+def name = getCurrentImageNameWithoutExtension()
+def path_png = buildFilePath("d://GeneCard//00_Post//52_greenland-shark-400-years",
+        "images",
+        "${name}.png"
+)
+
+writeRenderedImage(viewer, path_png)
+
+println 'Done!'
+```
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

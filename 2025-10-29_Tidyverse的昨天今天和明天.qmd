@@ -1,0 +1,88 @@
+---
+title: Tidyverse
+subtitle: Tidyverse的昨天、今天、和明天
+date: 2025-10-29
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+Hadley Wickham在2025-10-09写了一篇文章，题目是“A personal history of the tidyverse”[@Hadley2025]。
+
+<center>
+![The tidyverse is an opinionated collection of R packages designed for data science.](images/tidyverse.png){width="60%"}
+</center>
+
+我们认真的阅读，并整理出一个读书笔记（全是引用），或理解为知识点。每一条都可能是“干货”。😎
+
+> tidyverse was named in 2016.
+
+> I was very lucky to have access to computers from a very early age (around 10), thanks to my dad, and this led to a general interest in computers and programming.
+
+<center>
+![Hadley Wickham and his dad Brian Wickham, who passed away in 2023](images/hadley-and-his-dad.webp){width="60%"}
+</center>
+
+> ...my undergraduate statistics degree at the University of Auckland (New Zealand), the birthplace of R.
+
+> I started using R (v1.6.2) in 2003.
+
+> ... my dad had done his PhD at Cornell University (the USA) (with only two years).
+
+> ... to do my PhD (statistics, 2004 - 2008) ... Iowa State University (ISU) (the USA)...
+
+> At the same time (PhD) I was reading The Grammar of Graphics (by [Leland Wilkinson](https://en.wikipedia.org/wiki/Leland_Wilkinson)) ...only implementation available at the time was very expensive, so I decided I'd have to go at creating my own in R. That led to ggplot and later ggplot2.
+
+<center>
+![Leland Wilkinson, who passed away in 2021](images/Leland_Wilkinson.png){width="60%"}
+</center>
+
+> After graduating from ISU, I got a job at Rice University (2008 - 2012) ... teaching "Introduction to Data Analysis" ... year-to-year ... led to the creation of the stringr (2009) and lubridate (2010) packages.
+
+> ... the popularity of ggplot2 continued to rise ... carve out time to work on it ... not valued by my department.
+
+> During my time at Rice I had very little success with grants ... I was fortunate to get a couple of small grants from BD (a medical technolgy company) and Google to continue my mork on plyr, reshape, and ggplot2.
+
+> I was developing quite a few packages ... invest in tooling ... led to the creation of the testthat (2009) and devtools (2011) packages ... and maintenance of the roxygen2 package (2011).
+
+> In 2012, I left Rice (University) for RStudio (now Posit) ... where the practice of software engineering was valued and I no longer needed to produce papers or find grant money.
+
+<center>
+![JJ Allaire, the founder of RStudio (https://en.wikipedia.org/wiki/Joseph_J._Allaire)](images/JJ_Allaire_at_Web_2.0.jpg){width="60%"}
+</center>
+
+> my first few years at RStudio led to an explosion of new packages ... The most important new package was dplyr.
+
+> I took over maintenance of the DBI and RSQLite packages ..., created bigrquery, and forked RPostgres ... worked on a range of other data sources including web scraping (rvest), Excel (readxl), ractangular text files (readr), SPSS/SAS/Stata (haven), and XML (xml2) ... relied on tight integration with existing C libraries.
+
+> Around this time I started to become particularly well known in the R community.
+
+> ... I don't like: it (the name tidyverse) implies that everything outside the tidyverse is the messyverse.
+
+> ... all the books I write have a dual production model: a free HTML version that I produce and a paid version produced by a commercial publisher.
+
+> R for Data Science proved to be extremely popular ... has been translated into including Russia, Polish, Japanese, Chinese (traditional) and Chinese (simplified).
+
+> I created the tibble, an extention of the data frame ...
+
+> I first implemented the pipe in dplyr in Oct 2013 and called it %.% ... use magrittr (%>%) ... with the maturity of the base pipe, the tidyverse is gradually moving away from %>% towards |>.
+
+> ... theory is really important but experience taught us that few R users wanted to learn it.
+
+> I'm pretty sure the first hex logo was magrittr's, designed by Stefan in December 2014.
+
+> This (tidyverse) wouldn't have been possible without Posit (former RStudio), which has funded this work as part of its public benefit corporation mission. I feel tremendously lucky to work at an organization whose mission so closely aligns with my own.
+
+> The mission of the (tidyverse) team is broad and extends well beyond the tidyverse: we want to make R the best environment for doing data science ... we love R, believe in it, and believe that you have to stay focused if you want to have an impact.
+
+> ... testthat for unit testing ... pkgdown to make package websites ... roxygen2 to generate documentation.
+
+> Within the tidyverse team, the tidymodels team has a narrower mission: improving the tools data scientists need to do statistical modelling and machine learning.
+
+> Positron is a new integrated development environment (IDE) for data science, produced by the same team that created RStudio.
+
+> Looking ahead, I'm more excited than ever about the future of R and the the tidyverse.
+
+> I still love R, love programming, and most importantly, love working with this incredible community.
+
+[给我买杯茶🍵](给我买杯茶.qmd)

@@ -1,0 +1,50 @@
+---
+title: 长尾病毒
+subtitle: 两个长长长(zhang chang chang)尾巴的病毒
+date: 2025-08-01
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+笔者看到两个病毒的结构图片和/或感染宿主细胞的过程，让没有病毒相关基础的笔者眼前一亮，因此在这里展示出来。
+
+这两个病毒分别是：
+
+- 1. 感染分枝杆菌(mycobacteria)的噬菌体mycobacteriophage Douge,分离自中国台湾新竹(Hsinchu，Taiwan，China)的土壤中[@Maharana2025]。该文章最早上线于2025-07-24。
+- 2. 感染海洋鞭毛虫的巨型病毒PelV-1，分离自北太平洋亚热带环流中的表层海域("the epipelagic zone in the North Pacific Subtropical Gyre")[@Gajigan2025]。该文章最早上线于2025-07-19。
+
+## 1. Mycobacteriophage Douge
+
+### 1.1 病毒的样子和“身高”
+
+<p style="text-align: center;">
+<img src="images/mycobacteriophage_shape.png" style="width: 80%; height: auto;">
+</p>
+
+这种样子的病毒称为siphophage (有一条长长的、灵活的、不收缩的尾巴）。这个病毒的“身高”是400 nm。
+
+### 1.2 感染分枝杆菌的过程
+
+<p style="text-align: center;">
+<img src="images/mycobacteriophage_infect.png" style="width: 80%; height: auto;">
+<img src="images/mycobacteriophage_infect_schematic.png" style="width: 80%; height: auto;">
+</p>
+
+病毒把自己的核酸“注射”进分枝杆菌时，其形状没有明显的变化。
+
+## 2. PelV-1
+
+### 2.1 病毒的样子和“身高”
+
+<p style="text-align: center;">
+<img src="images/PelV-1_shape.png" style="width: 80%; height: auto;">
+</p>
+
+病毒的“脑袋”（capsid/衣壳）长达216 nm (0.2 μm)，尾巴(tail)长达2292 nm (2.3 μm)，所以“身高”是2.5 μm。
+
+文章作者声称，其尾巴是<mark>“迄今最长的病毒尾巴/the longest virus appendage described to date”</mark>。
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

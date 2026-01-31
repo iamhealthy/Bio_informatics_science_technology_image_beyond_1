@@ -1,0 +1,47 @@
+---
+title: 文章发表历史干货
+subtitle: 生物医学文章发表的几个历史"干货"
+date: 2025-08-31
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+最近留意到一个2023年发表的一个文章/essay [@Sever2023]。作者是Richard Sever。
+
+![](images/PLoS%20Biol.png){width="100%" height="auto"}
+
+## 1. 关于作者Richard Sever
+
+![](images/Richard_Sever.png){width="100%" height="auto"}
+
+通过[@Sever2023]这个文章，知道作者来自冷泉港实验室。
+
+通过作者的Bluesky账号，知道<mark>作者是bioRxiv和medRxiv的联合创始人</mark>；同时，作者是openRxiv的首席科学和战略官。
+
+## 2. 什么是openRxiv？
+
+> <mark>openRxiv is an independent non-profit, the new organizational home for bioRxiv and medRxiv</mark>,
+enabling researchers to instantly share groundbreaking findings with the global scientific community.
+
+引自[openRxiv官网](https://openrxiv.org/)。
+
+## 3. 这个文章的若干“干货”或“知识点”
+
+![**图1：科学出版的时间线。**该时间线展示了科学出版历史中的几个重要里程碑，包括多个期刊的创刊。它并非旨在全面涵盖所有里程碑。为了简明起见，未显示一些关键事件，如<mark>《Nature Genetics》的创刊（1992年，Nature的第一个成功的衍生期刊）</mark>、<mark>BioMed Central的成立（2000年，第一个开放获取出版社）</mark>、<mark>F1000R的创办（2013年，第一个出版后（post-publication）同行评审）</mark>以及<mark>PLOS ONE的创刊（2004年，第一个超大期刊（mega journal））</mark>。这些也应被视为重要里程碑。时间线还显示了外部同行评审的实施进程。<mark>同行评审最早出现在18世纪初，但直到20世纪末才成为标准</mark>。预印本服务器（例如arXiv和bioRxiv）的推出使得科学文章<mark>再次</mark>可以在没有正式同行评审的情况下公开。在图中，虚线表示同行评审的存在，破折线表示其开始变得更为普及，而<mark>实线</mark>则表示它在科研传播中几乎是普遍存在的。](images/journal.pbio.3002234.g001.PNG){width="100%" height="auto"}
+
+> ... articles are critical not only for communication between scientists but also for them to demonstrate their productivity and thereby secure grants, jobs, and promotions in a <mark>hypercompetitive academic environment</mark>.
+
+> Up until the 17th century, scientific discoveries were communicated primarily in <mark>private letters and monographs</mark>.
+
+> <mark>The first scientific journal—Philosophical Transactions of the Royal Society—was launched in 1665 by Henry Oldenburg</mark> (Journal Des Sçavans was launched earlier the same year but was broader in scope).
+
+> In 1850, there were approximately <mark>1,400 journals</mark>; come the 21st century the number had risen to <mark>more than 20,000</mark>.
+
+> Journals continued to proliferate into the early 21st century, with a series of mergers and acquisitions among the big commercial publishers resulting in a <mark>“big five”—Springer Nature, Elsevier, John Wiley, Sage, and Taylor & Francis</mark>—controlling most of the industry.
+
+> In fact, <mark>the practice of consulting external referees was only introduced in the 18th century</mark>...
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

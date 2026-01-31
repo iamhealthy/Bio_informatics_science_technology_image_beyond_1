@@ -1,0 +1,91 @@
+---
+title: 最长寿啮齿动物
+subtitle: 世界上最长寿的啮齿动物种类
+date: 2025-10-15
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+![](images/science.aeb6125-f1.jpg){width="100%"}
+
+## 1. 裸鼹鼠（naked mole rat，*Heterocephalus glaber*）的寿命
+
+读到一篇关于探讨裸鼹鼠的cGAS和抗衰老/anti-aging的研究论文[@Chen2025]和对应的评论[@Martinez2025]。
+
+研究论文[@Chen2025]提到：
+
+> The naked mole-rat (*Heterocephalus glaber*) is an extraordinarily long-lived rodent with <mark>a maximum life span of ∼37 years</mark>.
+
+对应的评论[@Martinez2025]提到：
+
+> The naked mole rat (*Heterocephalus glaber*) is the longest-lived rodent, with <mark>a maximum life span of nearly 40 years</mark>.
+
+对该推文的笔者来说，算一个知识点，所以贴出来。
+
+## 2. QuPath for fun
+
+纯粹为了好玩，我们通过个性化groovy脚本在QuPath中标注裸鼹鼠的寿命特点。
+
+<center>
+![](images/science.aeb6125-f1_qupath.jpg){width="100%"}
+
+![批注大概从第8秒开始。](images/science.aeb6125-f1_qupath_video.mp4)
+</center>
+
+```
+// QuPath v0.6.0
+
+import qupath.lib.objects.PathObjects
+import qupath.lib.roi.ROIs
+
+// Set image type
+setImageType('OTHER')
+
+// Remove all existed objects
+selectAllObjects()
+removeAllObjects()
+
+// Sleep for 30 seconds
+Thread.sleep(30000)
+
+// Draw a line (1st)
+def line_x1 = 592; line_x2 = 724
+def line_y1 = 835; line_y2 = 457
+def plane = getCurrentViewer().getImagePlane()
+def line1_roi = ROIs.createLineROI(line_x1, line_y1, line_x2, line_y2, plane)
+def line1_anno = PathObjects.createAnnotationObject(line1_roi)
+addObject(line1_anno)
+
+// Sleep for 2 seconds
+Thread.sleep(2000)
+
+// Draw another line (2nd)
+def line_x3 = line_x2; line_x4 = 2500
+def line_y3 = line_y2; line_y4 = line_y2
+def line2_roi = ROIs.createLineROI(line_x3, line_y3, line_x4, line_y4, plane)
+def line2_anno = PathObjects.createAnnotationObject(line2_roi)
+addObject(line2_anno)
+
+// Sleep for 2 seconds
+Thread.sleep(2000)
+
+// Set a name to the 2nd line
+def text = "I (naked mole rat/裸鼹鼠) am the longest-lived rodent, with a maximum life span of nearly 40 years :)"
+def text_annotation = text
+def text_annotation_obj = PathObjects.createAnnotationObject(line2_roi)
+text_annotation_obj.setName(text_annotation)
+addObject(text_annotation_obj)
+
+// Sleep for 2 seconds
+Thread.sleep(2000)
+
+// Select all objects
+selectAllObjects()
+
+println("Done!")
+```
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

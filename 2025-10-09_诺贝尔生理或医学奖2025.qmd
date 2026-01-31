@@ -1,0 +1,35 @@
+---
+title: Nobel2025
+subtitle: 诺贝尔生理或医学奖2025
+date: 2025-10-09
+toc-depth: 4
+toc-expand: true
+lang: en
+
+---
+
+<center>
+![图源：https://www.nobelprize.org/all-nobel-prizes-2025/](images/Carrier_3-2.jpg){width="100%"}
+</center>
+
+<center>
+![The image was exported using a custom groovy script equivalent to: QuPath v0.6.0: Analyze -> Tils & superpixels -> SLIC superpixel segmentation…; File -> Export images… -> Rendered RGB (with overlays)…](images/Carrier_3-2_slic.jpg){width="100%"}
+</center>
+
+```
+// QuPath v0.6.0
+// Some technical detail
+runPlugin('qupath.imagej.superpixels.SLICSuperpixelsPlugin', '{"sigmaPixels":5.0,"spacingPixels":1.0,"maxIterations":20,"regularization":0.25,"adaptRegularization":false}')
+```
+
+<center>
+![The image was exported using a custom groovy script equivalent to: QuPath v0.6.0: Analyze -> Calculate features -> Add intensity features…; Measure -> Show measurement maps; File -> Export images… -> Rendered SVG…](images/Carrier_3-2map.jpg){width="100%"}
+</center>
+
+```
+// QuPath v0.6.0
+// Some technical detail
+runPlugin('qupath.lib.algorithms.IntensityFeaturesPlugin', '{"downsample":1.0,"region":"ROI","tileSizePixels":200.0,"colorRed":true,"colorGreen":false,"colorBlue":false,"colorHue":false,"colorSaturation":false,"colorBrightness":false,"doMean":true,"doStdDev":false,"doMinMax":false,"doMedian":false,"doHaralick":false,"haralickDistance":1,"haralickBins":32}')
+```
+
+[给我买杯茶🍵](给我买杯茶.qmd)

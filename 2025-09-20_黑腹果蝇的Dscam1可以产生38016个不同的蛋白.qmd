@@ -1,0 +1,37 @@
+---
+title: Dscam1产生38106个蛋白
+subtitle: 黑腹果蝇的Dscam1可以产生38016个不同的蛋白
+date: 2025-09-20
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+## 1. 黑腹果蝇（*Drosophila melanogaster*）*Dscam1*转录本多态性
+
+![](images/plos-bio-2025.png){width="100%"}
+
+文献[@Dong2025][@Dong2023]提到黑腹果蝇的*Dscam1*可以产生<mark>38016个不同的转录本和对应的蛋白</mark>。
+
+笔者很惊讶，所以在这里分享一下。
+
+<center>
+![The variable exons or domains are shown in color, while the constant exons or domains are shown in 
+gray./可变外显子或结构域以彩色标示，恒定外显子或结构域则以灰色标示。](images/diagram.png){width="100%"}
+</center>
+
+> The Drosophila melanogaster Dscam1 gene can generate <mark>38,016 closely related single-transmembrane proteins of the immunoglobulin superfamily</mark> via mutually exclusive alternative splicing of 12 exon 4s, 48 exon 6s, 33 exon 9s, and 2 exon 17s ...
+
+> 黑腹果蝇（Drosophila melanogaster）的 Dscam1 基因可通过其12个外显子4变体、48个外显子6变体、33个外显子9变体及2个外显子17变体之间的互斥性选择性剪接，产生<mark>38,016种结构高度相似、属于免疫球蛋白超家族的单次跨膜蛋白</mark>……
+
+```{r}
+12 * 48 * 33 * 2
+```
+
+至于为什么需要这么多的蛋白变体，如文章题目所示，是因为“fitness and immunity”。
+
+您感兴趣的话，可以详读该文献[@Dong2025]。
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

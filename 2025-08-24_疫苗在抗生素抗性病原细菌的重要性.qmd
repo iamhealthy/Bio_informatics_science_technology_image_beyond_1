@@ -1,0 +1,37 @@
+---
+title: 疫苗和病原菌
+subtitle: 疫苗在抗生素抗性病原细菌的重要性
+date: 2025-08-24
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+单纯觉得这个综述[@vaccines13090893]的两个配图很具有概括性，所以贴出来。
+
+## 1. 两个配图
+
+<img src="images/vaccines-13-00893-g001.png" style="width: 100%; height: auto;">
+
+多数疫苗以预防为目的，也有以治疗为目的的疫苗或疫苗治疗方案。
+
+多数抗生素以治疗为目的，也有以预防为目的的抗生素预防方案。
+
+<img src="images/vaccines-13-00893-g002.png" style="width: 100%; height: auto;">
+
+最起码能知道这些病原菌长什么样（长、短、胖、瘦、是否有鞭毛等）。😁
+
+- *Mycobacterium tuberculosis*：*结核分枝杆菌*
+- *Staphylococcus aureus*：*金黄色葡萄球菌*
+- *Enterococcus faecium*：*肠球菌*
+- *Escherichia coli*：*大肠杆菌*
+- Salmonella species：沙门氏菌属
+- Shigella species：志贺氏菌属
+- *Klebsiella pneumoniae*：*肺炎克雷伯菌*
+- *Neisseria gonorrhoeae*：*淋病奈瑟菌*
+- *Pseudomonas aeruginosa*：*铜绿假单胞菌*
+- *Acinetobacter baumannii*：*鲍曼不动杆菌*
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

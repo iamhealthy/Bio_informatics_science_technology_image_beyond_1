@@ -1,0 +1,92 @@
+---
+title: Keep climbing
+subtitle: Alex Honnold徒手无保护攀爬台北101
+date: 2026-02-03
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+## 1. Alex Honnold徒手无保护攀爬台北101的一个瞬间
+
+Alex Honnold在2026-01-24日徒手无保护攀爬了台北101大楼（ropeless climb of Taipei 101）。下面是一个攀爬的瞬间。
+
+<center>
+![图源：<https://www.netflix.com/tudum/articles/how-to-watch-alex-honnold-skyscraper-climb-live-netflix>](images/56_Alex_Honold.jpg){width="100%"}
+</center>
+
+## 2. 通过QuPath进行color deconvolution（颜色解卷积）
+
+### 2.1 设定图片格式为Brightfield H&E时
+
+把图片通过QuPath打开，并color deconvolution后，发现Eosin通道的图片貌似有些[艺术感]{.mark}。
+
+<img src="images/56_Alex_Honold_eosin.png" style="width:100%; border:1px solid gray">
+
+这是对应的groovy script [@KW_eosin2026]：
+
+```
+// QuPath v0.6.0
+
+import qupath.lib.images.servers.TransformedServerBuilder
+setImageType('BRIGHTFIELD_H_E')
+setColorDeconvolutionStains('{"Name" : "H&E default", "Stain 1" : "Hematoxylin", "Values 1" : "0.6511078257574492 0.7011930431234068 0.29049426072255424", "Stain 2" : "Eosin", "Values 2" : "0.21589893562087106 0.8011960501132093 0.5580972485873467", "Background" : " 255 255 255"}');
+
+// 1 for Hematoxylin, 2 for Eosin, 3 for Residual
+var stainNumber = 2
+
+var server = getCurrentServer()
+var imageData = getCurrentImageData()
+
+var stains = imageData.getColorDeconvolutionStains()
+// Scale factors: 0.0, 1.0, 0.0 for Eosin
+// Scale factors: 1.0, 0.0, 0.0 if for Hematoxylin
+// the exported image might look slightly darker than in the QuPath viewer,
+// since the viewer applies brightness/contrast adjustments.
+// You can tweak the scale factor (e.g. 0.85 or other values instead of 1.0) if you want to lighten it.
+var extractedServer = new TransformedServerBuilder(server)
+        .stainNormalize(stains, stains, 0.0, 1.0, 0.0)
+        .build()
+
+def name = getCurrentImageNameWithoutExtension()
+def fileName = "${name}_eosin.png"
+
+// Set the folder to save images
+def folder = 'path\\to\\your\\folder'
+def outputFile = new File(buildFilePath(folder, fileName))
+
+// Write the full image (only possible if it isn't too large!)
+writeImage(extractedServer, "${outputFile}")
+
+println "${outputFile} saved!"
+```
+
+### 2.2 设定图片格式为Brightfield H-DAB时
+
+DAB通道的图片貌似亦有些[艺术感]{.mark}。
+
+<image src="images/56_Alex_Honold_dab.png" style="width:100%; border:1px solid gray">
+
+对应的groovy script和`2.1`部分类似，只需将：
+
+```
+setImageType('BRIGHTFIELD_H_E')
+setColorDeconvolutionStains('{"Name" : "H&E default", "Stain 1" : "Hematoxylin", "Values 1" : "0.6511078257574492 0.7011930431234068 0.29049426072255424", "Stain 2" : "Eosin", "Values 2" : "0.21589893562087106 0.8011960501132093 0.5580972485873467", "Background" : " 255 255 255"}');
+
+some codes
+
+def fileName = "${name}_eosin.png"
+```
+
+更改为：
+
+```
+setImageType('BRIGHTFIELD_H_DAB')
+setColorDeconvolutionStains('{"Name" : "H-DAB default", "Stain 1" : "Hematoxylin", "Values 1" : "0.6511078257574492 0.7011930431234068 0.29049426072255424", "Stain 2" : "DAB", "Values 2" : "0.26916687204956063 0.5682411743268502 0.777593185920953", "Background" : " 255 255 255"}');
+
+some codes
+
+def fileName = "${name}_dab.png"
+```
+
+## References

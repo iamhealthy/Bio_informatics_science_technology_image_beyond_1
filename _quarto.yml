@@ -50,6 +50,7 @@ book:
         - 2026-01-13_格陵兰鲨是最长寿的脊椎动物.qmd
         - 2026-01-17_（通过script获得）pixel size.qmd
         - 2026-01-28_通过QuPath用ImageJ进行阈值设定.qmd
+        - 2026-02-03_keep-climbing.qmd
 
     - part: 技术相关
       chapters:

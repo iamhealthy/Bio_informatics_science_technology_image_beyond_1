@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-08-31">
+<meta name="dcterms.date" content="2026-02-03">
 
-<title>52&nbsp; 文章发表历史干货 – 【生物】信息、科技、和图像分析（1）</title>
+<title>26&nbsp; Keep climbing – 【生物】信息、科技、和图像分析（1）</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,8 +50,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./2025-10-20_中美研究机构的研究多样性比较.html" rel="next">
-<link href="./2025-08-27_Hadley对RStudio公司的一种评价.html" rel="prev">
+<link href="./2025-07-23_RNAlater_一个案例.html" rel="next">
+<link href="./2026-01-28_通过QuPath用ImageJ进行阈值设定.html" rel="prev">
 <link href="./qupath-style.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -287,7 +287,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2025-08-27_Hadley对RStudio公司的一种评价.html">其它</a></li><li class="breadcrumb-item"><a href="./2025-08-31_生物医学文章发表的几个历史干货.html"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">文章发表历史干货</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2025-07-29_银河系起源于HE.html">QuPath</a></li><li class="breadcrumb-item"><a href="./2026-02-03_keep-climbing.html"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Keep climbing</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -481,7 +481,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2026-02-03_keep-climbing.html" class="sidebar-item-text sidebar-link">
+  <a href="./2026-02-03_keep-climbing.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Keep climbing</span></span></a>
   </div>
 </li>
@@ -681,7 +681,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2025-08-31_生物医学文章发表的几个历史干货.html" class="sidebar-item-text sidebar-link active">
+  <a href="./2025-08-31_生物医学文章发表的几个历史干货.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">文章发表历史干货</span></span></a>
   </div>
 </li>
@@ -721,9 +721,12 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#关于作者richard-sever" id="toc-关于作者richard-sever" class="nav-link active" data-scroll-target="#关于作者richard-sever">1. 关于作者Richard Sever</a></li>
-  <li><a href="#什么是openrxiv" id="toc-什么是openrxiv" class="nav-link" data-scroll-target="#什么是openrxiv">2. 什么是openRxiv？</a></li>
-  <li><a href="#这个文章的若干干货或知识点" id="toc-这个文章的若干干货或知识点" class="nav-link" data-scroll-target="#这个文章的若干干货或知识点">3. 这个文章的若干“干货”或“知识点”</a></li>
+  <li><a href="#alex-honnold徒手无保护攀爬台北101的一个瞬间" id="toc-alex-honnold徒手无保护攀爬台北101的一个瞬间" class="nav-link active" data-scroll-target="#alex-honnold徒手无保护攀爬台北101的一个瞬间">1. Alex Honnold徒手无保护攀爬台北101的一个瞬间</a></li>
+  <li><a href="#通过qupath进行color-deconvolution颜色解卷积" id="toc-通过qupath进行color-deconvolution颜色解卷积" class="nav-link" data-scroll-target="#通过qupath进行color-deconvolution颜色解卷积">2. 通过QuPath进行color deconvolution（颜色解卷积）</a>
+  <ul>
+  <li><a href="#设定图片格式为brightfield-he时" id="toc-设定图片格式为brightfield-he时" class="nav-link" data-scroll-target="#设定图片格式为brightfield-he时">2.1 设定图片格式为Brightfield H&amp;E时</a></li>
+  <li><a href="#设定图片格式为brightfield-h-dab时" id="toc-设定图片格式为brightfield-h-dab时" class="nav-link" data-scroll-target="#设定图片格式为brightfield-h-dab时">2.2 设定图片格式为Brightfield H-DAB时</a></li>
+  </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -732,10 +735,10 @@ div.csl-indent {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2025-08-27_Hadley对RStudio公司的一种评价.html">其它</a></li><li class="breadcrumb-item"><a href="./2025-08-31_生物医学文章发表的几个历史干货.html"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">文章发表历史干货</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2025-07-29_银河系起源于HE.html">QuPath</a></li><li class="breadcrumb-item"><a href="./2026-02-03_keep-climbing.html"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Keep climbing</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">文章发表历史干货</span></h1>
-<p class="subtitle lead">生物医学文章发表的几个历史”干货”</p>
+<h1 class="title"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Keep climbing</span></h1>
+<p class="subtitle lead">Alex Honnold徒手无保护攀爬台北101</p>
 </div>
 
 
@@ -746,7 +749,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 31, 2025</p>
+      <p class="date">February 3, 2026</p>
     </div>
   </div>
   
@@ -758,56 +761,86 @@ div.csl-indent {
 </header>
 
 
-<p>最近留意到一个2023年发表的一个文章/essay <span class="citation" data-cites="Sever2023">(<a href="#ref-Sever2023" role="doc-biblioref"><em>1</em></a>)</span>。作者是Richard Sever。</p>
-<p><img src="images/PLoS Biol.png" style="width:100.0%"></p>
-<section id="关于作者richard-sever" class="level2">
-<h2 class="anchored" data-anchor-id="关于作者richard-sever">1. 关于作者Richard Sever</h2>
-<p><img src="images/Richard_Sever.png" style="width:100.0%"></p>
-<p>通过<span class="citation" data-cites="Sever2023">(<a href="#ref-Sever2023" role="doc-biblioref"><em>1</em></a>)</span>这个文章，知道作者来自冷泉港实验室。</p>
-<p>通过作者的Bluesky账号，知道<mark>作者是bioRxiv和medRxiv的联合创始人</mark>；同时，作者是openRxiv的首席科学和战略官。</p>
-</section>
-<section id="什么是openrxiv" class="level2">
-<h2 class="anchored" data-anchor-id="什么是openrxiv">2. 什么是openRxiv？</h2>
-<blockquote class="blockquote">
-<p><mark>openRxiv is an independent non-profit, the new organizational home for bioRxiv and medRxiv</mark>, enabling researchers to instantly share groundbreaking findings with the global scientific community.</p>
-</blockquote>
-<p>引自<a href="https://openrxiv.org/">openRxiv官网</a>。</p>
-</section>
-<section id="这个文章的若干干货或知识点" class="level2">
-<h2 class="anchored" data-anchor-id="这个文章的若干干货或知识点">3. 这个文章的若干“干货”或“知识点”</h2>
+<section id="alex-honnold徒手无保护攀爬台北101的一个瞬间" class="level2">
+<h2 class="anchored" data-anchor-id="alex-honnold徒手无保护攀爬台北101的一个瞬间">1. Alex Honnold徒手无保护攀爬台北101的一个瞬间</h2>
+<p>Alex Honnold在2026-01-24日徒手无保护攀爬了台北101大楼（ropeless climb of Taipei 101）。下面是一个攀爬的瞬间。</p>
+<center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/journal.pbio.3002234.g001.PNG" style="width:100.0%" class="figure-img"></p>
-<figcaption><strong>图1：科学出版的时间线。</strong>该时间线展示了科学出版历史中的几个重要里程碑，包括多个期刊的创刊。它并非旨在全面涵盖所有里程碑。为了简明起见，未显示一些关键事件，如<mark>《Nature Genetics》的创刊（1992年，Nature的第一个成功的衍生期刊）</mark>、<mark>BioMed Central的成立（2000年，第一个开放获取出版社）</mark>、<mark>F1000R的创办（2013年，第一个出版后（post-publication）同行评审）</mark>以及<mark>PLOS ONE的创刊（2004年，第一个超大期刊（mega journal））</mark>。这些也应被视为重要里程碑。时间线还显示了外部同行评审的实施进程。<mark>同行评审最早出现在18世纪初，但直到20世纪末才成为标准</mark>。预印本服务器（例如arXiv和bioRxiv）的推出使得科学文章<mark>再次</mark>可以在没有正式同行评审的情况下公开。在图中，虚线表示同行评审的存在，破折线表示其开始变得更为普及，而<mark>实线</mark>则表示它在科研传播中几乎是普遍存在的。</figcaption>
+<p><img src="images/56_Alex_Honold.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>图源：<a href="https://www.netflix.com/tudum/articles/how-to-watch-alex-honnold-skyscraper-climb-live-netflix" class="uri">https://www.netflix.com/tudum/articles/how-to-watch-alex-honnold-skyscraper-climb-live-netflix</a></figcaption>
 </figure>
 </div>
-<blockquote class="blockquote">
-<p>… articles are critical not only for communication between scientists but also for them to demonstrate their productivity and thereby secure grants, jobs, and promotions in a <mark>hypercompetitive academic environment</mark>.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Up until the 17th century, scientific discoveries were communicated primarily in <mark>private letters and monographs</mark>.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p><mark>The first scientific journal—Philosophical Transactions of the Royal Society—was launched in 1665 by Henry Oldenburg</mark> (Journal Des Sçavans was launched earlier the same year but was broader in scope).</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>In 1850, there were approximately <mark>1,400 journals</mark>; come the 21st century the number had risen to <mark>more than 20,000</mark>.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Journals continued to proliferate into the early 21st century, with a series of mergers and acquisitions among the big commercial publishers resulting in a <mark>“big five”—Springer Nature, Elsevier, John Wiley, Sage, and Taylor &amp; Francis</mark>—controlling most of the industry.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>In fact, <mark>the practice of consulting external referees was only introduced in the 18th century</mark>…</p>
-</blockquote>
-<p><a href="./给我买杯茶.html">给我买杯茶🍵</a></p>
+</center>
+</section>
+<section id="通过qupath进行color-deconvolution颜色解卷积" class="level2">
+<h2 class="anchored" data-anchor-id="通过qupath进行color-deconvolution颜色解卷积">2. 通过QuPath进行color deconvolution（颜色解卷积）</h2>
+<section id="设定图片格式为brightfield-he时" class="level3">
+<h3 class="anchored" data-anchor-id="设定图片格式为brightfield-he时">2.1 设定图片格式为Brightfield H&amp;E时</h3>
+<p>把图片通过QuPath打开，并color deconvolution后，发现Eosin通道的图片貌似有些<mark>艺术感</mark>。</p>
+<p><img src="images/56_Alex_Honold_eosin.png" style="width:100%; border:1px solid gray"></p>
+<p>这是对应的groovy script <span class="citation" data-cites="KW_eosin2026">(<a href="#ref-KW_eosin2026" role="doc-biblioref"><em>1</em></a>)</span>：</p>
+<pre><code>// QuPath v0.6.0
+
+import qupath.lib.images.servers.TransformedServerBuilder
+setImageType('BRIGHTFIELD_H_E')
+setColorDeconvolutionStains('{"Name" : "H&amp;E default", "Stain 1" : "Hematoxylin", "Values 1" : "0.6511078257574492 0.7011930431234068 0.29049426072255424", "Stain 2" : "Eosin", "Values 2" : "0.21589893562087106 0.8011960501132093 0.5580972485873467", "Background" : " 255 255 255"}');
+
+// 1 for Hematoxylin, 2 for Eosin, 3 for Residual
+var stainNumber = 2
+
+var server = getCurrentServer()
+var imageData = getCurrentImageData()
+
+var stains = imageData.getColorDeconvolutionStains()
+// Scale factors: 0.0, 1.0, 0.0 for Eosin
+// Scale factors: 1.0, 0.0, 0.0 if for Hematoxylin
+// the exported image might look slightly darker than in the QuPath viewer,
+// since the viewer applies brightness/contrast adjustments.
+// You can tweak the scale factor (e.g. 0.85 or other values instead of 1.0) if you want to lighten it.
+var extractedServer = new TransformedServerBuilder(server)
+        .stainNormalize(stains, stains, 0.0, 1.0, 0.0)
+        .build()
+
+def name = getCurrentImageNameWithoutExtension()
+def fileName = "${name}_eosin.png"
+
+// Set the folder to save images
+def folder = 'path\\to\\your\\folder'
+def outputFile = new File(buildFilePath(folder, fileName))
+
+// Write the full image (only possible if it isn't too large!)
+writeImage(extractedServer, "${outputFile}")
+
+println "${outputFile} saved!"</code></pre>
+</section>
+<section id="设定图片格式为brightfield-h-dab时" class="level3">
+<h3 class="anchored" data-anchor-id="设定图片格式为brightfield-h-dab时">2.2 设定图片格式为Brightfield H-DAB时</h3>
+<p>DAB通道的图片貌似亦有些<mark>艺术感</mark>。</p>
+<p><img src="images/56_Alex_Honold_dab.png" style="width:100%; border:1px solid gray"></p>
+<p>对应的groovy script和<code>2.1</code>部分类似，只需将：</p>
+<pre><code>setImageType('BRIGHTFIELD_H_E')
+setColorDeconvolutionStains('{"Name" : "H&amp;E default", "Stain 1" : "Hematoxylin", "Values 1" : "0.6511078257574492 0.7011930431234068 0.29049426072255424", "Stain 2" : "Eosin", "Values 2" : "0.21589893562087106 0.8011960501132093 0.5580972485873467", "Background" : " 255 255 255"}');
+
+some codes
+
+def fileName = "${name}_eosin.png"</code></pre>
+<p>更改为：</p>
+<pre><code>setImageType('BRIGHTFIELD_H_DAB')
+setColorDeconvolutionStains('{"Name" : "H-DAB default", "Stain 1" : "Hematoxylin", "Values 1" : "0.6511078257574492 0.7011930431234068 0.29049426072255424", "Stain 2" : "DAB", "Values 2" : "0.26916687204956063 0.5682411743268502 0.777593185920953", "Background" : " 255 255 255"}');
+
+some codes
+
+def fileName = "${name}_dab.png"</code></pre>
+</section>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
 
 <div id="refs" class="references csl-bib-body" role="list">
-<div id="ref-Sever2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">R. Sever, <a href="https://doi.org/10.1371/journal.pbio.3002234">Biomedical publishing: Past historic, present continuous, future conditional</a>. <em>PLOS Biology</em> <strong>21</strong>, e3002234 (2023).</div>
+<div id="ref-KW_eosin2026" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">W. Kang, L. Léo, A. Sarah, Exporting color deconvoluted channels (e.g. Eosin) via script (2026). <a href="https://forum.image.sc/t/exporting-color-deconvoluted-channels-e-g-eosin-via-script/118918/4">https://forum.image.sc/t/exporting-color-deconvoluted-channels-e-g-eosin-via-script/118918/4</a>.</div>
 </div>
 </div>
 </section>
@@ -1228,13 +1261,13 @@ div.csl-indent {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./2025-08-27_Hadley对RStudio公司的一种评价.html" class="pagination-link" aria-label="Hadley对Posit评价">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Hadley对Posit评价</span></span>
+      <a href="./2026-01-28_通过QuPath用ImageJ进行阈值设定.html" class="pagination-link" aria-label="通过ImageJ定阈值">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">通过ImageJ定阈值</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./2025-10-20_中美研究机构的研究多样性比较.html" class="pagination-link" aria-label="中美研究多样性">
-        <span class="nav-page-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">中美研究多样性</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./2025-07-23_RNAlater_一个案例.html" class="pagination-link" aria-label="RNAlater案例">
+        <span class="nav-page-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">RNAlater案例</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

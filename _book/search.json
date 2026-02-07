@@ -36,7 +36,7 @@
     "href": "2025-08-12_ggplot2等高线图版本的银河系.html#增加一个random_color列用于每个细胞核颜色的随机分配",
     "title": "1  ggplot2“银河系”",
     "section": "3. 增加一个“random_color”列，用于每个细胞核颜色的随机分配",
-    "text": "3. 增加一个“random_color”列，用于每个细胞核颜色的随机分配\n\npalette &lt;- brewer.pal(8, \"Set2\") # get a color palette\n\ndf &lt;- df |&gt; \n  mutate(random_color = sample(palette, nrow(df), replace = TRUE)) # add a random color column\n\ndf |&gt; head() # Display the first six rows of the updated data frame\n\n# A tibble: 6 × 3\n  `Centroid X µm` `Centroid Y µm` random_color\n            &lt;dbl&gt;           &lt;dbl&gt; &lt;chr&gt;       \n1            131.            88.4 #66C2A5     \n2            118.            90.2 #66C2A5     \n3            169.            90.9 #B3B3B3     \n4            179.            95.0 #FC8D62     \n5            230.            96.5 #A6D854     \n6            119.            96.8 #E5C494",
+    "text": "3. 增加一个“random_color”列，用于每个细胞核颜色的随机分配\n\npalette &lt;- brewer.pal(8, \"Set2\") # get a color palette\n\ndf &lt;- df |&gt; \n  mutate(random_color = sample(palette, nrow(df), replace = TRUE)) # add a random color column\n\ndf |&gt; head() # Display the first six rows of the updated data frame\n\n# A tibble: 6 × 3\n  `Centroid X µm` `Centroid Y µm` random_color\n            &lt;dbl&gt;           &lt;dbl&gt; &lt;chr&gt;       \n1            131.            88.4 #E5C494     \n2            118.            90.2 #8DA0CB     \n3            169.            90.9 #66C2A5     \n4            179.            95.0 #E78AC3     \n5            230.            96.5 #FFD92F     \n6            119.            96.8 #FC8D62",
     "crumbs": [
       "R",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>ggplot2“银河系”</span>"
@@ -212,7 +212,7 @@
     "href": "2025-08-23_ggplot2版本的银河系-无细胞核面积的加权-vs-细胞核面积的加权.html#增加一个random_color列用于每个细胞核颜色的随机分配",
     "title": "4  ggplot2“银河系”加权有无",
     "section": "2. 增加一个“random_color”列，用于每个细胞核颜色的随机分配",
-    "text": "2. 增加一个“random_color”列，用于每个细胞核颜色的随机分配\n\npalette &lt;- brewer.pal(8, \"Set2\") # get a color palette\n\ndf &lt;- df |&gt; \n  mutate(Random_color = sample(palette, nrow(df), replace = TRUE)) # add a random color column\n\ndf |&gt; head() # Display the first six rows of the updated data frame\n\n# A tibble: 6 × 4\n  `Centroid X µm` `Centroid Y µm` `Area µm^2` Random_color\n            &lt;dbl&gt;           &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;       \n1            131.            88.4        29.2 #8DA0CB     \n2            118.            90.2        55.5 #66C2A5     \n3            169.            90.9        55.5 #FFD92F     \n4            179.            95.0        61   #B3B3B3     \n5            230.            96.5        69.8 #A6D854     \n6            119.            96.8        53.8 #E78AC3",
+    "text": "2. 增加一个“random_color”列，用于每个细胞核颜色的随机分配\n\npalette &lt;- brewer.pal(8, \"Set2\") # get a color palette\n\ndf &lt;- df |&gt; \n  mutate(Random_color = sample(palette, nrow(df), replace = TRUE)) # add a random color column\n\ndf |&gt; head() # Display the first six rows of the updated data frame\n\n# A tibble: 6 × 4\n  `Centroid X µm` `Centroid Y µm` `Area µm^2` Random_color\n            &lt;dbl&gt;           &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;       \n1            131.            88.4        29.2 #66C2A5     \n2            118.            90.2        55.5 #E5C494     \n3            169.            90.9        55.5 #66C2A5     \n4            179.            95.0        61   #8DA0CB     \n5            230.            96.5        69.8 #FC8D62     \n6            119.            96.8        53.8 #66C2A5",
     "crumbs": [
       "R",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>ggplot2“银河系”加权有无</span>"
@@ -1103,7 +1103,7 @@
     "href": "2026-02-03_keep-climbing.html#通过qupath进行color-deconvolution颜色解卷积",
     "title": "26  Keep climbing",
     "section": "2. 通过QuPath进行color deconvolution（颜色解卷积）",
-    "text": "2. 通过QuPath进行color deconvolution（颜色解卷积）\n\n2.1 设定图片格式为Brightfield H&E时\n把图片通过QuPath打开，并color deconvolution后，发现Eosin通道的图片貌似有些艺术感。\n\n这是对应的groovy script (1)：\n// QuPath v0.6.0\n\nimport qupath.lib.images.servers.TransformedServerBuilder\nsetImageType('BRIGHTFIELD_H_E')\nsetColorDeconvolutionStains('{\"Name\" : \"H&E default\", \"Stain 1\" : \"Hematoxylin\", \"Values 1\" : \"0.6511078257574492 0.7011930431234068 0.29049426072255424\", \"Stain 2\" : \"Eosin\", \"Values 2\" : \"0.21589893562087106 0.8011960501132093 0.5580972485873467\", \"Background\" : \" 255 255 255\"}');\n\n// 1 for Hematoxylin, 2 for Eosin, 3 for Residual\nvar stainNumber = 2\n\nvar server = getCurrentServer()\nvar imageData = getCurrentImageData()\n\nvar stains = imageData.getColorDeconvolutionStains()\n// Scale factors: 0.0, 1.0, 0.0 for Eosin\n// Scale factors: 1.0, 0.0, 0.0 if for Hematoxylin\n// the exported image might look slightly darker than in the QuPath viewer,\n// since the viewer applies brightness/contrast adjustments.\n// You can tweak the scale factor (e.g. 0.85 or other values instead of 1.0) if you want to lighten it.\nvar extractedServer = new TransformedServerBuilder(server)\n        .stainNormalize(stains, stains, 0.0, 1.0, 0.0)\n        .build()\n\ndef name = getCurrentImageNameWithoutExtension()\ndef fileName = \"${name}_eosin.png\"\n\n// Set the folder to save images\ndef folder = 'path\\\\to\\\\your\\\\folder'\ndef outputFile = new File(buildFilePath(folder, fileName))\n\n// Write the full image (only possible if it isn't too large!)\nwriteImage(extractedServer, \"${outputFile}\")\n\nprintln \"${outputFile} saved!\"\n\n\n2.2 设定图片格式为Brightfield H-DAB时\nDAB通道的图片貌似亦有些艺术感。\n\n对应的groovy script和2.1部分类似，只需将：\nsetImageType('BRIGHTFIELD_H_E')\nsetColorDeconvolutionStains('{\"Name\" : \"H&E default\", \"Stain 1\" : \"Hematoxylin\", \"Values 1\" : \"0.6511078257574492 0.7011930431234068 0.29049426072255424\", \"Stain 2\" : \"Eosin\", \"Values 2\" : \"0.21589893562087106 0.8011960501132093 0.5580972485873467\", \"Background\" : \" 255 255 255\"}');\n\nsome codes\n\ndef fileName = \"${name}_eosin.png\"\n更改为：\nsetImageType('BRIGHTFIELD_H_DAB')\nsetColorDeconvolutionStains('{\"Name\" : \"H-DAB default\", \"Stain 1\" : \"Hematoxylin\", \"Values 1\" : \"0.6511078257574492 0.7011930431234068 0.29049426072255424\", \"Stain 2\" : \"DAB\", \"Values 2\" : \"0.26916687204956063 0.5682411743268502 0.777593185920953\", \"Background\" : \" 255 255 255\"}');\n\nsome codes\n\ndef fileName = \"${name}_dab.png\"",
+    "text": "2. 通过QuPath进行color deconvolution（颜色解卷积）\n\n2.1 设定图片格式为Brightfield H&E时\n把图片通过QuPath打开，并color deconvolution后，发现Eosin通道的图片貌似有些艺术感。\n\n这是对应的groovy script (1)：\n// QuPath v0.6.0\n\nimport qupath.lib.images.servers.TransformedServerBuilder\nsetImageType('BRIGHTFIELD_H_E')\nsetColorDeconvolutionStains('{\"Name\" : \"H&E default\", \"Stain 1\" : \"Hematoxylin\", \"Values 1\" : \"0.6511078257574492 0.7011930431234068 0.29049426072255424\", \"Stain 2\" : \"Eosin\", \"Values 2\" : \"0.21589893562087106 0.8011960501132093 0.5580972485873467\", \"Background\" : \" 255 255 255\"}');\n\n// 1 for Hematoxylin, 2 for Eosin, 3 for Residual\nvar stainNumber = 2\n\nvar server = getCurrentServer()\nvar imageData = getCurrentImageData()\n\nvar stains = imageData.getColorDeconvolutionStains()\n// Scale factors: 0.0, 1.0, 0.0 for Eosin\n// Scale factors: 1.0, 0.0, 0.0 if for Hematoxylin\n// the exported image might look slightly darker than in the QuPath viewer,\n// since the viewer applies brightness/contrast adjustments.\n// You can tweak the scale factor (e.g. 0.85 or other values instead of 1.0) if you want to lighten it.\nvar extractedServer = new TransformedServerBuilder(server)\n        .stainNormalize(stains, stains, 0.0, 1.0, 0.0)\n        .build()\n\ndef name = getCurrentImageNameWithoutExtension()\ndef fileName = \"${name}_eosin.png\"\n\n// Set the folder to save images\ndef folder = 'path\\\\to\\\\your\\\\folder'\ndef outputFile = new File(buildFilePath(folder, fileName))\n\n// Write the full image (only possible if it isn't too large!)\nwriteImage(extractedServer, \"${outputFile}\")\n\nprintln \"${outputFile} saved!\"\n\n\n2.2 设定图片格式为Brightfield H-DAB时\nDAB通道的图片貌似亦有些艺术感。\n\n对应的groovy script和2.1部分类似，只需将：\nsetImageType('BRIGHTFIELD_H_E')\nsetColorDeconvolutionStains('{\"Name\" : \"H&E default\", \"Stain 1\" : \"Hematoxylin\", \"Values 1\" : \"0.6511078257574492 0.7011930431234068 0.29049426072255424\", \"Stain 2\" : \"Eosin\", \"Values 2\" : \"0.21589893562087106 0.8011960501132093 0.5580972485873467\", \"Background\" : \" 255 255 255\"}');\n\nsome codes\n\ndef fileName = \"${name}_eosin.png\"\n更改为：\nsetImageType('BRIGHTFIELD_H_DAB')\nsetColorDeconvolutionStains('{\"Name\" : \"H-DAB default\", \"Stain 1\" : \"Hematoxylin\", \"Values 1\" : \"0.6511078257574492 0.7011930431234068 0.29049426072255424\", \"Stain 2\" : \"DAB\", \"Values 2\" : \"0.26916687204956063 0.5682411743268502 0.777593185920953\", \"Background\" : \" 255 255 255\"}');\n\nsome codes\n\ndef fileName = \"${name}_dab.png\"\n给我买杯茶🍵",
     "crumbs": [
       "QuPath",
       "<span class='chapter-number'>26</span>  <span class='chapter-title'>Keep climbing</span>"
@@ -1125,7 +1125,7 @@
     "href": "2026-02-07_HE切片的细胞类型鉴定.html",
     "title": "27  HE切片细胞类型",
     "section": "",
-    "text": "1. 两种细胞分割/cell segmentations\n看到一篇2025-12-22日上线的预印版文献(Mandal2025?)，报道了Classpose，可用于HE染色全片的细胞类型鉴定。\n以HE切片为例，直观理解就是选切片上的细胞（核）。\n以HE切片为例，直观理解就是确定每个细胞（核）属于哪种类型（比如中性粒细胞、上皮细胞、淋巴细胞等等）。",
+    "text": "1. 两种细胞分割/cell segmentations\n看到一篇2025-12-22日上线的预印版文献(1)，报道了Classpose，可用于HE染色全片的细胞类型鉴定。\n以HE切片为例，直观理解就是选切片上的细胞（核）。\n以HE切片为例，直观理解就是确定每个细胞（核）属于哪种类型（比如中性粒细胞、上皮细胞、淋巴细胞等等）。",
     "crumbs": [
       "QuPath",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"
@@ -1136,7 +1136,7 @@
     "href": "2026-02-07_HE切片的细胞类型鉴定.html#两种细胞分割cell-segmentations",
     "title": "27  HE切片细胞类型",
     "section": "",
-    "text": "Instance segmentation … aims to determine whether a pixel belongs to a unique cell (Mandal2025?).\n\n\n\nSemantic segmentation … aims to determine to which cell type a pixel belongs to (Mandal2025?).",
+    "text": "Instance segmentation … aims to determine whether a pixel belongs to a unique cell (1).\n\n\n\nSemantic segmentation … aims to determine to which cell type a pixel belongs to (1).",
     "crumbs": [
       "QuPath",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"
@@ -1158,7 +1158,7 @@
     "href": "2026-02-07_HE切片的细胞类型鉴定.html#classpose能做什么",
     "title": "27  HE切片细胞类型",
     "section": "3. Classpose能做什么？",
-    "text": "3. Classpose能做什么？\n\nClasspose, as easily trainable analog of the Cellpose-SAM model for semantic segmentation (Mandal2025?).",
+    "text": "3. Classpose能做什么？\n\nClasspose, as easily trainable analog of the Cellpose-SAM model for semantic segmentation (1).",
     "crumbs": [
       "QuPath",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"
@@ -1169,7 +1169,7 @@
     "href": "2026-02-07_HE切片的细胞类型鉴定.html#classpose的优点",
     "title": "27  HE切片细胞类型",
     "section": "4. Classpose的优点？",
-    "text": "4. Classpose的优点？\n\nWe extensively benchmark Classpose against 3 other state-of-the-art methods (Semantic Celllpose-SAM, CellViT++, and Stardist) across 6 datasets (CoNIC, ConSep, GlySAC, MoNuSAC, NuCLS, and PUMA), showing that Classpose consistently outperforms all other methods (Mandal2025?).",
+    "text": "4. Classpose的优点？\n\nWe extensively benchmark Classpose against 3 other state-of-the-art methods (Semantic Celllpose-SAM, CellViT++, and Stardist) across 6 datasets (CoNIC, ConSep, GlySAC, MoNuSAC, NuCLS, and PUMA), showing that Classpose consistently outperforms all other methods (1).",
     "crumbs": [
       "QuPath",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"
@@ -1180,7 +1180,7 @@
     "href": "2026-02-07_HE切片的细胞类型鉴定.html#classpose如何使用",
     "title": "27  HE切片细胞类型",
     "section": "5. Classpose如何使用？",
-    "text": "5. Classpose如何使用？\n\n… provide a commond-line tool and a QuPath extension for whole slide-image … (Mandal2025?)",
+    "text": "5. Classpose如何使用？\n\n… provide a commond-line tool and a QuPath extension for whole slide-image … (1)",
     "crumbs": [
       "QuPath",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"
@@ -1191,7 +1191,7 @@
     "href": "2026-02-07_HE切片的细胞类型鉴定.html#自己安装classpose的qupath-extension体验下",
     "title": "27  HE切片细胞类型",
     "section": "6. 自己安装Classpose的QuPath extension体验下",
-    "text": "6. 自己安装Classpose的QuPath extension体验下\n具体安装过程有些折腾，但最终还是成功了。安装过程参考(Classpose_qupath?) (KW_classpose2026?)。\n\n\n\n\nPretrained models有：conic、consep、glysac、monusac、nucls、和puma。\n\n\n\n\n\n\n\n不同pretrained models可预测的细胞类型。\n\n\n\n\n\n\n\n用于测试的HE切片。\n\n\n\n\n\n\n\nClasspose的测试结果（用的pretrained model是conic）。Conic可区分的细胞类型是：neutrophils、epithelial cells、lymphocytes、plasma cells、eosinophils、和connective tissue cells (lizard_arxiv?)。不同颜色表示不同的细胞类型。",
+    "text": "6. 自己安装Classpose的QuPath extension体验下\n具体安装过程有些折腾，但最终还是成功了。安装过程参考(2) (3)。\n\n\n\n\nPretrained models有：conic、consep、glysac、monusac、nucls、和puma。\n\n\n\n\n\n\n\n不同pretrained models可预测的细胞类型。\n\n\n\n\n\n\n\n用于测试的HE切片。\n\n\n\n\n\n\n\nClasspose的测试结果（用的pretrained model是conic）。Conic可区分的细胞类型是：neutrophils、epithelial cells、lymphocytes、plasma cells、eosinophils、和connective tissue cells (4)。不同颜色表示不同的细胞类型。",
     "crumbs": [
       "QuPath",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"
@@ -1202,7 +1202,18 @@
     "href": "2026-02-07_HE切片的细胞类型鉴定.html#期待classpose文章正式发表",
     "title": "27  HE切片细胞类型",
     "section": "7. 期待Classpose文章正式发表",
-    "text": "7. 期待Classpose文章正式发表\n目前该软件工具还是预印版，期待正式在某个科研杂志发表，这样使用起来更加有底气些。\n本着严谨的态度，感觉是不是应该比较下Classpose的预测结果和多色免疫荧光染色的结果一致性？\n或者基于Classpose分析得到了某种结论，再针对该结论通过某种合适的实验验证下？",
+    "text": "7. 期待Classpose文章正式发表\n目前该软件工具还是预印版，期待正式在某个科研杂志发表，这样使用起来更加有底气些。\n本着严谨的态度，感觉是不是应该比较下Classpose的预测结果和多色免疫荧光染色的结果一致性？\n或者基于Classpose分析得到了某种结论，再针对该结论通过某种合适的实验验证下？\n给我买杯茶🍵",
+    "crumbs": [
+      "QuPath",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-07_HE切片的细胞类型鉴定.html#references",
+    "href": "2026-02-07_HE切片的细胞类型鉴定.html#references",
+    "title": "27  HE切片细胞类型",
+    "section": "References",
+    "text": "References\n\n\n\n\n1. S. Mandal, J. G. de Almeida, N. Papanikolaou, T. A. Graham, Classpose: Foundation model-driven whole slide image-scale cell phenotyping in h&amp;e. doi: 10.64898/2025.12.18.695211 (2025).\n\n\n2. M. Soham, Classpose (2025). https://github.com/sohmandal/classpose/tree/main.\n\n\n3. W. Kang, josegcpa, Classpose: Foundation model-driven whole slide image-scale cell phenotyping in h&e (with QuPath extension!) (2026). https://forum.image.sc/t/classpose-foundation-model-driven-whole-slide-image-scale-cell-phenotyping-in-h-e-with-qupath-extension/118516/13.\n\n\n4. S. Graham, M. Jahanifar, A. Azam, M. Nimir, Y.-W. Tsang, K. Dodd, E. Hero, H. Sahota, A. Tank, K. Benes, N. Wahab, F. Minhas, S. E. A. Raza, H. E. Daly, K. Gopalakrishnan, D. Snead, N. Rajpoot, Lizard: A large-scale dataset for colonic nuclear instance segmentation and classification (2021). https://doi.org/10.48550/ARXIV.2108.11195.",
     "crumbs": [
       "QuPath",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"

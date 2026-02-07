@@ -21,7 +21,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -715,6 +734,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#classpose如何使用" id="toc-classpose如何使用" class="nav-link" data-scroll-target="#classpose如何使用">5. Classpose如何使用？</a></li>
   <li><a href="#自己安装classpose的qupath-extension体验下" id="toc-自己安装classpose的qupath-extension体验下" class="nav-link" data-scroll-target="#自己安装classpose的qupath-extension体验下">6. 自己安装Classpose的QuPath extension体验下</a></li>
   <li><a href="#期待classpose文章正式发表" id="toc-期待classpose文章正式发表" class="nav-link" data-scroll-target="#期待classpose文章正式发表">7. 期待Classpose文章正式发表</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -748,7 +768,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>看到一篇2025-12-22日上线的预印版文献<span class="citation" data-cites="Mandal2025">(<a href="#ref-Mandal2025" role="doc-biblioref"><strong>Mandal2025?</strong></a>)</span>，报道了Classpose，可用于HE染色全片的细胞类型鉴定。</p>
+<p>看到一篇2025-12-22日上线的预印版文献<span class="citation" data-cites="Mandal2025">(<a href="#ref-Mandal2025" role="doc-biblioref"><em>1</em></a>)</span>，报道了Classpose，可用于HE染色全片的细胞类型鉴定。</p>
 <center>
 <p><img src="images/classpose.png" style="width:100%; border: 1px solid gray"></p>
 <div class="quarto-figure quarto-figure-center">
@@ -761,11 +781,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="两种细胞分割cell-segmentations" class="level2">
 <h2 class="anchored" data-anchor-id="两种细胞分割cell-segmentations">1. 两种细胞分割/cell segmentations</h2>
 <blockquote class="blockquote">
-<p><strong>Instance segmentation</strong> … aims to determine whether a pixel belongs to a unique cell <span class="citation" data-cites="Mandal2025">(<a href="#ref-Mandal2025" role="doc-biblioref"><strong>Mandal2025?</strong></a>)</span>.</p>
+<p><strong>Instance segmentation</strong> … aims to determine whether a pixel belongs to a unique cell <span class="citation" data-cites="Mandal2025">(<a href="#ref-Mandal2025" role="doc-biblioref"><em>1</em></a>)</span>.</p>
 </blockquote>
 <p>以HE切片为例，直观理解就是选切片上的细胞（核）。</p>
 <blockquote class="blockquote">
-<p><strong>Semantic segmentation</strong> … aims to determine to which cell type a pixel belongs to <span class="citation" data-cites="Mandal2025">(<a href="#ref-Mandal2025" role="doc-biblioref"><strong>Mandal2025?</strong></a>)</span>.</p>
+<p><strong>Semantic segmentation</strong> … aims to determine to which cell type a pixel belongs to <span class="citation" data-cites="Mandal2025">(<a href="#ref-Mandal2025" role="doc-biblioref"><em>1</em></a>)</span>.</p>
 </blockquote>
 <p>以HE切片为例，直观理解就是确定每个细胞（核）属于哪种类型（比如中性粒细胞、上皮细胞、淋巴细胞等等）。</p>
 </section>
@@ -776,14 +796,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="classpose能做什么" class="level2">
 <h2 class="anchored" data-anchor-id="classpose能做什么">3. Classpose能做什么？</h2>
 <blockquote class="blockquote">
-<p><strong>Classpose</strong>, as easily trainable analog of the Cellpose-SAM model <mark>for semantic segmentation</mark> <span class="citation" data-cites="Mandal2025">(<a href="#ref-Mandal2025" role="doc-biblioref"><strong>Mandal2025?</strong></a>)</span>.</p>
+<p><strong>Classpose</strong>, as easily trainable analog of the Cellpose-SAM model <mark>for semantic segmentation</mark> <span class="citation" data-cites="Mandal2025">(<a href="#ref-Mandal2025" role="doc-biblioref"><em>1</em></a>)</span>.</p>
 </blockquote>
 <p><img src="images/what-is-classpose.png" class="img-fluid" style="width:100.0%"></p>
 </section>
 <section id="classpose的优点" class="level2">
 <h2 class="anchored" data-anchor-id="classpose的优点">4. Classpose的优点？</h2>
 <blockquote class="blockquote">
-<p>We extensively <strong>benchmark Classpose against 3 other state-of-the-art methods</strong> (Semantic Celllpose-SAM, CellViT++, and Stardist) across 6 datasets (CoNIC, ConSep, GlySAC, MoNuSAC, NuCLS, and PUMA), showing that <mark>Classpose consistently outperforms all other methods</mark> <span class="citation" data-cites="Mandal2025">(<a href="#ref-Mandal2025" role="doc-biblioref"><strong>Mandal2025?</strong></a>)</span>.</p>
+<p>We extensively <strong>benchmark Classpose against 3 other state-of-the-art methods</strong> (Semantic Celllpose-SAM, CellViT++, and Stardist) across 6 datasets (CoNIC, ConSep, GlySAC, MoNuSAC, NuCLS, and PUMA), showing that <mark>Classpose consistently outperforms all other methods</mark> <span class="citation" data-cites="Mandal2025">(<a href="#ref-Mandal2025" role="doc-biblioref"><em>1</em></a>)</span>.</p>
 </blockquote>
 <center>
 <img src="images/classpose-performance.png" class="img-fluid" style="width:50.0%">
@@ -792,12 +812,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="classpose如何使用" class="level2">
 <h2 class="anchored" data-anchor-id="classpose如何使用">5. Classpose如何使用？</h2>
 <blockquote class="blockquote">
-<p>… provide a <mark>commond-line tool</mark> and <strong><mark>a QuPath extension</mark></strong> for whole slide-image … <span class="citation" data-cites="Mandal2025">(<a href="#ref-Mandal2025" role="doc-biblioref"><strong>Mandal2025?</strong></a>)</span></p>
+<p>… provide a <mark>commond-line tool</mark> and <strong><mark>a QuPath extension</mark></strong> for whole slide-image … <span class="citation" data-cites="Mandal2025">(<a href="#ref-Mandal2025" role="doc-biblioref"><em>1</em></a>)</span></p>
 </blockquote>
 </section>
 <section id="自己安装classpose的qupath-extension体验下" class="level2">
 <h2 class="anchored" data-anchor-id="自己安装classpose的qupath-extension体验下">6. 自己安装Classpose的QuPath extension体验下</h2>
-<p>具体安装过程有些折腾，但最终还是成功了。安装过程参考<span class="citation" data-cites="Classpose_qupath">(<a href="#ref-Classpose_qupath" role="doc-biblioref"><strong>Classpose_qupath?</strong></a>)</span> <span class="citation" data-cites="KW_classpose2026">(<a href="#ref-KW_classpose2026" role="doc-biblioref"><strong>KW_classpose2026?</strong></a>)</span>。</p>
+<p>具体安装过程有些折腾，但最终还是成功了。安装过程参考<span class="citation" data-cites="Classpose_qupath">(<a href="#ref-Classpose_qupath" role="doc-biblioref"><em>2</em></a>)</span> <span class="citation" data-cites="KW_classpose2026">(<a href="#ref-KW_classpose2026" role="doc-biblioref"><em>3</em></a>)</span>。</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -826,7 +846,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/classpose_tested.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Classpose的测试结果（用的pretrained model是conic）。Conic可区分的细胞类型是：neutrophils、epithelial cells、lymphocytes、plasma cells、eosinophils、和connective tissue cells <span class="citation" data-cites="lizard_arxiv">(<a href="#ref-lizard_arxiv" role="doc-biblioref"><strong>lizard_arxiv?</strong></a>)</span>。不同颜色表示不同的细胞类型。</figcaption>
+<figcaption>Classpose的测试结果（用的pretrained model是conic）。Conic可区分的细胞类型是：neutrophils、epithelial cells、lymphocytes、plasma cells、eosinophils、和connective tissue cells <span class="citation" data-cites="lizard_arxiv">(<a href="#ref-lizard_arxiv" role="doc-biblioref"><em>4</em></a>)</span>。不同颜色表示不同的细胞类型。</figcaption>
 </figure>
 </div>
 </center>
@@ -836,8 +856,26 @@ ul.task-list li input[type="checkbox"] {
 <p>目前该软件工具还是预印版，期待正式在某个科研杂志发表，这样使用起来更加有底气些。</p>
 <p>本着严谨的态度，感觉是不是应该比较下<mark>Classpose的预测结果</mark>和<mark>多色免疫荧光染色</mark>的结果一致性？</p>
 <p>或者基于Classpose分析得到了某种结论，再针对该结论通过某种合适的实验验证下？</p>
+<p><a href="./给我买杯茶.html">给我买杯茶🍵</a></p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-Mandal2025" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">S. Mandal, J. G. de Almeida, N. Papanikolaou, T. A. Graham, Classpose: Foundation model-driven whole slide image-scale cell phenotyping in h&amp;amp;e. doi: <a href="https://doi.org/10.64898/2025.12.18.695211">10.64898/2025.12.18.695211</a> (2025).</div>
+</div>
+<div id="ref-Classpose_qupath" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">M. Soham, Classpose (2025). <a href="https://github.com/sohmandal/classpose/tree/main">https://github.com/sohmandal/classpose/tree/main</a>.</div>
+</div>
+<div id="ref-KW_classpose2026" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">W. Kang, josegcpa, Classpose: Foundation model-driven whole slide image-scale cell phenotyping in h&amp;e (with QuPath extension!) (2026). <a href="https://forum.image.sc/t/classpose-foundation-model-driven-whole-slide-image-scale-cell-phenotyping-in-h-e-with-qupath-extension/118516/13">https://forum.image.sc/t/classpose-foundation-model-driven-whole-slide-image-scale-cell-phenotyping-in-h-e-with-qupath-extension/118516/13</a>.</div>
+</div>
+<div id="ref-lizard_arxiv" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">S. Graham, M. Jahanifar, A. Azam, M. Nimir, Y.-W. Tsang, K. Dodd, E. Hero, H. Sahota, A. Tank, K. Benes, N. Wahab, F. Minhas, S. E. A. Raza, H. E. Daly, K. Gopalakrishnan, D. Snead, N. Rajpoot, Lizard: A large-scale dataset for colonic nuclear instance segmentation and classification (2021). <a href="https://doi.org/10.48550/ARXIV.2108.11195">https://doi.org/10.48550/ARXIV.2108.11195</a>.</div>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

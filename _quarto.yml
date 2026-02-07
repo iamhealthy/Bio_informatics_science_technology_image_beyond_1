@@ -51,6 +51,7 @@ book:
         - 2026-01-17_（通过script获得）pixel size.qmd
         - 2026-01-28_通过QuPath用ImageJ进行阈值设定.qmd
         - 2026-02-03_keep-climbing.qmd
+        - 2026-02-07_HE切片的细胞类型鉴定.qmd
 
     - part: 技术相关
       chapters:

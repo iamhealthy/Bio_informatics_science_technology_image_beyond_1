@@ -1,0 +1,76 @@
+---
+title: HE切片细胞类型
+subtitle: HE切片的细胞类型鉴定
+date: 2026-02-07
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+看到一篇2025-12-22日上线的预印版文献[@Mandal2025]，报道了Classpose，可用于HE染色全片的细胞类型鉴定。
+
+<center>
+<img src="images/classpose.png" style="width:100%; border: 1px solid gray">
+
+![Classpose的logo。图源：<https://github.com/sohmandal/classpose>。](images/classpose_logo.png){width="50%"}
+</center>
+
+## 1. 两种细胞分割/cell segmentations
+
+> **Instance segmentation** ... aims to determine whether a pixel belongs to a unique cell [@Mandal2025].
+
+以HE切片为例，直观理解就是选切片上的细胞（核）。
+
+> **Semantic segmentation** ... aims to determine to which cell type a pixel belongs to [@Mandal2025]. 
+
+以HE切片为例，直观理解就是确定每个细胞（核）属于哪种类型（比如中性粒细胞、上皮细胞、淋巴细胞等等）。
+
+## 2. Classpose的原理？
+
+看不懂文献的方法，好像也没有读懂的动力。
+
+## 3. Classpose能做什么？
+
+> **Classpose**, as easily trainable analog of the Cellpose-SAM model [for semantic segmentation]{.mark} [@Mandal2025]. 
+
+![](images/what-is-classpose.png){width="100%"}
+
+## 4. Classpose的优点？
+
+> We extensively **benchmark Classpose against 3 other state-of-the-art methods** (Semantic Celllpose-SAM, CellViT++, and Stardist) across 6 datasets (CoNIC, ConSep, GlySAC, MoNuSAC, NuCLS, and PUMA), showing that [Classpose consistently outperforms all other methods]{.mark} [@Mandal2025].
+
+<center>
+![](images/classpose-performance.png){width="50%"}
+</center>
+
+## 5. Classpose如何使用？
+
+> ... provide a [commond-line tool]{.mark} and **[a QuPath extension]{.mark}** for whole slide-image ... [@Mandal2025]
+
+## 6. 自己安装Classpose的QuPath extension体验下
+
+具体安装过程有些折腾，但最终还是成功了。安装过程参考[@Classpose_qupath] [@KW_classpose2026]。
+
+<center>
+![Pretrained models有：conic、consep、glysac、monusac、nucls、和puma。](images/classpose_pretrained-models.png){width="50%"}
+</center>
+
+<center>
+![不同pretrained models可预测的细胞类型。](images/classpose_model_cells.png){width="60%"}
+</center>
+
+<center>
+![用于测试的HE切片。](images/classpose_to-be-tested.jpg){width="100%"}
+</center>
+
+<center>
+![Classpose的测试结果（用的pretrained model是conic）。Conic可区分的细胞类型是：neutrophils、epithelial cells、lymphocytes、plasma cells、eosinophils、和connective tissue cells [@lizard_arxiv]。不同颜色表示不同的细胞类型。](images/classpose_tested.jpg){width="100%"}
+</center>
+
+## 7. 期待Classpose文章正式发表
+
+目前该软件工具还是预印版，期待正式在某个科研杂志发表，这样使用起来更加有底气些。
+
+本着严谨的态度，感觉是不是应该比较下[Classpose的预测结果]{.mark}和[多色免疫荧光染色]{.mark}的结果一致性？
+
+或者基于Classpose分析得到了某种结论，再针对该结论通过某种合适的实验验证下？

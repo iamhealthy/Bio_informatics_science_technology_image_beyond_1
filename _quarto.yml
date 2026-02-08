@@ -14,10 +14,8 @@ book:
     background: dark
     border: true
 
-  navbar: 
-    logo: qupath-style.png
-
   chapters:
+    
     - index.qmd
 
     - part: R

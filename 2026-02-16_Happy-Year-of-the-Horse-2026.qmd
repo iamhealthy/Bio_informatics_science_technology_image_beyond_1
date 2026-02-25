@@ -1,0 +1,100 @@
+---
+title: 马年快乐2026
+subtitle: Happy Year of the Horse 2026
+date: 2026-02-16
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+<center>
+![铜奔马图源：<http://www.gansumuseum.com/home>](images/happy_new_year_2026.png){width="100%"}
+</center>
+
+```{r}
+#| eval: false
+#| message: false
+# ***** Load packages *****
+ggplot2 |> library()
+ggforce |> library()
+magick |> library()
+grid |> library()
+
+# ***** Set the coordinates for a magnification len *****
+
+# Prepare a dataframe for a circle/glass
+circle <- data.frame(
+    x = 50, # x coordinate
+    y = 50, # y coordinate
+    r = 40 # radius
+)
+
+# Prepare a datafram for a line (i.e., than handle of magnifying len)
+line <- data.frame(
+    x = c(73, 90),
+    y = c(20, 0)
+)
+
+# ***** Read Galloping Horse *****
+horse <- "images/galloping-horse.png" |> 
+    magick::image_read()
+horse_grob <- horse |> 
+    grid::rasterGrob(interpolate = TRUE)
+
+# ***** Prepare a data frame for the text "马年喜奔2026"
+text <- data.frame(
+    x = c(50, 50),
+    y = c(-2, 103),
+    label = c("2026", "马年喜奔")
+)
+
+# ***** Plot *****
+df <- data.frame(
+    x = seq(1, 100),
+    y = seq(-24, 125, by = 1.5)
+)
+
+happy_new_year_2026 <- df |> 
+    ggplot(aes(x = x, y = y)) +
+    geom_point(alpha = 0) +
+    geom_line(
+        data = line,
+        aes(x = x, y = y),
+        linewidth = 4,
+        color = "black"
+    ) +
+    ggforce::geom_circle(
+        data = circle,
+        aes(x0 = x, y0 = y, r = r, linewidth = 8),
+        color = "#3674C1"
+    ) +
+    annotation_custom(
+        horse_grob,
+        xmin = 20,
+        xmax = 80,
+        ymin = 20,
+        ymax = 80
+    ) +
+    geom_text(
+        data = text,
+        aes(x = x, y = y, label = label),
+        size = 4.2,
+        color = "red",
+        fontface = "italic",
+        family = "serif"
+    ) +
+    theme_void() +
+    theme(
+        legend.position = "none"
+    )
+
+happy_new_year_2026 |> ggsave(
+    filename = "images/happy_new_year_2026.png",
+    width = 3,
+    height = 4.5,
+    units = "cm",
+    dpi = 300
+)
+```
+
+[给我买杯茶🍵](给我买杯茶.qmd)

@@ -34,6 +34,8 @@ book:
         - 2026-01-01_通过R和Python简单比较相同内容的txt和csv文件.qmd
         - 2026-01-02_happy-new-year.qmd
         - 2026-01-21_图书馆借的书产生了逾期费.qmd
+        - 2026-02-16_Happy-Year-of-the-Horse-2026.qmd
+        - 2026-02-24_春节在hometown吃了啥.qmd
 
     - part: QuPath
       chapters:   
@@ -50,6 +52,7 @@ book:
         - 2026-01-28_通过QuPath用ImageJ进行阈值设定.qmd
         - 2026-02-03_keep-climbing.qmd
         - 2026-02-07_HE切片的细胞类型鉴定.qmd
+        - 2026-02-15_摘要的方法和结果的时态.qmd
 
     - part: 技术相关
       chapters:

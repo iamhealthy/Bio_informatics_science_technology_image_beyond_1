@@ -1,0 +1,140 @@
+---
+title: 春节吃了啥
+subtitle: 春节在hometown吃了啥？
+date: 2026-02-24
+toc-depth: 4
+toc-expand: true
+lang: en
+---
+
+有同事全家在春节回了新疆（hometown）。
+
+## 1. 通过地图展示出发地和目的地
+
+从天地图（<https://cloudcenter.tianditu.gov.cn/administrativeDivision/>）下载中国的省份的GeoJSON文件`中国_省.geojson`。（网站的地图数据更新时间：2025年9月）
+
+在mapshaper（<https://mapshaper.org/>）将`中国_省.geojson`转为`shapefile格式文件`。
+
+解压缩后如下：
+
+```
+raw_data/
+├── 中国_省2.dbf
+├── 中国_省2.prj
+├── 中国_省2.shp
+├── 中国_省2.shx
+```
+
+::: {.callout-tip icon="true"}
+`天地图`和`mapshaper`网站及其方法参考自[@sciessai]。
+:::
+
+```{r}
+#| message = FALSE
+dplyr |> library()
+ggplot2 |> library()
+sf |> library()
+
+china <- "raw_data/中国_省2.shp" |> sf::read_sf()
+
+# Set positions to label "上海" and "新疆"
+shanghai_xinjing <- data.frame(
+    x = c(125, 87),
+    y = c(31, 42),
+    z = c("上海", "新疆")
+)
+
+# Set positions to link "上海" and "新疆" with arrows
+shanghai_xinjiang_arrows <- data.frame(
+    x = c(121.5, 89),
+    y = c(31, 42)
+)
+
+# Set a new column to label "上海" and "新疆" to blue and red
+china <- china |> 
+    mutate(
+        label_color = case_when(
+            name == "上海市" ~ "#df938fff",
+            name == "新疆维吾尔自治区" ~ "#b1cce6ff",
+            TRUE ~ "#F3F3F3"
+        )
+    )
+
+china |> ggplot() +
+    geom_sf(aes(fill = label_color)) +
+    scale_fill_identity() +
+    geom_text(data = shanghai_xinjing, aes(x = x, y = y, label = z)) +
+    geom_line(data = shanghai_xinjiang_arrows, aes(x = x, y = y), arrow = arrow(length = unit(0.2, "cm"), ends = "first"), color = "#f11206ff") +
+    labs(x = "Longitude", y = "Latitude") +
+    theme_void()
+
+ggsave("images/sh-to-xj.png", bg = "white")
+```
+
+::: {.callout-tip icon="true"}
+部分R codes参考自[@Andrew_Heiss]。
+:::
+
+## 2. 在新疆的哪些地方吃了啥？
+
+在天地图网站下载`新疆维吾尔自治区_市.geojson`；在mapshaper网站将`新疆维吾尔自治区_市.geojson`转为`shapefile格式文件`。
+
+解压缩后如下：
+
+```
+raw_data/
+├── 新疆维吾尔自治区_市2.dbf
+├── 新疆维吾尔自治区_市2.prj
+├── 新疆维吾尔自治区_市2.shp
+└── 新疆维吾尔自治区_市2.shx
+```
+
+```{r}
+#| message = FALSE
+xinjiang <- "raw_data/新疆维吾尔自治区_市2.shp" |>
+    sf::read_sf()
+
+# Set positions to label "昌吉回族自治州", "博尔塔拉蒙古自治州", and "石河子市".
+xinjiang_labels <- data.frame(
+    x = c(82, 85, 86.5, 89.8),
+    y = c(44.5, 43.8, 45, 44.4),
+    z = c("博州", "石河子市", "昌吉州", "昌吉州")
+)
+
+# Set positions to list what I ate in XinJiang
+what_you_ate <- data.frame(
+    x = c(73, 73, 73, 73, 73),
+    y = c(49, 48, 47, 46, 45),
+    z = c("拌面*2", "汤饭*3", "丸子汤*2", "丁丁炒面*2", "马有鱼(烤鱼)*2")
+)
+
+# Set a new column to label "博尔塔拉蒙古自治州", "昌吉回族自治州", and "石河子市".
+xinjiang <- xinjiang |> 
+    mutate(
+        label_color = case_when(
+            name == "博尔塔拉蒙古自治州" ~ "#b1cce6ff",
+            name == "昌吉回族自治州" ~ "#df938fff",
+            name == "石河子市" ~ "#3437c5ff",
+            TRUE ~ "#F3F3F3"
+        )
+    )
+
+xinjiang |> ggplot() +
+    geom_sf(aes(fill = label_color, group = label_color)) +
+    scale_fill_identity() +
+    geom_text(data = xinjiang_labels, aes(x = x, y = y, label = z), color = c("black", "#3437c5ff", "black", "black")) +
+    geom_text(data = what_you_ate, aes(x = x, y = y, label = z), hjust = "left", vjust = "center", size = 6, color = "red") +
+    labs(x = "Longitude", y = "Latitude") +
+    labs(title = "在标注的州/市吃的。") +
+    theme_void()
+
+ggsave("images/xinjiang_what_you_ate.png", bg = "white")
+```
+
+::: {.callout-caution icon="true"}
+昌吉州由两片互不相连的区域组成。
+:::
+
+[给我买杯茶🍵](给我买杯茶.qmd)
+
+## References

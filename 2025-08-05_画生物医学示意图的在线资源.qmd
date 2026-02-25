@@ -1,7 +1,7 @@
 ---
 title: 生物图资源
 subtitle: 画生物医学示意图的在线资源
-date: 2025-08-05
+date: 2026-02-15
 toc-depth: 4
 toc-expand: true
 lang: en
@@ -35,6 +35,8 @@ lang: en
 
 11. Reactome --> icon-lib。https://reactome.org/icon-lib。可以下载矢量图。
 
-12. 另外，也可以关注一些图片素材网站，比如pixabay (https://pixabay.com/)，里面亦含有矢量图素材。
+12. BioDraws。https://biodraws.com/。可以下载矢量图。
+
+13. 另外，也可以关注一些图片素材网站，比如pixabay (https://pixabay.com/)，里面亦含有矢量图素材。
 
 [给我买杯茶🍵](给我买杯茶.qmd)

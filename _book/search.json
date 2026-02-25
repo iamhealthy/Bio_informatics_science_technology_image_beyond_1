@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "【生物】信息、科技、和图像分析（1）",
     "section": "",
-    "text": "前言\n看到了，如果有感触，就写点。\n内容可能涉及：\n\nR v4.5.2（Python v3.13.9）；\n\ntidyverse v2.0.0;\nRColorBrewer v1.1.3;\npatchwork v1.3.2;\npracma v2.4.6;\nterra v1.8.80;\ngrid v4.5.2;\ntidyplots v0.4.0;\nhexSticker v0.5.2;\nmagick v2.9.0;\nggforce v0.5.0;\nggstar v1.0.6;\nfs v1.6.6;\npandas (Python) v3.0.0\n\nQuPath v0.6.0（ImageJ）；\n生物医学相关的科技；\n生物图像处理；\n其它。\n\n📧：15821314790@126.com",
+    "text": "前言\n看到了，如果有感触，就写点。\n内容可能涉及：\n\nR v4.5.2（Python v3.13.9）；\n\ntidyverse v2.0.0;\nRColorBrewer v1.1.3;\npatchwork v1.3.2;\npracma v2.4.6;\nterra v1.8.80;\ngrid v4.5.2;\ntidyplots v0.4.0;\nhexSticker v0.5.2;\nmagick v2.9.0;\nggforce v0.5.0;\nggstar v1.0.6;\nfs v1.6.6;\npandas (Python) v3.0.0\n\nQuPath v0.6.0（ImageJ）；\n生物医学相关的科技；\n生物图像处理；\n其它。\n\n因为六十一甲子，所以六十一本书。🚶🏻‍➡️\n📧：15821314790@126.com",
     "crumbs": [
       "前言"
     ]
@@ -36,7 +36,7 @@
     "href": "2025-08-12_ggplot2等高线图版本的银河系.html#增加一个random_color列用于每个细胞核颜色的随机分配",
     "title": "1  ggplot2“银河系”",
     "section": "3. 增加一个“random_color”列，用于每个细胞核颜色的随机分配",
-    "text": "3. 增加一个“random_color”列，用于每个细胞核颜色的随机分配\n\npalette &lt;- brewer.pal(8, \"Set2\") # get a color palette\n\ndf &lt;- df |&gt; \n  mutate(random_color = sample(palette, nrow(df), replace = TRUE)) # add a random color column\n\ndf |&gt; head() # Display the first six rows of the updated data frame\n\n# A tibble: 6 × 3\n  `Centroid X µm` `Centroid Y µm` random_color\n            &lt;dbl&gt;           &lt;dbl&gt; &lt;chr&gt;       \n1            131.            88.4 #FFD92F     \n2            118.            90.2 #FFD92F     \n3            169.            90.9 #E78AC3     \n4            179.            95.0 #B3B3B3     \n5            230.            96.5 #E78AC3     \n6            119.            96.8 #B3B3B3",
+    "text": "3. 增加一个“random_color”列，用于每个细胞核颜色的随机分配\n\npalette &lt;- brewer.pal(8, \"Set2\") # get a color palette\n\ndf &lt;- df |&gt; \n  mutate(random_color = sample(palette, nrow(df), replace = TRUE)) # add a random color column\n\ndf |&gt; head() # Display the first six rows of the updated data frame\n\n# A tibble: 6 × 3\n  `Centroid X µm` `Centroid Y µm` random_color\n            &lt;dbl&gt;           &lt;dbl&gt; &lt;chr&gt;       \n1            131.            88.4 #FFD92F     \n2            118.            90.2 #FFD92F     \n3            169.            90.9 #FC8D62     \n4            179.            95.0 #8DA0CB     \n5            230.            96.5 #8DA0CB     \n6            119.            96.8 #66C2A5",
     "crumbs": [
       "R",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>ggplot2“银河系”</span>"
@@ -212,7 +212,7 @@
     "href": "2025-08-23_ggplot2版本的银河系-无细胞核面积的加权-vs-细胞核面积的加权.html#增加一个random_color列用于每个细胞核颜色的随机分配",
     "title": "4  ggplot2“银河系”加权有无",
     "section": "2. 增加一个“random_color”列，用于每个细胞核颜色的随机分配",
-    "text": "2. 增加一个“random_color”列，用于每个细胞核颜色的随机分配\n\npalette &lt;- brewer.pal(8, \"Set2\") # get a color palette\n\ndf &lt;- df |&gt; \n  mutate(Random_color = sample(palette, nrow(df), replace = TRUE)) # add a random color column\n\ndf |&gt; head() # Display the first six rows of the updated data frame\n\n# A tibble: 6 × 4\n  `Centroid X µm` `Centroid Y µm` `Area µm^2` Random_color\n            &lt;dbl&gt;           &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;       \n1            131.            88.4        29.2 #8DA0CB     \n2            118.            90.2        55.5 #E78AC3     \n3            169.            90.9        55.5 #B3B3B3     \n4            179.            95.0        61   #8DA0CB     \n5            230.            96.5        69.8 #66C2A5     \n6            119.            96.8        53.8 #FC8D62",
+    "text": "2. 增加一个“random_color”列，用于每个细胞核颜色的随机分配\n\npalette &lt;- brewer.pal(8, \"Set2\") # get a color palette\n\ndf &lt;- df |&gt; \n  mutate(Random_color = sample(palette, nrow(df), replace = TRUE)) # add a random color column\n\ndf |&gt; head() # Display the first six rows of the updated data frame\n\n# A tibble: 6 × 4\n  `Centroid X µm` `Centroid Y µm` `Area µm^2` Random_color\n            &lt;dbl&gt;           &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;       \n1            131.            88.4        29.2 #A6D854     \n2            118.            90.2        55.5 #E78AC3     \n3            169.            90.9        55.5 #E5C494     \n4            179.            95.0        61   #FC8D62     \n5            230.            96.5        69.8 #FFD92F     \n6            119.            96.8        53.8 #66C2A5",
     "crumbs": [
       "R",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>ggplot2“银河系”加权有无</span>"
@@ -626,1741 +626,1873 @@
     ]
   },
   {
+    "objectID": "2026-02-16_Happy-Year-of-the-Horse-2026.html",
+    "href": "2026-02-16_Happy-Year-of-the-Horse-2026.html",
+    "title": "15  马年快乐2026",
+    "section": "",
+    "text": "铜奔马图源：http://www.gansumuseum.com/home\n\n\n\n\n# ***** Load packages *****\nggplot2 |&gt; library()\nggforce |&gt; library()\nmagick |&gt; library()\ngrid |&gt; library()\n\n# ***** Set the coordinates for a magnification len *****\n\n# Prepare a dataframe for a circle/glass\ncircle &lt;- data.frame(\n    x = 50, # x coordinate\n    y = 50, # y coordinate\n    r = 40 # radius\n)\n\n# Prepare a datafram for a line (i.e., than handle of magnifying len)\nline &lt;- data.frame(\n    x = c(73, 90),\n    y = c(20, 0)\n)\n\n# ***** Read Galloping Horse *****\nhorse &lt;- \"images/galloping-horse.png\" |&gt; \n    magick::image_read()\nhorse_grob &lt;- horse |&gt; \n    grid::rasterGrob(interpolate = TRUE)\n\n# ***** Prepare a data frame for the text \"马年喜奔2026\"\ntext &lt;- data.frame(\n    x = c(50, 50),\n    y = c(-2, 103),\n    label = c(\"2026\", \"马年喜奔\")\n)\n\n# ***** Plot *****\ndf &lt;- data.frame(\n    x = seq(1, 100),\n    y = seq(-24, 125, by = 1.5)\n)\n\nhappy_new_year_2026 &lt;- df |&gt; \n    ggplot(aes(x = x, y = y)) +\n    geom_point(alpha = 0) +\n    geom_line(\n        data = line,\n        aes(x = x, y = y),\n        linewidth = 4,\n        color = \"black\"\n    ) +\n    ggforce::geom_circle(\n        data = circle,\n        aes(x0 = x, y0 = y, r = r, linewidth = 8),\n        color = \"#3674C1\"\n    ) +\n    annotation_custom(\n        horse_grob,\n        xmin = 20,\n        xmax = 80,\n        ymin = 20,\n        ymax = 80\n    ) +\n    geom_text(\n        data = text,\n        aes(x = x, y = y, label = label),\n        size = 4.2,\n        color = \"red\",\n        fontface = \"italic\",\n        family = \"serif\"\n    ) +\n    theme_void() +\n    theme(\n        legend.position = \"none\"\n    )\n\nhappy_new_year_2026 |&gt; ggsave(\n    filename = \"images/happy_new_year_2026.png\",\n    width = 3,\n    height = 4.5,\n    units = \"cm\",\n    dpi = 300\n)\n\n给我买杯茶🍵",
+    "crumbs": [
+      "R",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>马年快乐2026</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-24_春节在hometown吃了啥.html",
+    "href": "2026-02-24_春节在hometown吃了啥.html",
+    "title": "16  春节吃了啥",
+    "section": "",
+    "text": "1. 通过地图展示出发地和目的地\n有同事全家在春节回了新疆（hometown）。\n从天地图（https://cloudcenter.tianditu.gov.cn/administrativeDivision/）下载中国的省份的GeoJSON文件中国_省.geojson。（网站的地图数据更新时间：2025年9月）\n在mapshaper（https://mapshaper.org/）将中国_省.geojson转为shapefile格式文件。\n解压缩后如下：\ndplyr |&gt; library()\nggplot2 |&gt; library()\nsf |&gt; library()\n\nchina &lt;- \"raw_data/中国_省2.shp\" |&gt; sf::read_sf()\n\n# Set positions to label \"上海\" and \"新疆\"\nshanghai_xinjing &lt;- data.frame(\n    x = c(125, 87),\n    y = c(31, 42),\n    z = c(\"上海\", \"新疆\")\n)\n\n# Set positions to link \"上海\" and \"新疆\" with arrows\nshanghai_xinjiang_arrows &lt;- data.frame(\n    x = c(121.5, 89),\n    y = c(31, 42)\n)\n\n# Set a new column to label \"上海\" and \"新疆\" to blue and red\nchina &lt;- china |&gt; \n    mutate(\n        label_color = case_when(\n            name == \"上海市\" ~ \"#df938fff\",\n            name == \"新疆维吾尔自治区\" ~ \"#b1cce6ff\",\n            TRUE ~ \"#F3F3F3\"\n        )\n    )\n\nchina |&gt; ggplot() +\n    geom_sf(aes(fill = label_color)) +\n    scale_fill_identity() +\n    geom_text(data = shanghai_xinjing, aes(x = x, y = y, label = z)) +\n    geom_line(data = shanghai_xinjiang_arrows, aes(x = x, y = y), arrow = arrow(length = unit(0.2, \"cm\"), ends = \"first\"), color = \"#f11206ff\") +\n    labs(x = \"Longitude\", y = \"Latitude\") +\n    theme_void()\n\n\n\n\n\n\n\nggsave(\"images/sh-to-xj.png\", bg = \"white\")",
+    "crumbs": [
+      "R",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>春节吃了啥</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-24_春节在hometown吃了啥.html#通过地图展示出发地和目的地",
+    "href": "2026-02-24_春节在hometown吃了啥.html#通过地图展示出发地和目的地",
+    "title": "16  春节吃了啥",
+    "section": "",
+    "text": "raw_data/\n├── 中国_省2.dbf\n├── 中国_省2.prj\n├── 中国_省2.shp\n├── 中国_省2.shx\n\n\n\n\n\n\nTip\n\n\n\n天地图和mapshaper网站及其方法参考自(1)。\n\n\n\n\n\n\n\n\n\nTip\n\n\n\n部分R codes参考自(2)。",
+    "crumbs": [
+      "R",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>春节吃了啥</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-24_春节在hometown吃了啥.html#在新疆的哪些地方吃了啥",
+    "href": "2026-02-24_春节在hometown吃了啥.html#在新疆的哪些地方吃了啥",
+    "title": "16  春节吃了啥",
+    "section": "2. 在新疆的哪些地方吃了啥？",
+    "text": "2. 在新疆的哪些地方吃了啥？\n在天地图网站下载新疆维吾尔自治区_市.geojson；在mapshaper网站将新疆维吾尔自治区_市.geojson转为shapefile格式文件。\n解压缩后如下：\nraw_data/\n├── 新疆维吾尔自治区_市2.dbf\n├── 新疆维吾尔自治区_市2.prj\n├── 新疆维吾尔自治区_市2.shp\n└── 新疆维吾尔自治区_市2.shx\n\nxinjiang &lt;- \"raw_data/新疆维吾尔自治区_市2.shp\" |&gt;\n    sf::read_sf()\n\n# Set positions to label \"昌吉回族自治州\", \"博尔塔拉蒙古自治州\", and \"石河子市\".\nxinjiang_labels &lt;- data.frame(\n    x = c(82, 85, 86.5, 89.8),\n    y = c(44.5, 43.8, 45, 44.4),\n    z = c(\"博州\", \"石河子市\", \"昌吉州\", \"昌吉州\")\n)\n\n# Set positions to list what I ate in XinJiang\nwhat_you_ate &lt;- data.frame(\n    x = c(73, 73, 73, 73, 73),\n    y = c(49, 48, 47, 46, 45),\n    z = c(\"拌面*2\", \"汤饭*3\", \"丸子汤*2\", \"丁丁炒面*2\", \"马有鱼(烤鱼)*2\")\n)\n\n# Set a new column to label \"博尔塔拉蒙古自治州\", \"昌吉回族自治州\", and \"石河子市\".\nxinjiang &lt;- xinjiang |&gt; \n    mutate(\n        label_color = case_when(\n            name == \"博尔塔拉蒙古自治州\" ~ \"#b1cce6ff\",\n            name == \"昌吉回族自治州\" ~ \"#df938fff\",\n            name == \"石河子市\" ~ \"#3437c5ff\",\n            TRUE ~ \"#F3F3F3\"\n        )\n    )\n\nxinjiang |&gt; ggplot() +\n    geom_sf(aes(fill = label_color, group = label_color)) +\n    scale_fill_identity() +\n    geom_text(data = xinjiang_labels, aes(x = x, y = y, label = z), color = c(\"black\", \"#3437c5ff\", \"black\", \"black\")) +\n    geom_text(data = what_you_ate, aes(x = x, y = y, label = z), hjust = \"left\", vjust = \"center\", size = 6, color = \"red\") +\n    labs(x = \"Longitude\", y = \"Latitude\") +\n    labs(title = \"在标注的州/市吃的。\") +\n    theme_void()\n\n\n\n\n\n\n\nggsave(\"images/xinjiang_what_you_ate.png\", bg = \"white\")\n\n\n\n\n\n\n\nCaution\n\n\n\n昌吉州由两片互不相连的区域组成。\n\n\n给我买杯茶🍵",
+    "crumbs": [
+      "R",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>春节吃了啥</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-24_春节在hometown吃了啥.html#references",
+    "href": "2026-02-24_春节在hometown吃了啥.html#references",
+    "title": "16  春节吃了啥",
+    "section": "References",
+    "text": "References\n\n\n\n\n1. SCiessai, 【数据分享】2024年5月最新全国省市县行政区划shp数据，下载和处理过程，带审图号 (2024). https://zhuanlan.zhihu.com/p/720041249.\n\n\n2. Andrew, Heiss, Making middle earth maps with r (2023). https://www.andrewheiss.com/blog/2023/04/26/middle-earth-mapping-sf-r-gis/.",
+    "crumbs": [
+      "R",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>春节吃了啥</span>"
+    ]
+  },
+  {
     "objectID": "2025-07-29_银河系起源于HE.html",
     "href": "2025-07-29_银河系起源于HE.html",
-    "title": "15  “银河系”&HE",
+    "title": "17  “银河系”&HE",
     "section": "",
     "text": "“银河系”1号🤓\n笔者在用QuPath（v0.6.0）处理H&E图片时，发现一个区域的衍生图片很漂亮，有点像“银河系/galaxy”，于是决定分享出来，给严谨的科学研究工作提供一点“艺术气息”。",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>“银河系”&HE</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>“银河系”&HE</span>"
     ]
   },
   {
     "objectID": "2025-07-29_银河系起源于HE.html#银河系2号",
     "href": "2025-07-29_银河系起源于HE.html#银河系2号",
-    "title": "15  “银河系”&HE",
+    "title": "17  “银河系”&HE",
     "section": "“银河系”2号😃",
     "text": "“银河系”2号😃",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>“银河系”&HE</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>“银河系”&HE</span>"
     ]
   },
   {
     "objectID": "2025-07-29_银河系起源于HE.html#银河系3号",
     "href": "2025-07-29_银河系起源于HE.html#银河系3号",
-    "title": "15  “银河系”&HE",
+    "title": "17  “银河系”&HE",
     "section": "“银河系”3号😇",
     "text": "“银河系”3号😇",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>“银河系”&HE</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>“银河系”&HE</span>"
     ]
   },
   {
     "objectID": "2025-07-29_银河系起源于HE.html#银河系的起源",
     "href": "2025-07-29_银河系起源于HE.html#银河系的起源",
-    "title": "15  “银河系”&HE",
+    "title": "17  “银河系”&HE",
     "section": "“银河系”的“起源”🤪",
     "text": "“银河系”的“起源”🤪",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>“银河系”&HE</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>“银河系”&HE</span>"
     ]
   },
   {
     "objectID": "2025-07-29_银河系起源于HE.html#声明",
     "href": "2025-07-29_银河系起源于HE.html#声明",
-    "title": "15  “银河系”&HE",
+    "title": "17  “银河系”&HE",
     "section": "声明😉",
     "text": "声明😉\n本文图片均来自笔者的工作，未经许可，可随意使用和转载。😉\n高清图片下载地址：通过网盘分享的文件：2025-07-29_HE_galaxy 链接: https://pan.baidu.com/s/1LTdyc__XSqBQ2QxA3zF6zw?pwd=pwkw 提取码: pwkw\n给我买杯茶🍵",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>“银河系”&HE</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>“银河系”&HE</span>"
     ]
   },
   {
     "objectID": "2025-09-30_用QuPath打开mrxs格式切片图像的问题.html",
     "href": "2025-09-30_用QuPath打开mrxs格式切片图像的问题.html",
-    "title": "16  QuPath vs mrxs",
+    "title": "18  QuPath vs mrxs",
     "section": "",
     "text": "1. QuPath对mrxs格式的支持情况\n有时候，我们所拿到的切片图像格式是mrxs格式。\n并且有时候，您可能想用QuPath软件(1)来分析这些图片。\n阅读QuPath的官方文档，可以发现：\n所以，从实操角度，当拿到mrxs格式切片图像时，先用QuPath试试看。\n下面所测试的是Windows版本的QuPath（version 0.6.0）。",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>QuPath vs mrxs</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>QuPath vs mrxs</span>"
     ]
   },
   {
     "objectID": "2025-09-30_用QuPath打开mrxs格式切片图像的问题.html#qupath对mrxs格式的支持情况",
     "href": "2025-09-30_用QuPath打开mrxs格式切片图像的问题.html#qupath对mrxs格式的支持情况",
-    "title": "16  QuPath vs mrxs",
+    "title": "18  QuPath vs mrxs",
     "section": "",
     "text": "… 2D, 8-bit, RGB images that do not use JPEG-XR compression seem to be ok. Anything else (e.g. 16-bit fluorescence) is not.\n\n\nQuPath may still be able to open a low-resolution thumbnail for an unsupported MRXS image, but unfortunately not the full data.",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>QuPath vs mrxs</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>QuPath vs mrxs</span>"
     ]
   },
   {
     "objectID": "2025-09-30_用QuPath打开mrxs格式切片图像的问题.html#用qupath打开mrxs格式的白光切片图像",
     "href": "2025-09-30_用QuPath打开mrxs格式切片图像的问题.html#用qupath打开mrxs格式的白光切片图像",
-    "title": "16  QuPath vs mrxs",
+    "title": "18  QuPath vs mrxs",
     "section": "2. 用QuPath打开mrxs格式的白光切片图像",
     "text": "2. 用QuPath打开mrxs格式的白光切片图像\n\n当图片路径包含中文时，发现只打开了缩略图，而没有打开完整图像👎。\n\n\n\n\n\nQuPath自动选择的image server类型是“Bio-Formats”。手动选择image server类型为“OpenSlide”后，甚至显示“Error attempting to load image data. Failed to load ImageServer”。\n\n\n\n\n\n\n\n打开图片时，可以让QuPath自动选择image server类型，亦可以手动选择。\n\n\n\n\n当图片路径不包含中文时，则打开了完整图像👋。\n\n\n\n\n\nQuPath自动选择的image server类型是“OpenSlide”。\n\n\n\n所以，先保证图片路径不包含中文，再用QuPath打开mrxs格式切片。",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>QuPath vs mrxs</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>QuPath vs mrxs</span>"
     ]
   },
   {
     "objectID": "2025-09-30_用QuPath打开mrxs格式切片图像的问题.html#用qupath打开mrxs格式的多色荧光切片图像",
     "href": "2025-09-30_用QuPath打开mrxs格式切片图像的问题.html#用qupath打开mrxs格式的多色荧光切片图像",
-    "title": "16  QuPath vs mrxs",
+    "title": "18  QuPath vs mrxs",
     "section": "3. 用QuPath打开mrxs格式的多色荧光切片图像",
     "text": "3. 用QuPath打开mrxs格式的多色荧光切片图像\n\n当图片路径不包含中文时，打开了图像，且识别了pyramid信息，但通道只有RGB通道，而没有真实的荧光通道信息，且读取的图片含有灰色区域。\n\n\n\n\n\n成功读取了pyramid信息，但通道不对，且读取的图片含有灰色区域。\n\n\n\n\n\n\n\n正确的荧光通道（示例）。\n\n\n\n\n其它几个image servers，要么只能读取缩略图，要么“Error attempting to load image data. Failed to load ImageServer”，要么“Unable to add images”👎。\n\n所以，如果还是想用QuPath分析的话，需要提前将mrxs格式转为QuPath支持的格式。\n给我买杯茶🍵",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>QuPath vs mrxs</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>QuPath vs mrxs</span>"
     ]
   },
   {
     "objectID": "2025-09-30_用QuPath打开mrxs格式切片图像的问题.html#references",
     "href": "2025-09-30_用QuPath打开mrxs格式切片图像的问题.html#references",
-    "title": "16  QuPath vs mrxs",
+    "title": "18  QuPath vs mrxs",
     "section": "References",
     "text": "References\n\n\n\n\n1. P. Bankhead, M. B. Loughrey, J. A. Fernández, Y. Dombrowski, D. G. McArt, P. D. Dunne, S. McQuaid, R. T. Gray, L. J. Murray, H. G. Coleman, J. A. James, M. Salto-Tellez, P. W. Hamilton, QuPath: Open source software for digital pathology image analysis. Scientific Reports 7 (2017).",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>QuPath vs mrxs</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>QuPath vs mrxs</span>"
     ]
   },
   {
     "objectID": "2025-10-01_庆祝国庆2025.html",
     "href": "2025-10-01_庆祝国庆2025.html",
-    "title": "17  国庆2025",
+    "title": "19  国庆2025",
     "section": "",
     "text": "图源：央视网https://military.cctv.cn/2025/09/22/ARTIlzFH7RQIYQEVpCEz4oyz250922.shtml\n\n\n\n\n\n\n\nQuPath v0.6.0: Analyze -&gt; Tils & superpixels -&gt; SLIC superpixel segmentation…; File -&gt; Export images… -&gt; Rendered RGG (with overlays)…\n\n\n\n// QuPath v0.6.0\n// Some detail\nrunPlugin('qupath.imagej.superpixels.SLICSuperpixelsPlugin', '{\"sigmaPixels\":5.0,\"spacingPixels\":2.0,\"maxIterations\":10,\"regularization\":0.25,\"adaptRegularization\":false}')\n\n\n\n\nQuPath v0.6.0: Analyze -&gt; Calculate features -&gt; Add intensity features…; Measure -&gt; Show measurement maps; File -&gt; Export images… -&gt; Rendered SVG…\n\n\n\n// QuPath v0.6.0\n// Some detail\nrunPlugin('qupath.imagej.superpixels.SLICSuperpixelsPlugin', '{\"sigmaPixels\":5.0,\"spacingPixels\":2.0,\"maxIterations\":10,\"regularization\":0.25,\"adaptRegularization\":false}')\nselectDetections();\nrunPlugin('qupath.lib.algorithms.IntensityFeaturesPlugin', '{\"downsample\":1.0,\"region\":\"ROI\",\"tileSizePixels\":200.0,\"colorRed\":false,\"colorGreen\":false,\"colorBlue\":true,\"colorHue\":false,\"colorSaturation\":false,\"colorBrightness\":false,\"doMean\":true,\"doStdDev\":false,\"doMinMax\":false,\"doMedian\":false,\"doHaralick\":false,\"haralickDistance\":1,\"haralickBins\":32}')\n给我买杯茶🍵",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>国庆2025</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>国庆2025</span>"
     ]
   },
   {
     "objectID": "2025-10-09_诺贝尔生理或医学奖2025.html",
     "href": "2025-10-09_诺贝尔生理或医学奖2025.html",
-    "title": "18  Nobel2025",
+    "title": "20  Nobel2025",
     "section": "",
     "text": "图源：https://www.nobelprize.org/all-nobel-prizes-2025/\n\n\n\n\n\n\n\nThe image was exported using a custom groovy script equivalent to: QuPath v0.6.0: Analyze -&gt; Tils & superpixels -&gt; SLIC superpixel segmentation…; File -&gt; Export images… -&gt; Rendered RGB (with overlays)…\n\n\n\n// QuPath v0.6.0\n// Some technical detail\nrunPlugin('qupath.imagej.superpixels.SLICSuperpixelsPlugin', '{\"sigmaPixels\":5.0,\"spacingPixels\":1.0,\"maxIterations\":20,\"regularization\":0.25,\"adaptRegularization\":false}')\n\n\n\n\nThe image was exported using a custom groovy script equivalent to: QuPath v0.6.0: Analyze -&gt; Calculate features -&gt; Add intensity features…; Measure -&gt; Show measurement maps; File -&gt; Export images… -&gt; Rendered SVG…\n\n\n\n// QuPath v0.6.0\n// Some technical detail\nrunPlugin('qupath.lib.algorithms.IntensityFeaturesPlugin', '{\"downsample\":1.0,\"region\":\"ROI\",\"tileSizePixels\":200.0,\"colorRed\":true,\"colorGreen\":false,\"colorBlue\":false,\"colorHue\":false,\"colorSaturation\":false,\"colorBrightness\":false,\"doMean\":true,\"doStdDev\":false,\"doMinMax\":false,\"doMedian\":false,\"doHaralick\":false,\"haralickDistance\":1,\"haralickBins\":32}')\n给我买杯茶🍵",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Nobel2025</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Nobel2025</span>"
     ]
   },
   {
     "objectID": "2025-10-15_世界上最长寿的啮齿动物种类.html",
     "href": "2025-10-15_世界上最长寿的啮齿动物种类.html",
-    "title": "19  最长寿啮齿动物",
+    "title": "21  最长寿啮齿动物",
     "section": "",
     "text": "1. 裸鼹鼠（naked mole rat，Heterocephalus glaber）的寿命\n读到一篇关于探讨裸鼹鼠的cGAS和抗衰老/anti-aging的研究论文(1)和对应的评论(2)。\n研究论文(1)提到：\n对应的评论(2)提到：\n对该推文的笔者来说，算一个知识点，所以贴出来。",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>最长寿啮齿动物</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>最长寿啮齿动物</span>"
     ]
   },
   {
     "objectID": "2025-10-15_世界上最长寿的啮齿动物种类.html#裸鼹鼠naked-mole-ratheterocephalus-glaber的寿命",
     "href": "2025-10-15_世界上最长寿的啮齿动物种类.html#裸鼹鼠naked-mole-ratheterocephalus-glaber的寿命",
-    "title": "19  最长寿啮齿动物",
+    "title": "21  最长寿啮齿动物",
     "section": "",
     "text": "The naked mole-rat (Heterocephalus glaber) is an extraordinarily long-lived rodent with a maximum life span of ∼37 years.\n\n\n\nThe naked mole rat (Heterocephalus glaber) is the longest-lived rodent, with a maximum life span of nearly 40 years.",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>最长寿啮齿动物</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>最长寿啮齿动物</span>"
     ]
   },
   {
     "objectID": "2025-10-15_世界上最长寿的啮齿动物种类.html#qupath-for-fun",
     "href": "2025-10-15_世界上最长寿的啮齿动物种类.html#qupath-for-fun",
-    "title": "19  最长寿啮齿动物",
+    "title": "21  最长寿啮齿动物",
     "section": "2. QuPath for fun",
     "text": "2. QuPath for fun\n纯粹为了好玩，我们通过个性化groovy脚本在QuPath中标注裸鼹鼠的寿命特点。\n\n\n\n\nVideo\n批注大概从第8秒开始。\n\n\n\n// QuPath v0.6.0\n\nimport qupath.lib.objects.PathObjects\nimport qupath.lib.roi.ROIs\n\n// Set image type\nsetImageType('OTHER')\n\n// Remove all existed objects\nselectAllObjects()\nremoveAllObjects()\n\n// Sleep for 30 seconds\nThread.sleep(30000)\n\n// Draw a line (1st)\ndef line_x1 = 592; line_x2 = 724\ndef line_y1 = 835; line_y2 = 457\ndef plane = getCurrentViewer().getImagePlane()\ndef line1_roi = ROIs.createLineROI(line_x1, line_y1, line_x2, line_y2, plane)\ndef line1_anno = PathObjects.createAnnotationObject(line1_roi)\naddObject(line1_anno)\n\n// Sleep for 2 seconds\nThread.sleep(2000)\n\n// Draw another line (2nd)\ndef line_x3 = line_x2; line_x4 = 2500\ndef line_y3 = line_y2; line_y4 = line_y2\ndef line2_roi = ROIs.createLineROI(line_x3, line_y3, line_x4, line_y4, plane)\ndef line2_anno = PathObjects.createAnnotationObject(line2_roi)\naddObject(line2_anno)\n\n// Sleep for 2 seconds\nThread.sleep(2000)\n\n// Set a name to the 2nd line\ndef text = \"I (naked mole rat/裸鼹鼠) am the longest-lived rodent, with a maximum life span of nearly 40 years :)\"\ndef text_annotation = text\ndef text_annotation_obj = PathObjects.createAnnotationObject(line2_roi)\ntext_annotation_obj.setName(text_annotation)\naddObject(text_annotation_obj)\n\n// Sleep for 2 seconds\nThread.sleep(2000)\n\n// Select all objects\nselectAllObjects()\n\nprintln(\"Done!\")\n给我买杯茶🍵",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>最长寿啮齿动物</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>最长寿啮齿动物</span>"
     ]
   },
   {
     "objectID": "2025-10-15_世界上最长寿的啮齿动物种类.html#references",
     "href": "2025-10-15_世界上最长寿的啮齿动物种类.html#references",
-    "title": "19  最长寿啮齿动物",
+    "title": "21  最长寿啮齿动物",
     "section": "References",
     "text": "References\n\n\n\n\n1. Y. Chen, Z. Chen, H. Wang, Z. Cui, K.-L. Li, Z. Song, L. Chen, X. Sun, X. Xu, Y. Zhang, L. Tan, J. Yuan, R. Tan, M.-H. Luo, F.-L. Sun, H. Liu, Y. Jiang, Z. Mao, A cGAS-mediated mechanism in naked mole-rats potentiates DNA repair and delays aging. Science 390 (2025).\n\n\n2. J. C. Martinez, A. Seluanov, V. Gorbunova, Longevity steps on the cGAS. Science 390, 126–127 (2025).",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>最长寿啮齿动物</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>最长寿啮齿动物</span>"
     ]
   },
   {
     "objectID": "2025-11-05_QuPath的Omnipose插件的安装和运行.html",
     "href": "2025-11-05_QuPath的Omnipose插件的安装和运行.html",
-    "title": "20  QuPath的Omnipose",
+    "title": "22  QuPath的Omnipose",
     "section": "",
     "text": "1. 安装Omnipose\n相对来说，能成功的安装Omnipose (1)（或者包括Cellpose (2)）软件，并成功的安装和运行对应QuPah插件，相对困难些。\n这里展示在Windows 11 64位操作系统的安装过程。\n假设已经安装好了miniconda（本机安装的版本是conda 25.9.1）。\n参照https://github.com/kevinjohncutler/omnipose安装Omnipose。\n安装结束后，启动Omnipose遇到问题😥：\n遇到了OpenMP and libiomp5相关问题，参考https://omnipose.readthedocs.io/installation.html，运行：\n再次启动Omnipose，又遇到问题😥：\n因此：\n安装的numpy版本为v2.2.6。\n这时，可以成功的启动Omnipose了🥳。",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>QuPath的Omnipose</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>QuPath的Omnipose</span>"
     ]
   },
   {
     "objectID": "2025-11-05_QuPath的Omnipose插件的安装和运行.html#安装omnipose",
     "href": "2025-11-05_QuPath的Omnipose插件的安装和运行.html#安装omnipose",
-    "title": "20  QuPath的Omnipose",
+    "title": "22  QuPath的Omnipose",
     "section": "",
     "text": "conda create -n omnipose 'python==3.10.12' pytorch\nconda activate omnipose\ngit clone https://github.com/kevinjohncutler/omnipose.git\ncd omnipose\npip install -e .\n\nomnipose\n\nOMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.\nOMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the program. That is dangerous, since it can degrade performance or cause incorrect results. The best thing to do is to ensure that only a single OpenMP runtime is linked into the process, e.g. by avoiding static linking of the OpenMP runtime in any library. As an unsafe, unsupported, undocumented workaround you can set the environment variable KMP_DUPLICATE_LIB_OK=TRUE to allow the program to continue to execute, but that may cause crashes or silently produce incorrect results. For more information, please see http://www.intel.com/software/products/support/.\n\nconda install nomkl\n\nomnipose\n\nTraceback (most recent call last):\n  File \"C:\\ProgramData\\miniconda3\\envs\\omnipose\\lib\\runpy.py\", line 196, in _run_module_as_main\n    return _run_code(code, main_globals, None,\n  File \"C:\\ProgramData\\miniconda3\\envs\\omnipose\\lib\\runpy.py\", line 86, in _run_code\n    exec(code, run_globals)\n  File \"C:\\ProgramData\\miniconda3\\envs\\omnipose\\Scripts\\omnipose.exe\\__main__.py\", line 2, in &lt;module&gt;\n  File \"D:\\8_tak\\36_Omnipose-study_2025-10-31\\omnipose\\src\\omnipose\\__init__.py\", line 15, in &lt;module&gt;\n    from numba.core.errors import NumbaPendingDeprecationWarning\n  File \"C:\\ProgramData\\miniconda3\\envs\\omnipose\\lib\\site-packages\\numba\\__init__.py\", line 59, in &lt;module&gt;\n    _ensure_critical_deps()\n  File \"C:\\ProgramData\\miniconda3\\envs\\omnipose\\lib\\site-packages\\numba\\__init__.py\", line 34, in _ensure_critical_deps\n    import numpy as np\nModuleNotFoundError: No module named 'numpy'\n\npip install numpy",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>QuPath的Omnipose</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>QuPath的Omnipose</span>"
     ]
   },
   {
     "objectID": "2025-11-05_QuPath的Omnipose插件的安装和运行.html#安装qupath的omnipose插件",
     "href": "2025-11-05_QuPath的Omnipose插件的安装和运行.html#安装qupath的omnipose插件",
-    "title": "20  QuPath的Omnipose",
+    "title": "22  QuPath的Omnipose",
     "section": "2. 安装QuPath的Omnipose插件",
     "text": "2. 安装QuPath的Omnipose插件\n参考https://github.com/BIOP/qupath-extension-cellpose安装Omnipose插件并设置对应环境Python的路径，这里不再赘述。\n运行插件提供的脚本（认真阅读脚本的注释，并根据需要去修改）时，报错（下面是部分报错信息）😥：\nINFO: Cellpose2D: AttributeError: `newbyteorder` was removed from the ndarray class in NumPy 2.0. Use `arr.view(arr.dtype.newbyteorder(order))` instead.\nINFO: Reading Temp_0_0_z0_t0_cp_masks.tif\nERROR: Cannot invoke \"ij.ImagePlus.getProcessor()\" because \"label_imp\" is null\n因此：\nconda activate omnipose\npip install \"numpy&lt;2.0\"\n安装的numpy版本降低为v1.26.4（第1部分安装的是v2.2.6）。\n这时，可以成功的运行Omnipose插件了🥳。\n\n\n\n补充说明：脚本中的model用绝对路径去定位，比如：\ndef pathModel = \"C:\\\\Users\\\\我\\\\.cellpose\\\\models\\\\bact_phase_affinitytorch_0\"\n以防出现如下报错：\nERROR: Cannot invoke \"ij.ImagePlus.getProcessor()\" because \"label_imp\" is null\n给我买杯茶🍵",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>QuPath的Omnipose</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>QuPath的Omnipose</span>"
     ]
   },
   {
     "objectID": "2025-11-05_QuPath的Omnipose插件的安装和运行.html#references",
     "href": "2025-11-05_QuPath的Omnipose插件的安装和运行.html#references",
-    "title": "20  QuPath的Omnipose",
+    "title": "22  QuPath的Omnipose",
     "section": "References",
     "text": "References\n\n\n\n\n1. K. J. Cutler, C. Stringer, T. W. Lo, L. Rappez, N. Stroustrup, S. Brook Peterson, P. A. Wiggins, J. D. Mougous, Omnipose: A high-precision morphology-independent solution for bacterial cell segmentation. Nature Methods 19, 1438–1448 (2022).\n\n\n2. M. Pachitariu, M. Rariden, C. Stringer, Cellpose-SAM: Superhuman generalization for cellular segmentation. doi: 10.1101/2025.04.28.651001 (2025).",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>QuPath的Omnipose</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>QuPath的Omnipose</span>"
     ]
   },
   {
     "objectID": "2025-12-16_通过groovy-script改变多通道图片的通道名称和颜色.html",
     "href": "2025-12-16_通过groovy-script改变多通道图片的通道名称和颜色.html",
-    "title": "21  改变通道名称和颜色",
+    "title": "23  改变通道名称和颜色",
     "section": "",
     "text": "1. 通过groovy script改变多通道图片的通道名称\n有时候，基于某种需要，要改变多通道图片的通道名称。\n具体见https://qupath.readthedocs.io/en/0.6/docs/tutorials/multiplex_analysis.html。该链接介绍了手动和自动策略。\n比如我们针对示例图片（4通道），groovy script脚本如下：\n如果一个项目中的多个多通道图片相关设置相同（比如通道数量、通道名称、通道颜色），则通过groovy script批量更改更方便（Automate -&gt; Script editor -&gt; 点击右下角的三点按钮 -&gt; Run for project）。",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>改变通道名称和颜色</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>改变通道名称和颜色</span>"
     ]
   },
   {
     "objectID": "2025-12-16_通过groovy-script改变多通道图片的通道名称和颜色.html#通过groovy-script改变多通道图片的通道名称",
     "href": "2025-12-16_通过groovy-script改变多通道图片的通道名称和颜色.html#通过groovy-script改变多通道图片的通道名称",
-    "title": "21  改变通道名称和颜色",
+    "title": "23  改变通道名称和颜色",
     "section": "",
     "text": "// QuPath v0.6.0\n// Set channel names\n// Relevant to specific study (e.g. for a four channel image)\nsetChannelNames( // in the sequence of C1 (channel 1), C2, C3, C4\n        'C1_Blue',\n        'C2_Green',\n        'C3_Red',\n        'C4_Magenta' // 洋红\n)\n\n// Get the image name of the current image\ndef imageName = getCurrentImageName()\n\n// Print the finished information\nprintln \"${imageName}'s channel names are renamed!\"\n\n\n\n\n\n\n原通道名。\n\n\n\n\n\n\n\n\n改变后的通道名。",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>改变通道名称和颜色</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>改变通道名称和颜色</span>"
     ]
   },
   {
     "objectID": "2025-12-16_通过groovy-script改变多通道图片的通道名称和颜色.html#通过groovy-script改变多通道图片的通道颜色",
     "href": "2025-12-16_通过groovy-script改变多通道图片的通道名称和颜色.html#通过groovy-script改变多通道图片的通道颜色",
-    "title": "21  改变通道名称和颜色",
+    "title": "23  改变通道名称和颜色",
     "section": "2. 通过groovy script改变多通道图片的通道颜色",
     "text": "2. 通过groovy script改变多通道图片的通道颜色\n有时候，基于某种需要，也要改变多通道图片的通道颜色。\n比如我们针对示例图片（4通道），groovy script脚本如下：\n// QuPath v0.6.0\ndef color_C1 = makeARGB(255, 0, 0, 255) // blue\n// The \"ARGB\" in makeARGB stands for Alpha (transparency), Red, Green, and Blue.\ndef color_C2 = makeARGB(255, 0, 255, 0) // green\ndef color_C3 = makeARGB(255, 255, 0, 0) // red\ndef color_C4 = makeARGB(255, 255, 0, 255) // magenta/洋红\n\nsetChannelColors( // in the sequence of C1 (channel 1), C2, C3, C4\n        color_C1,\n        color_C2,\n        color_C3,\n        color_C4\n)\n\n// Get the image name of the current image\ndef imageName = getCurrentImageName()\n\n// Print the finished information\nprintln \"${imageName}'s channel colors are changed!\"\n\n\n\n\n\n\n原通道颜色。\n\n\n\n\n\n\n\n\n改变后的通道颜色。\n\n\n\n\n\n给我买杯茶🍵",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>改变通道名称和颜色</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>改变通道名称和颜色</span>"
     ]
   },
   {
     "objectID": "2025-12-26_QuPath_输出detections的csv和txt格式文件.html",
     "href": "2025-12-26_QuPath_输出detections的csv和txt格式文件.html",
-    "title": "22  输出csv和txt",
+    "title": "24  输出csv和txt",
     "section": "",
     "text": "1. 输出csv和txt格式文件\n对于QuPath项目图片的detections结果，有时候因为某种需要，就想输出逗号分隔（comma-separated）的csv格式文件，或者就想输出制表符分隔（tab-separated）的txt格式文件。\n参考如下代码：\n以上代码部分参考自(1)。\n确认下文件已经保存成功：\n# R v4.5.2\noutputPath &lt;- \"path/to/detections/\"\noutputPath |&gt; fs::dir_tree()\n\npath/to/detections/\n├── image1_detections.csv\n├── image1_detections.txt\n├── image2_detections.csv\n├── image2_detections.txt\n├── image3_detections.csv\n├── image3_detections.txt\n├── image4_detections.csv\n├── image4_detections.txt\n├── image5_detections.csv\n└── image5_detections.txt\n给我买杯茶🍵",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>输出csv和txt</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>输出csv和txt</span>"
     ]
   },
   {
     "objectID": "2025-12-26_QuPath_输出detections的csv和txt格式文件.html#输出csv和txt格式文件",
     "href": "2025-12-26_QuPath_输出detections的csv和txt格式文件.html#输出csv和txt格式文件",
-    "title": "22  输出csv和txt",
+    "title": "24  输出csv和txt",
     "section": "",
     "text": "// QuPath v0.6.0\n\nimport qupath.lib.gui.tools.MeasurementExporter\n\n// #########################################\n// Export all detections as comma-separated file (.csv)\n// #########################################\n// Make the current image name as a list\ndef entryList = [getProjectEntry()]\n\n// If the folder detections exist, do noting; else create the folder\ndef outputPath = buildFilePath(PROJECT_BASE_DIR, \"detections\")\nmkdirs(outputPath)\n\n// Separate each measurement value in the output file with \",\"\ndef separator = \",\"\n\ndef csvName = getCurrentImageName() + \"_detections.csv\"\ndef csvOutputFile = new File(buildFilePath(outputPath, csvName))\n\n// Create the measurementExporter and start the export\ndef exporter = new MeasurementExporter()\n    .imageList(entryList)\n    .separator(separator)\n    .allDetections()\n    .exportMeasurements(csvOutputFile)\n\nprintln \"${csvOutputFile} saved.\"\n\n// #########################################\n// Export all detections as tab-separated file (.txt)\n// #########################################\ndef txtName = getCurrentImageName() + \"_detections.txt\"\ndef txtOutputFile = new File(buildFilePath(outputPath, txtName))\nsaveDetectionMeasurements(\"${txtOutputFile}\")\n\nprintln \"${txtOutputFile} saved.\"\n\nprintln \"Done.\"",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>输出csv和txt</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>输出csv和txt</span>"
     ]
   },
   {
     "objectID": "2025-12-26_QuPath_输出detections的csv和txt格式文件.html#references",
     "href": "2025-12-26_QuPath_输出detections的csv和txt格式文件.html#references",
-    "title": "22  输出csv和txt",
+    "title": "24  输出csv和txt",
     "section": "References",
     "text": "References\n\n\n\n\n1. MicroscopyRA, QuPath: Saving filtered DetectionTable with MeasurementExporter for current image only? (2020). https://forum.image.sc/t/qupath-saving-filtered-detectiontable-with-measurementexporter-for-current-image-only/41328/2.",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>输出csv和txt</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>输出csv和txt</span>"
     ]
   },
   {
     "objectID": "2026-01-13_格陵兰鲨是最长寿的脊椎动物.html",
     "href": "2026-01-13_格陵兰鲨是最长寿的脊椎动物.html",
-    "title": "23  最长寿鲨",
+    "title": "25  最长寿鲨",
     "section": "",
     "text": "1. 格陵兰鲨的寿命",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>最长寿鲨</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>最长寿鲨</span>"
     ]
   },
   {
     "objectID": "2026-01-13_格陵兰鲨是最长寿的脊椎动物.html#格陵兰鲨的寿命",
     "href": "2026-01-13_格陵兰鲨是最长寿的脊椎动物.html#格陵兰鲨的寿命",
-    "title": "23  最长寿鲨",
+    "title": "25  最长寿鲨",
     "section": "",
     "text": "The Greenland shark is the longest-living vertebrate on Earth, with an estimated lifespan of up to 400 years. (1)\n\n\n… the largest animal (502 cm) (i.e. Greenland shark) to be 392 ± 120 years old. (2)",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>最长寿鲨</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>最长寿鲨</span>"
     ]
   },
   {
     "objectID": "2026-01-13_格陵兰鲨是最长寿的脊椎动物.html#如何知道格陵兰鲨的寿命",
     "href": "2026-01-13_格陵兰鲨是最长寿的脊椎动物.html#如何知道格陵兰鲨的寿命",
-    "title": "23  最长寿鲨",
+    "title": "25  最长寿鲨",
     "section": "2. 如何知道格陵兰鲨的寿命？",
     "text": "2. 如何知道格陵兰鲨的寿命？\n\nRadiocarbon dating of eye lens nuclei from 28 female Greenland sharks …(2)",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>最长寿鲨</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>最长寿鲨</span>"
     ]
   },
   {
     "objectID": "2026-01-13_格陵兰鲨是最长寿的脊椎动物.html#格陵兰鲨什么时候性成熟",
     "href": "2026-01-13_格陵兰鲨是最长寿的脊椎动物.html#格陵兰鲨什么时候性成熟",
-    "title": "23  最长寿鲨",
+    "title": "25  最长寿鲨",
     "section": "3. 格陵兰鲨什么时候性成熟？",
     "text": "3. 格陵兰鲨什么时候性成熟？\n\nthe age at sexual maturity to be at least 156 ± 22 years, and the largest animal (502 cm) to be 392 ± 120 years old. (2)",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>最长寿鲨</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>最长寿鲨</span>"
     ]
   },
   {
     "objectID": "2026-01-13_格陵兰鲨是最长寿的脊椎动物.html#qupath-groovy-script-for-fun",
     "href": "2026-01-13_格陵兰鲨是最长寿的脊椎动物.html#qupath-groovy-script-for-fun",
-    "title": "23  最长寿鲨",
+    "title": "25  最长寿鲨",
     "section": "4. QuPath groovy script for fun",
     "text": "4. QuPath groovy script for fun\n\n\n\n\nImages created via QuPath.\n\n\n\n\n\n\nVideo\nScreen recorded via uTools → 区域录屏。\n\n\n\n这是groovy script of QuPath：\n// QuPath v0.6.0\n\nimport qupath.lib.common.GeneralTools\nimport qupath.lib.objects.PathObjects\nimport qupath.lib.roi.ROIs\n\n// Remove all existed objects if there are any\nselectAllObjects()\nremoveAllObjects()\n\n// Set image type\nsetImageType(\"OTHER\")\n\n// Sleep for 30 seconds for opening screen recording\n//Thread.sleep(30000)\n\n// ****************************************\n// Show self-introduction (i.e. three sentences)\n// ****************************************\n\n// Define image plane\ndef plane = getCurrentViewer().getImagePlane()\n\n// Select greenland shark\ndef shark_x = [242, 353, 489, 676, 755, 720, 529, 341, 248, 181, 197] as double[]\ndef shark_y = [154, 169, 200, 309, 390, 466, 445, 354, 275, 214, 181] as double[]\n\ndef shark_roi = ROIs.createPolygonROI(shark_x, shark_y, plane)\ndef shark_anno = PathObjects.createAnnotationObject(shark_roi)\n\naddObjects(shark_anno)\n\n// 1st sentence\nThread.sleep(2000)\n\ndef line1_roi = ROIs.createPointsROI(300, 80, plane)\ndef line1_anno = PathObjects.createAnnotationObject(line1_roi)\n\ndef sentence_1 = \"I'm greenland shark.\"\nline1_anno.setName(sentence_1)\n\naddObject(line1_anno)\n\n// 2nd sentence\nThread.sleep(2000)\n\ndef line2_roi = ROIs.createPointsROI(600, 150, plane)\ndef line2_anno = PathObjects.createAnnotationObject(line2_roi)\n\ndef sentence_2 = \"I can have a lifespan up to 400 years (the longest-living vertebrate)！\"\nline2_anno.setName(sentence_2)\n\naddObject(line2_anno)\n\n// 3rd sentence\nThread.sleep(2000)\n\ndef line3_roi = ROIs.createPointsROI(300, 550, plane)\ndef line3_anno = PathObjects.createAnnotationObject(line3_roi)\n\ndef sentence_3 = \"I can start to have kids when I am roughly 156 years old.\"\nline3_anno.setName(sentence_3)\n\naddObject(line3_anno)\n\nThread.sleep(2000)\n\n// Select all objects\nselectAllObjects()\n\n// ****************************************\n// Export as raster image with overlays (annotations)\n// ****************************************\n\ndef viewer = getCurrentViewer()\ndef name = getCurrentImageNameWithoutExtension()\ndef path_png = buildFilePath(\"d://GeneCard//00_Post//52_greenland-shark-400-years\",\n        \"images\",\n        \"${name}.png\"\n)\n\nwriteRenderedImage(viewer, path_png)\n\nprintln 'Done!'\n给我买杯茶🍵",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>最长寿鲨</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>最长寿鲨</span>"
     ]
   },
   {
     "objectID": "2026-01-13_格陵兰鲨是最长寿的脊椎动物.html#references",
     "href": "2026-01-13_格陵兰鲨是最长寿的脊椎动物.html#references",
-    "title": "23  最长寿鲨",
+    "title": "25  最长寿鲨",
     "section": "References",
     "text": "References\n\n\n\n\n1. L. G. Fogg, E. Tom, M. Policarpo, W. Cho, F. Gao, D. Hii, A. E. Fawcett, N. Boileau, A. Bech-Poulsen, K. F. Steffensen, C. J. Ng, P. G. Bushnell, J. F. Steffensen, R. Brill, W. Salzburger, D. Skowronska-Krawczyk, The visual system of the longest-living vertebrate, the greenland shark. Nature Communications 17 (2026).\n\n\n2. J. Nielsen, R. B. Hedeholm, J. Heinemeier, P. G. Bushnell, J. S. Christiansen, J. Olsen, C. B. Ramsey, R. W. Brill, M. Simon, K. F. Steffensen, J. F. Steffensen, Eye lens radiocarbon reveals centuries of longevity in the greenland shark (somniosus microcephalus). Science 353, 702–704 (2016).",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>最长寿鲨</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>最长寿鲨</span>"
     ]
   },
   {
     "objectID": "2026-01-17_（通过script获得）pixel size.html",
     "href": "2026-01-17_（通过script获得）pixel size.html",
-    "title": "24  Pixel size",
+    "title": "26  Pixel size",
     "section": "",
     "text": "1. 像素大小的定义(以显微镜为例)(1)",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Pixel size</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Pixel size</span>"
     ]
   },
   {
     "objectID": "2026-01-17_（通过script获得）pixel size.html#像素大小的定义以显微镜为例pete_pixelsize",
     "href": "2026-01-17_（通过script获得）pixel size.html#像素大小的定义以显微镜为例pete_pixelsize",
-    "title": "24  Pixel size",
+    "title": "26  Pixel size",
     "section": "",
     "text": "One way to think about this in microscopy is to consider the field of view of an image, i.e. the width and height of the area that has been imaged. We can divide the width and height in physical units (often µm) by the number of pixels along that dimension.\n\n\nThe result is that we have two value in µm/px, corresponding to the pixel width and pixel height. Usually these are the same.",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Pixel size</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Pixel size</span>"
     ]
   },
   {
     "objectID": "2026-01-17_（通过script获得）pixel size.html#像素大小的意义pete_pixelsize",
     "href": "2026-01-17_（通过script获得）pixel size.html#像素大小的意义pete_pixelsize",
-    "title": "24  Pixel size",
+    "title": "26  Pixel size",
     "section": "2. 像素大小的意义(1)",
     "text": "2. 像素大小的意义(1)\n\nThe ‘pixel size’ is an idea that helps us translate measurements we make in images to the sizes and positions of things in real life.\n\n\nKnowing the pixel size makes it possible to calibrate size measurements. For example, if we measure some structure horizontally in the image and find that it is 10 pixels in length, with a pixel size of 0.5µm, we can deduce that its actual length in reality is (approximately!) 10 × 0.5µm = 5µm.",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Pixel size</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Pixel size</span>"
     ]
   },
   {
     "objectID": "2026-01-17_（通过script获得）pixel size.html#通过qupath查看像素大小",
     "href": "2026-01-17_（通过script获得）pixel size.html#通过qupath查看像素大小",
-    "title": "24  Pixel size",
+    "title": "26  Pixel size",
     "section": "3. 通过QuPath查看像素大小",
     "text": "3. 通过QuPath查看像素大小\n\n3.1 通过QuPath软件界面\n\n\n\n\n通过QuPath软件界面的image panel。\n\n\n\n通过QuPath软件界面的image panel，可知该HE染色的组织切片图像的pixel width和pixel height都是0.2739 µm。\nPixel width和pixel height相同。\n\n\n3.2 通过groovy script\n// QuPath v0.6.0\n\n// Get image name, pixel width, pixel height, and pixel type.\ndef imageName = getCurrentImageNameWithoutExtension()\n\ndef metaData = getCurrentServer().getMetadata()\n\ndef pixelWidth = metaData.getPixelWidthMicrons()\ndef pixelHeight = metaData.getPixelHeightMicrons()\n\n// Print image name, pixel width, and pixel height.\nprintln \"Image name: ${imageName}\"\n\nprintln \"Pixel width: ${pixelWidth}\"\nprintln \"Pixel height: ${pixelHeight}\"\n\nprintln \"Done!\"\n\n\n\n\n通过groovy script获得像素大小。\n\n\n\n通过groovy script可知，该图像的pixel width为0.27385541963588983 µm，pixel height为0.27385493509814707 µm。\n严格来讲，pixel width和pixel height不同。\n如果通过groovy script将pixel size四舍五入呢？\n// QuPath v0.6.0\n\n// Get image name, pixel width, pixel height, and pixel type.\ndef imageName = getCurrentImageNameWithoutExtension()\n\ndef metaData = getCurrentServer().getMetadata()\n\ndef pixelWidth = metaData.getPixelWidthMicrons()\ndef pixelWidthRound = pixelWidth.round(4) // Round to 4 decimal places.\n\ndef pixelHeight = metaData.getPixelHeightMicrons()\ndef pixelHeightRound = pixelHeight.round(4)\n\n// Print image name, pixel width, and pixel height.\nprintln \"Image name: ${imageName}\"\n\nprintln \"Pixel width (rounded): ${pixelWidthRound}\"\nprintln \"Pixel height (rounded): ${pixelHeightRound}\"\n\nprintln \"Done!\"\n\n\n\n\n通过groovy script获得像素大小，并四舍五入到小数点后第4位。\n\n\n\n这时候（即四舍五入到小数点后第4位）pixel width和pixel height都是0.2739 µm。Pixel width和pixel height又相同了。\n给我买杯茶🍵\n\n\n\n\n1. Pete, Bankhead, Introduction to bioimage analysis (2022-2025). https://bioimagebook.github.io/chapters/1-concepts/5-pixel_size/pixel_size.html.",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Pixel size</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Pixel size</span>"
     ]
   },
   {
     "objectID": "2026-01-28_通过QuPath用ImageJ进行阈值设定.html",
     "href": "2026-01-28_通过QuPath用ImageJ进行阈值设定.html",
-    "title": "25  通过ImageJ定阈值",
+    "title": "27  通过ImageJ定阈值",
     "section": "",
     "text": "1. 阈值选择应该客观些\nQuPath (v0.6.0) → Classify → Pixel classification → Train pixel classifier…或Create thresholder…可以用于阈值设定，但感觉还是偏主观的人为设定。\n这样对于单独一张图片（比如HE图片），可能还可以。但如果一个项目含有多个图片（需要相互比较分析），且不同图片之间存在不同程度的整体颜色/染色差异，这样设定阈值可能就不太客观了。\n这时候需要一个相对客观的方法用于阈值设定。",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>通过ImageJ定阈值</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>通过ImageJ定阈值</span>"
     ]
   },
   {
     "objectID": "2026-01-28_通过QuPath用ImageJ进行阈值设定.html#qupath和imagej的关系",
     "href": "2026-01-28_通过QuPath用ImageJ进行阈值设定.html#qupath和imagej的关系",
-    "title": "25  通过ImageJ定阈值",
+    "title": "27  通过ImageJ定阈值",
     "section": "2. QuPath和ImageJ的关系",
     "text": "2. QuPath和ImageJ的关系\n如QuPath的说明文件所述(1)：\n\nQuPath was created by someone who was (and is) a big fan of ImageJ.\n\n\nIn fact, QuPath started life as a collection of ImageJ plugins for digital pathology.\n\n\nOver time … QuPath was rewritten from scratch as a completely new application, which uses ImageJ as an extension.",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>通过ImageJ定阈值</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>通过ImageJ定阈值</span>"
     ]
   },
   {
     "objectID": "2026-01-28_通过QuPath用ImageJ进行阈值设定.html#通过qupath用imagej进行阈值设定",
     "href": "2026-01-28_通过QuPath用ImageJ进行阈值设定.html#通过qupath用imagej进行阈值设定",
-    "title": "25  通过ImageJ定阈值",
+    "title": "27  通过ImageJ定阈值",
     "section": "3. 通过QuPath用ImageJ进行阈值设定",
     "text": "3. 通过QuPath用ImageJ进行阈值设定\n所用示例图片为HE图片。\n首先，通过QuPath将已经进行color deconvolution的hemotoxylin通道图片发送到ImageJ。\n\n\n\n\n发送到ImageJ后，通过Plugins → Macros → Record...记录在ImageJ的操作。\n\n\n\n\n该示例默认使用Default方法（自动选择32为阈值）。也可以通过下拉箭头选择其它方法测试。\n\n\n\n\n\n\n将ImageJ ROI发回QuPath。\n\n\n\n感觉还不赖。",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>通过ImageJ定阈值</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>通过ImageJ定阈值</span>"
     ]
   },
   {
     "objectID": "2026-01-28_通过QuPath用ImageJ进行阈值设定.html#使用qupath的imagej-script-runner",
     "href": "2026-01-28_通过QuPath用ImageJ进行阈值设定.html#使用qupath的imagej-script-runner",
-    "title": "25  通过ImageJ定阈值",
+    "title": "27  通过ImageJ定阈值",
     "section": "4. 使用QuPath的ImageJ script runner",
     "text": "4. 使用QuPath的ImageJ script runner\n通过ImageJ的Record...记录了在ImageJ的操作过程/ImageJ Macro，这时候可以把这个过程代码复制到QuPath的ImageJ script runner（见图1）。同样可以实现上面的操作。\n\n\n\n\nSelect channels: Hematoxylin。勾选Add script to command history（这样可以构建groovy script，用于基于代码的批量操作。）\n\n\n\n给我买杯茶🍵",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>通过ImageJ定阈值</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>通过ImageJ定阈值</span>"
     ]
   },
   {
     "objectID": "2026-01-28_通过QuPath用ImageJ进行阈值设定.html#references",
     "href": "2026-01-28_通过QuPath用ImageJ进行阈值设定.html#references",
-    "title": "25  通过ImageJ定阈值",
+    "title": "27  通过ImageJ定阈值",
     "section": "References",
     "text": "References\n\n\n\n\n1. QuPath_docs_authors, QuPath_advanced_ImageJ (2019-2025). https://qupath.readthedocs.io/en/0.6/docs/advanced/imagej.html.",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>通过ImageJ定阈值</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>通过ImageJ定阈值</span>"
     ]
   },
   {
     "objectID": "2026-02-03_keep-climbing.html",
     "href": "2026-02-03_keep-climbing.html",
-    "title": "26  Keep climbing",
+    "title": "28  Keep climbing",
     "section": "",
     "text": "1. Alex Honnold徒手无保护攀爬台北101的一个瞬间\nAlex Honnold在2026-01-24日徒手无保护攀爬了台北101大楼（ropeless climb of Taipei 101）。下面是一个攀爬的瞬间。",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Keep climbing</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Keep climbing</span>"
     ]
   },
   {
     "objectID": "2026-02-03_keep-climbing.html#alex-honnold徒手无保护攀爬台北101的一个瞬间",
     "href": "2026-02-03_keep-climbing.html#alex-honnold徒手无保护攀爬台北101的一个瞬间",
-    "title": "26  Keep climbing",
+    "title": "28  Keep climbing",
     "section": "",
     "text": "图源：https://www.netflix.com/tudum/articles/how-to-watch-alex-honnold-skyscraper-climb-live-netflix",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Keep climbing</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Keep climbing</span>"
     ]
   },
   {
     "objectID": "2026-02-03_keep-climbing.html#通过qupath进行color-deconvolution颜色解卷积",
     "href": "2026-02-03_keep-climbing.html#通过qupath进行color-deconvolution颜色解卷积",
-    "title": "26  Keep climbing",
+    "title": "28  Keep climbing",
     "section": "2. 通过QuPath进行color deconvolution（颜色解卷积）",
     "text": "2. 通过QuPath进行color deconvolution（颜色解卷积）\n\n2.1 设定图片格式为Brightfield H&E时\n把图片通过QuPath打开，并color deconvolution后，发现Eosin通道的图片貌似有些艺术感。\n\n这是对应的groovy script (1)：\n// QuPath v0.6.0\n\nimport qupath.lib.images.servers.TransformedServerBuilder\nsetImageType('BRIGHTFIELD_H_E')\nsetColorDeconvolutionStains('{\"Name\" : \"H&E default\", \"Stain 1\" : \"Hematoxylin\", \"Values 1\" : \"0.6511078257574492 0.7011930431234068 0.29049426072255424\", \"Stain 2\" : \"Eosin\", \"Values 2\" : \"0.21589893562087106 0.8011960501132093 0.5580972485873467\", \"Background\" : \" 255 255 255\"}');\n\n// 1 for Hematoxylin, 2 for Eosin, 3 for Residual\nvar stainNumber = 2\n\nvar server = getCurrentServer()\nvar imageData = getCurrentImageData()\n\nvar stains = imageData.getColorDeconvolutionStains()\n// Scale factors: 0.0, 1.0, 0.0 for Eosin\n// Scale factors: 1.0, 0.0, 0.0 if for Hematoxylin\n// the exported image might look slightly darker than in the QuPath viewer,\n// since the viewer applies brightness/contrast adjustments.\n// You can tweak the scale factor (e.g. 0.85 or other values instead of 1.0) if you want to lighten it.\nvar extractedServer = new TransformedServerBuilder(server)\n        .stainNormalize(stains, stains, 0.0, 1.0, 0.0)\n        .build()\n\ndef name = getCurrentImageNameWithoutExtension()\ndef fileName = \"${name}_eosin.png\"\n\n// Set the folder to save images\ndef folder = 'path\\\\to\\\\your\\\\folder'\ndef outputFile = new File(buildFilePath(folder, fileName))\n\n// Write the full image (only possible if it isn't too large!)\nwriteImage(extractedServer, \"${outputFile}\")\n\nprintln \"${outputFile} saved!\"\n\n\n2.2 设定图片格式为Brightfield H-DAB时\nDAB通道的图片貌似亦有些艺术感。\n\n对应的groovy script和2.1部分类似，只需将：\nsetImageType('BRIGHTFIELD_H_E')\nsetColorDeconvolutionStains('{\"Name\" : \"H&E default\", \"Stain 1\" : \"Hematoxylin\", \"Values 1\" : \"0.6511078257574492 0.7011930431234068 0.29049426072255424\", \"Stain 2\" : \"Eosin\", \"Values 2\" : \"0.21589893562087106 0.8011960501132093 0.5580972485873467\", \"Background\" : \" 255 255 255\"}');\n\nsome codes\n\ndef fileName = \"${name}_eosin.png\"\n更改为：\nsetImageType('BRIGHTFIELD_H_DAB')\nsetColorDeconvolutionStains('{\"Name\" : \"H-DAB default\", \"Stain 1\" : \"Hematoxylin\", \"Values 1\" : \"0.6511078257574492 0.7011930431234068 0.29049426072255424\", \"Stain 2\" : \"DAB\", \"Values 2\" : \"0.26916687204956063 0.5682411743268502 0.777593185920953\", \"Background\" : \" 255 255 255\"}');\n\nsome codes\n\ndef fileName = \"${name}_dab.png\"\n给我买杯茶🍵",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Keep climbing</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Keep climbing</span>"
     ]
   },
   {
     "objectID": "2026-02-03_keep-climbing.html#references",
     "href": "2026-02-03_keep-climbing.html#references",
-    "title": "26  Keep climbing",
+    "title": "28  Keep climbing",
     "section": "References",
     "text": "References\n\n\n\n\n1. W. Kang, L. Léo, A. Sarah, Exporting color deconvoluted channels (e.g. Eosin) via script (2026). https://forum.image.sc/t/exporting-color-deconvoluted-channels-e-g-eosin-via-script/118918/4.",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Keep climbing</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Keep climbing</span>"
     ]
   },
   {
     "objectID": "2026-02-07_HE切片的细胞类型鉴定.html",
     "href": "2026-02-07_HE切片的细胞类型鉴定.html",
-    "title": "27  HE切片细胞类型",
+    "title": "29  HE切片细胞类型",
     "section": "",
     "text": "1. 两种细胞分割/cell segmentations\n看到一篇2025-12-22日上线的预印版文献(1)，报道了Classpose，可用于HE染色全片的细胞类型鉴定。\n以HE切片为例，直观理解就是选切片上的细胞（核）。\n以HE切片为例，直观理解就是确定每个细胞（核）属于哪种类型（比如中性粒细胞、上皮细胞、淋巴细胞等等）。",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>HE切片细胞类型</span>"
     ]
   },
   {
     "objectID": "2026-02-07_HE切片的细胞类型鉴定.html#两种细胞分割cell-segmentations",
     "href": "2026-02-07_HE切片的细胞类型鉴定.html#两种细胞分割cell-segmentations",
-    "title": "27  HE切片细胞类型",
+    "title": "29  HE切片细胞类型",
     "section": "",
     "text": "Instance segmentation … aims to determine whether a pixel belongs to a unique cell (1).\n\n\n\nSemantic segmentation … aims to determine to which cell type a pixel belongs to (1).",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>HE切片细胞类型</span>"
     ]
   },
   {
     "objectID": "2026-02-07_HE切片的细胞类型鉴定.html#classpose的原理",
     "href": "2026-02-07_HE切片的细胞类型鉴定.html#classpose的原理",
-    "title": "27  HE切片细胞类型",
+    "title": "29  HE切片细胞类型",
     "section": "2. Classpose的原理？",
     "text": "2. Classpose的原理？\n看不懂文献的方法，好像也没有读懂的动力。",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>HE切片细胞类型</span>"
     ]
   },
   {
     "objectID": "2026-02-07_HE切片的细胞类型鉴定.html#classpose能做什么",
     "href": "2026-02-07_HE切片的细胞类型鉴定.html#classpose能做什么",
-    "title": "27  HE切片细胞类型",
+    "title": "29  HE切片细胞类型",
     "section": "3. Classpose能做什么？",
     "text": "3. Classpose能做什么？\n\nClasspose, as easily trainable analog of the Cellpose-SAM model for semantic segmentation (1).",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>HE切片细胞类型</span>"
     ]
   },
   {
     "objectID": "2026-02-07_HE切片的细胞类型鉴定.html#classpose的优点",
     "href": "2026-02-07_HE切片的细胞类型鉴定.html#classpose的优点",
-    "title": "27  HE切片细胞类型",
+    "title": "29  HE切片细胞类型",
     "section": "4. Classpose的优点？",
     "text": "4. Classpose的优点？\n\nWe extensively benchmark Classpose against 3 other state-of-the-art methods (Semantic Celllpose-SAM, CellViT++, and Stardist) across 6 datasets (CoNIC, ConSep, GlySAC, MoNuSAC, NuCLS, and PUMA), showing that Classpose consistently outperforms all other methods (1).",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>HE切片细胞类型</span>"
     ]
   },
   {
     "objectID": "2026-02-07_HE切片的细胞类型鉴定.html#classpose如何使用",
     "href": "2026-02-07_HE切片的细胞类型鉴定.html#classpose如何使用",
-    "title": "27  HE切片细胞类型",
+    "title": "29  HE切片细胞类型",
     "section": "5. Classpose如何使用？",
     "text": "5. Classpose如何使用？\n\n… provide a commond-line tool and a QuPath extension for whole slide-image … (1)",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>HE切片细胞类型</span>"
     ]
   },
   {
     "objectID": "2026-02-07_HE切片的细胞类型鉴定.html#自己安装classpose的qupath-extension体验下",
     "href": "2026-02-07_HE切片的细胞类型鉴定.html#自己安装classpose的qupath-extension体验下",
-    "title": "27  HE切片细胞类型",
+    "title": "29  HE切片细胞类型",
     "section": "6. 自己安装Classpose的QuPath extension体验下",
     "text": "6. 自己安装Classpose的QuPath extension体验下\n具体安装过程有些折腾，但最终还是成功了。安装过程参考(2) (3)。\n\n\n\n\nPretrained models有：conic、consep、glysac、monusac、nucls、和puma。\n\n\n\n\n\n\n\n不同pretrained models可预测的细胞类型。\n\n\n\n\n\n\n\n用于测试的HE切片。\n\n\n\n\n\n\n\nClasspose的测试结果（用的pretrained model是conic）。Conic可区分的细胞类型是：neutrophils、epithelial cells、lymphocytes、plasma cells、eosinophils、和connective tissue cells (4)。不同颜色表示不同的细胞类型。",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>HE切片细胞类型</span>"
     ]
   },
   {
     "objectID": "2026-02-07_HE切片的细胞类型鉴定.html#期待classpose文章正式发表",
     "href": "2026-02-07_HE切片的细胞类型鉴定.html#期待classpose文章正式发表",
-    "title": "27  HE切片细胞类型",
+    "title": "29  HE切片细胞类型",
     "section": "7. 期待Classpose文章正式发表",
     "text": "7. 期待Classpose文章正式发表\n目前该软件工具还是预印版，期待正式在某个科研杂志发表，这样使用起来更加有底气些。\n本着严谨的态度，感觉是不是应该比较下Classpose的预测结果和多色免疫荧光染色的结果一致性？\n或者基于Classpose分析得到了某种结论，再针对该结论通过某种合适的实验验证下？\n给我买杯茶🍵",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>HE切片细胞类型</span>"
     ]
   },
   {
     "objectID": "2026-02-07_HE切片的细胞类型鉴定.html#references",
     "href": "2026-02-07_HE切片的细胞类型鉴定.html#references",
-    "title": "27  HE切片细胞类型",
+    "title": "29  HE切片细胞类型",
     "section": "References",
     "text": "References\n\n\n\n\n1. S. Mandal, J. G. de Almeida, N. Papanikolaou, T. A. Graham, Classpose: Foundation model-driven whole slide image-scale cell phenotyping in h&amp;e. doi: 10.64898/2025.12.18.695211 (2025).\n\n\n2. M. Soham, Classpose (2025). https://github.com/sohmandal/classpose/tree/main.\n\n\n3. W. Kang, josegcpa, Classpose: Foundation model-driven whole slide image-scale cell phenotyping in h&e (with QuPath extension!) (2026). https://forum.image.sc/t/classpose-foundation-model-driven-whole-slide-image-scale-cell-phenotyping-in-h-e-with-qupath-extension/118516/13.\n\n\n4. S. Graham, M. Jahanifar, A. Azam, M. Nimir, Y.-W. Tsang, K. Dodd, E. Hero, H. Sahota, A. Tank, K. Benes, N. Wahab, F. Minhas, S. E. A. Raza, H. E. Daly, K. Gopalakrishnan, D. Snead, N. Rajpoot, Lizard: A large-scale dataset for colonic nuclear instance segmentation and classification (2021). https://doi.org/10.48550/ARXIV.2108.11195.",
     "crumbs": [
       "QuPath",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>HE切片细胞类型</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>HE切片细胞类型</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-15_摘要的方法和结果的时态.html",
+    "href": "2026-02-15_摘要的方法和结果的时态.html",
+    "title": "30  摘要-方法结果-时态",
+    "section": "",
+    "text": "1.《How to Write and Illustrate a Scientific Paper》的描述\n多年之前，因为想写英文文献（人生第一次），基本通读了《How to Write and Illustrate a Scientific Paper》（2nd edition）这本书。对于摘要（abstract）的方法和结果描述，该书认为应该用一般过去时：\n但实际并非如此。",
+    "crumbs": [
+      "QuPath",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>摘要-方法结果-时态</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-15_摘要的方法和结果的时态.html#how-to-write-and-illustrate-a-scientific-paper的描述",
+    "href": "2026-02-15_摘要的方法和结果的时态.html#how-to-write-and-illustrate-a-scientific-paper的描述",
+    "title": "30  摘要-方法结果-时态",
+    "section": "",
+    "text": "图源：https://www.amazon.co.uk/How-Write-Illustrate-Scientific-Paper/dp/052170393X\n\n\n\n\n\nPresent tense is used for established knowledge … past tense is used for the results thant you are currently reporting.\n\n\nMost of the abstract section describes your own present work; it is referred to in the past tense.",
+    "crumbs": [
+      "QuPath",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>摘要-方法结果-时态</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-15_摘要的方法和结果的时态.html#用一般现在时的两个文献摘要",
+    "href": "2026-02-15_摘要的方法和结果的时态.html#用一般现在时的两个文献摘要",
+    "title": "30  摘要-方法结果-时态",
+    "section": "2. 用一般现在时的两个文献摘要",
+    "text": "2. 用一般现在时的两个文献摘要\n留意红色方框的动词的词性都是一般现在时。\n\n\n\n\n实例1。\n\n\n\n\n\n实例2。",
+    "crumbs": [
+      "QuPath",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>摘要-方法结果-时态</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-15_摘要的方法和结果的时态.html#用一般过去时的两个文献摘要",
+    "href": "2026-02-15_摘要的方法和结果的时态.html#用一般过去时的两个文献摘要",
+    "title": "30  摘要-方法结果-时态",
+    "section": "3. 用一般过去时的两个文献摘要",
+    "text": "3. 用一般过去时的两个文献摘要\n留意红色方框的动词的词性都是一般过去时。\n\n\n\n\n\n实例3。\n\n\n\n\n\n实例4。",
+    "crumbs": [
+      "QuPath",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>摘要-方法结果-时态</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-15_摘要的方法和结果的时态.html#结论",
+    "href": "2026-02-15_摘要的方法和结果的时态.html#结论",
+    "title": "30  摘要-方法结果-时态",
+    "section": "4. 结论",
+    "text": "4. 结论\n摘要中对应的方法和结果部分，可以使用一般现在时，或者使用一般过去时；但不要混用一般现在时和一般过去时。",
+    "crumbs": [
+      "QuPath",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>摘要-方法结果-时态</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-15_摘要的方法和结果的时态.html#附录",
+    "href": "2026-02-15_摘要的方法和结果的时态.html#附录",
+    "title": "30  摘要-方法结果-时态",
+    "section": "附录",
+    "text": "附录\n实例3属于structured abstract，另外3个实例属于conventional abstract。\n图片的红色方框通过QuPath（v0.6.0）添加（即rectangle annotation）。→ 之后通过groovy script保存图像（script见下方）。\n// QuPath v0.6.0\n\n// Get image name\ndef imageName = getCurrentImageNameWithoutExtension()\n\n// Set the base directory\ndef baseDirectory = \"d:\\\\path\\\\to\\\\your\\\\directory\"\n\n// Set the name going to be exported\ndef exportedImageName = buildFilePath(baseDirectory, \"${imageName}_annotated.png\")\n\n// Write the full image, displaying objects according to how they are currently shown in the viewer\ndef viewer = getCurrentViewer()\nwriteRenderedImage(viewer, \"${exportedImageName}\")\n\nprintln \"${exportedImageName} saved!\"\n给我买杯茶🍵",
+    "crumbs": [
+      "QuPath",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>摘要-方法结果-时态</span>"
     ]
   },
   {
     "objectID": "2025-07-23_RNAlater_一个案例.html",
     "href": "2025-07-23_RNAlater_一个案例.html",
-    "title": "28  RNAlater案例",
+    "title": "31  RNAlater案例",
     "section": "",
     "text": "1. 组织RNA降解了😭\n小张同学是上海市徐汇区枫林桥地区（感兴趣的话，可以搜搜，看到底是哪个高校）一个学校的在读硕士生，他最近对组织样本保存和运输对于RNA质量的影响有了真切的体会。\n小张同学第一次的操作流程：\n小鼠皮下植瘤的肿瘤 -&gt; 取样 -&gt; 立即干冰速冻 -&gt; 当天干冰运输 -&gt; 公司进行RNA抽提 -&gt; RNA评级为D（最低等级，质量完全不满足建库测序要求）。",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>RNAlater案例</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>RNAlater案例</span>"
     ]
   },
   {
     "objectID": "2025-07-23_RNAlater_一个案例.html#使用rnalater后组织rna评级为a",
     "href": "2025-07-23_RNAlater_一个案例.html#使用rnalater后组织rna评级为a",
-    "title": "28  RNAlater案例",
+    "title": "31  RNAlater案例",
     "section": "2. 使用RNAlater后，组织RNA评级为A😃👋",
     "text": "2. 使用RNAlater后，组织RNA评级为A😃👋\n小张同学重整旗鼓，第二次的操作流程：\n小鼠皮下植瘤的肿瘤 -&gt; 取样 -&gt; 立即浸泡于1 mL RNAlater -&gt; 4℃过夜 -&gt; -80℃保存再过夜 -&gt; 干冰运输 -&gt; 公司进行RNA抽提 -&gt; RNA评级为A（最高等级，质量满足建库测序要求）。\n\n给我买杯茶🍵",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>RNAlater案例</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>RNAlater案例</span>"
     ]
   },
   {
     "objectID": "2025-08-02_做组织病理切片染色时-为什么需要用到尽量大的组织块.html",
     "href": "2025-08-02_做组织病理切片染色时-为什么需要用到尽量大的组织块.html",
-    "title": "29  大组织切片？",
+    "title": "32  大组织切片？",
     "section": "",
     "text": "一个H&E染色的实例\n这个是一个小鼠的整个左肺纵切面的H&E染色(1)。能够看出来：这些异常的炎性病变是局部的。😎",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>大组织切片？</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>大组织切片？</span>"
     ]
   },
   {
     "objectID": "2025-08-02_做组织病理切片染色时-为什么需要用到尽量大的组织块.html#小鼠的肺部构造",
     "href": "2025-08-02_做组织病理切片染色时-为什么需要用到尽量大的组织块.html#小鼠的肺部构造",
-    "title": "29  大组织切片？",
+    "title": "32  大组织切片？",
     "section": "小鼠的肺部构造",
     "text": "小鼠的肺部构造\n\n小鼠左肺只有一个肺叶；而右肺有四个肺叶，有大有小(2)。😎",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>大组织切片？</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>大组织切片？</span>"
     ]
   },
   {
     "objectID": "2025-08-02_做组织病理切片染色时-为什么需要用到尽量大的组织块.html#用小鼠右肺的一个小肺叶做组织病理切片染色可以吗",
     "href": "2025-08-02_做组织病理切片染色时-为什么需要用到尽量大的组织块.html#用小鼠右肺的一个小肺叶做组织病理切片染色可以吗",
-    "title": "29  大组织切片？",
+    "title": "32  大组织切片？",
     "section": "用小鼠右肺的一个小肺叶做组织病理切片染色，可以吗？",
     "text": "用小鼠右肺的一个小肺叶做组织病理切片染色，可以吗？\n笔者认为：\n\n如果预期的疾病或模型在肺部广泛分布，无明显局限性或区域性聚集，则右肺的一个小肺叶也许可行。😃\n如果预期的疾病或模型在肺部有明显的局限性或区域性聚集，则右肺的一个小肺叶可能无法代表整个肺部的病理状态。这时候，用较大的肺叶，比如整个左肺，可能更合适。😃\n\n对于图1的疾病模型，基于右肺的middle lobe（中叶）或者post-caval lobe（后腔叶）做的H&E切片，可能找不到异常炎性病变（即使该小鼠肺部整体病变严重）；反之亦然。😅\n\n\n给我买杯茶🍵",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>大组织切片？</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>大组织切片？</span>"
     ]
   },
   {
     "objectID": "2025-08-02_做组织病理切片染色时-为什么需要用到尽量大的组织块.html#references",
     "href": "2025-08-02_做组织病理切片染色时-为什么需要用到尽量大的组织块.html#references",
-    "title": "29  大组织切片？",
+    "title": "32  大组织切片？",
     "section": "References",
     "text": "References\n\n\n\n\n1. B. H. Gern, J. M. Klas, K. A. Foster, M. E. Kanagy, S. B. Cohen, C. R. Plumlee, F. J. Duffy, M. L. Neal, M. Halima, A. T. Gustin, S. M. Stull, J. J. Wilson, A. H. Diercks, A. Aderem, M. Gale, J. D. Aitchison, M. Y. Gerner, K. B. Urdahl, Early and opposing neutrophil and CD4 t cell responses shape pulmonary tuberculosis pathology. Journal of Experimental Medicine 222 (2025).\n\n\n2. S. Sato, E. BartolÃ¡k-Suki, H. Parameswaran, H. Hamakawa, B. Suki, Scale dependence of structure-function relationship in the emphysematous mouse lung. Frontiers in Physiology 6 (2015).",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>大组织切片？</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>大组织切片？</span>"
     ]
   },
   {
     "objectID": "2025-08-05_画生物医学示意图的在线资源.html",
     "href": "2025-08-05_画生物医学示意图的在线资源.html",
-    "title": "30  生物图资源",
+    "title": "33  生物图资源",
     "section": "",
     "text": "直接上“干货”(这些都是笔者时不时收集的)\n给我买杯茶🍵",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>生物图资源</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>生物图资源</span>"
     ]
   },
   {
     "objectID": "2025-08-05_画生物医学示意图的在线资源.html#直接上干货这些都是笔者时不时收集的",
     "href": "2025-08-05_画生物医学示意图的在线资源.html#直接上干货这些都是笔者时不时收集的",
-    "title": "30  生物图资源",
+    "title": "33  生物图资源",
     "section": "",
-    "text": "SMART servier。https://smart.servier.com/。可从该网站下载原始矢量图素材(免费)，之后用Adobe illustrator或Inkscape等软件操作。\n\n\nInkscape是免费的。\n\n\n绘科研FIG DRAW。https://www.figdraw.com/static/index.html#/。在线绘画。收费。可输出tiff格式图片，不能输出矢量图。来自中国。\nBioRender。https://biorender.com/。在线绘画，收费。没测试过。\nGDP (Generic Diagramming Platform)。https://biogdp.com/。在线绘图。可以输出PDF。来自中国。\nNIH BIOART SOURCE。https://bioart.niaid.nih.gov/。可以下载矢量图。\nSciDraw。https://scidraw.io/。可以下载矢量图。\nOpenScienceArt。https://openscienceart.com/。可以下载矢量图。\nAlphaFold Protein Structure Database。https://alphafold.ebi.ac.uk/。关于蛋白3D结构的，肯定可以下载相关的图片。\nVISIBLE BODY。https://www.visiblebody.com/。这个网站有一些生物体的示意图，2D和3D，也不错。\nBioicons。https://bioicons.com/。可以下载矢量图。\nReactome –&gt; icon-lib。https://reactome.org/icon-lib。可以下载矢量图。\n另外，也可以关注一些图片素材网站，比如pixabay (https://pixabay.com/)，里面亦含有矢量图素材。",
+    "text": "SMART servier。https://smart.servier.com/。可从该网站下载原始矢量图素材(免费)，之后用Adobe illustrator或Inkscape等软件操作。\n\n\nInkscape是免费的。\n\n\n绘科研FIG DRAW。https://www.figdraw.com/static/index.html#/。在线绘画。收费。可输出tiff格式图片，不能输出矢量图。来自中国。\nBioRender。https://biorender.com/。在线绘画，收费。没测试过。\nGDP (Generic Diagramming Platform)。https://biogdp.com/。在线绘图。可以输出PDF。来自中国。\nNIH BIOART SOURCE。https://bioart.niaid.nih.gov/。可以下载矢量图。\nSciDraw。https://scidraw.io/。可以下载矢量图。\nOpenScienceArt。https://openscienceart.com/。可以下载矢量图。\nAlphaFold Protein Structure Database。https://alphafold.ebi.ac.uk/。关于蛋白3D结构的，肯定可以下载相关的图片。\nVISIBLE BODY。https://www.visiblebody.com/。这个网站有一些生物体的示意图，2D和3D，也不错。\nBioicons。https://bioicons.com/。可以下载矢量图。\nReactome –&gt; icon-lib。https://reactome.org/icon-lib。可以下载矢量图。\nBioDraws。https://biodraws.com/。可以下载矢量图。\n另外，也可以关注一些图片素材网站，比如pixabay (https://pixabay.com/)，里面亦含有矢量图素材。",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>生物图资源</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>生物图资源</span>"
     ]
   },
   {
     "objectID": "2025-09-02_文献-Nature-Cell-Biology建议的生物图像存储网站.html",
     "href": "2025-09-02_文献-Nature-Cell-Biology建议的生物图像存储网站.html",
-    "title": "31  生物图像存储网站",
+    "title": "34  生物图像存储网站",
     "section": "",
     "text": "1. 生物图像存储网站一瞥\n2025-06-17，Nature Cell Biology发表了一篇题为“Light microscopy reporting for reproducibility”的文章(1)，文中提到了一些生物图像存储网站：",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>生物图像存储网站</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>生物图像存储网站</span>"
     ]
   },
   {
     "objectID": "2025-09-02_文献-Nature-Cell-Biology建议的生物图像存储网站.html#生物图像存储网站一瞥",
     "href": "2025-09-02_文献-Nature-Cell-Biology建议的生物图像存储网站.html#生物图像存储网站一瞥",
-    "title": "31  生物图像存储网站",
+    "title": "34  生物图像存储网站",
     "section": "",
     "text": "1.1 Image Data Resource (IDR)\n\n\n\n1.2 The BioStudies database\n\n\n\n1.3 The BioImage Archive\n\n\n\n1.4 figshare\n\n尽管现阶段仅为建议，但可以预见，未来在论文投稿过程中，​强制要求提供并共享原始生物图像，很可能成为一种普遍趋势。​\n从现在开始，研究人员可以从图片采集、图片分析、图片存储等方面做相应调整，以应对潜在的变化。\n给我买杯茶🍵",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>生物图像存储网站</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>生物图像存储网站</span>"
     ]
   },
   {
     "objectID": "2025-09-02_文献-Nature-Cell-Biology建议的生物图像存储网站.html#references",
     "href": "2025-09-02_文献-Nature-Cell-Biology建议的生物图像存储网站.html#references",
-    "title": "31  生物图像存储网站",
+    "title": "34  生物图像存储网站",
     "section": "References",
     "text": "References\n\n\n\n\n1. Editorial, Light microscopy reporting for reproducibility. Nature Cell Biology 27, 877–877 (2025).",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>生物图像存储网站</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>生物图像存储网站</span>"
     ]
   },
   {
     "objectID": "2026-01-06_启动ImageJ的6种方式.html",
     "href": "2026-01-06_启动ImageJ的6种方式.html",
-    "title": "32  ImageJ启动",
+    "title": "35  ImageJ启动",
     "section": "",
     "text": "方法1：进入文件夹直接启动\n以下方法都是在Windows 11 x64下测试的。\n进入ImageJ文件夹，启动ImageJ.exe。",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>ImageJ启动</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>ImageJ启动</span>"
     ]
   },
   {
     "objectID": "2026-01-06_启动ImageJ的6种方式.html#方法1进入文件夹直接启动",
     "href": "2026-01-06_启动ImageJ的6种方式.html#方法1进入文件夹直接启动",
-    "title": "32  ImageJ启动",
+    "title": "35  ImageJ启动",
     "section": "",
     "text": "path/to/ImageJ/\n├── ij.jar\n├── ImageJ.cfg\n├── ImageJ.exe\n├── jre\n├── luts\n├── macros\n└── plugins",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>ImageJ启动</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>ImageJ启动</span>"
     ]
   },
   {
     "objectID": "2026-01-06_启动ImageJ的6种方式.html#方法2通过windows-powershell启动",
     "href": "2026-01-06_启动ImageJ的6种方式.html#方法2通过windows-powershell启动",
-    "title": "32  ImageJ启动",
+    "title": "35  ImageJ启动",
     "section": "方法2：通过Windows PowerShell启动",
     "text": "方法2：通过Windows PowerShell启动\nStart-Process \"path/to/ImageJ/ImageJ.exe\"",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>ImageJ启动</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>ImageJ启动</span>"
     ]
   },
   {
     "objectID": "2026-01-06_启动ImageJ的6种方式.html#方法3把imagej-launcher固定到任务栏再启动",
     "href": "2026-01-06_启动ImageJ的6种方式.html#方法3把imagej-launcher固定到任务栏再启动",
-    "title": "32  ImageJ启动",
+    "title": "35  ImageJ启动",
     "section": "方法3：把ImageJ launcher固定到任务栏，再启动",
     "text": "方法3：把ImageJ launcher固定到任务栏，再启动\n打开“path/to/ImageJ/”文件夹 → 右键ImageJ.exe → 固定到任务栏(K)。\n\n\n\n\nImageJ（显微镜图标）被固定在任务栏。\n\n\n\n点击任务栏中的ImageJ图标，就可以启动ImageJ了。",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>ImageJ启动</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>ImageJ启动</span>"
     ]
   },
   {
     "objectID": "2026-01-06_启动ImageJ的6种方式.html#方法4创建imagej快捷方式再启动",
     "href": "2026-01-06_启动ImageJ的6种方式.html#方法4创建imagej快捷方式再启动",
-    "title": "32  ImageJ启动",
+    "title": "35  ImageJ启动",
     "section": "方法4：创建ImageJ快捷方式，再启动",
     "text": "方法4：创建ImageJ快捷方式，再启动\n打开“path/to/ImageJ/”文件夹 → 右键ImageJ.exe → 创建快捷方式(S)。\npath/to/ImageJ/\n├── ij.jar\n├── ImageJ - 快捷方式.lnk\n├── ImageJ.cfg\n├── ImageJ.exe\n├── jre\n├── luts\n├── macros\n└── plugins\n将”ImageJ - 快捷方式.lnk”复制到感兴趣的路径（比如桌面） → 双击就可以启动ImageJ了。",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>ImageJ启动</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>ImageJ启动</span>"
     ]
   },
   {
     "objectID": "2026-01-06_启动ImageJ的6种方式.html#方法5将imagej固定到开始再启动",
     "href": "2026-01-06_启动ImageJ的6种方式.html#方法5将imagej固定到开始再启动",
-    "title": "32  ImageJ启动",
+    "title": "35  ImageJ启动",
     "section": "方法5：将ImageJ固定到”开始”，再启动",
     "text": "方法5：将ImageJ固定到”开始”，再启动\n打开“path/to/ImageJ/”文件夹 → 右键ImageJ.exe → 固定到”开始”。\n\n\n\n点击任务栏Windows图标 → 在搜索框输入imagej → 回车或点击ImageJ图标，就可以启动ImageJ了。",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>ImageJ启动</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>ImageJ启动</span>"
     ]
   },
   {
     "objectID": "2026-01-06_启动ImageJ的6种方式.html#方法6通过utools启动笔者最喜欢的方法",
     "href": "2026-01-06_启动ImageJ的6种方式.html#方法6通过utools启动笔者最喜欢的方法",
-    "title": "32  ImageJ启动",
+    "title": "35  ImageJ启动",
     "section": "方法6：通过uTools启动（笔者最喜欢的方法）",
     "text": "方法6：通过uTools启动（笔者最喜欢的方法）\n个人非常喜欢用uTools（https://www.u-tools.cn/index.html）启动各种软件。\n默认通过alt + space组合键唤起uTools窗口（确保已经运行uTools） → 拖拽ImageJ.exe到uTools窗口的搜索区 → 回车即可添加ImageJ到uTools启动列表。\n\n\n\nAlt + space组合键唤起uTools窗口 → 在搜索区输入imagej → 回车即可启动ImageJ。\n给我买杯茶🍵",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>ImageJ启动</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>ImageJ启动</span>"
     ]
   },
   {
     "objectID": "2026-01-09_Fiji稳定版和最新版的区别.html",
     "href": "2026-01-09_Fiji稳定版和最新版的区别.html",
-    "title": "33  Fiji稳定vs最新",
+    "title": "36  Fiji稳定vs最新",
     "section": "",
     "text": "1. Fiji有稳定版和最新版之别\n当下载Fiji (1)时，会发现有两个版本的Fiji：稳定版（STABLE）和最新版（LATEST）。",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Fiji稳定vs最新</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Fiji稳定vs最新</span>"
     ]
   },
   {
     "objectID": "2026-01-09_Fiji稳定版和最新版的区别.html#fiji有稳定版和最新版之别",
     "href": "2026-01-09_Fiji稳定版和最新版的区别.html#fiji有稳定版和最新版之别",
-    "title": "33  Fiji稳定vs最新",
+    "title": "36  Fiji稳定vs最新",
     "section": "",
     "text": "下载地址https://imagej.net/software/fiji/downloads",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Fiji稳定vs最新</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Fiji稳定vs最新</span>"
     ]
   },
   {
     "objectID": "2026-01-09_Fiji稳定版和最新版的区别.html#两个版本的区别",
     "href": "2026-01-09_Fiji稳定版和最新版的区别.html#两个版本的区别",
-    "title": "33  Fiji稳定vs最新",
+    "title": "36  Fiji稳定vs最新",
     "section": "2. 两个版本的区别",
     "text": "2. 两个版本的区别\n如上图所示，以及如Odinsbane所说(2)：\n\nFiji-latest will include more recent versions of core libraries and uses java 21. Fiji-stable targets java 8.\n\n或者如Curtis Rueden所说(2)：\n\n\n\n\nCurtis Rueden, project lead for ImageJ2, current maintainer of Fiji…https://loci.wisc.edu/staff/rueden-curtis/\n\n\n\n\nFiji-Latest bundles Java 21 … Fiji-Latest (compared to Fiji-stable) generally prunes Fiji a bit to remove various obsolete no-longer-functional things.\n\n\n…the two Fijis (latest and stable) are still close enough together that targeting Fiji-Stable means your plugin also works on Fiji-Latest. But that will not remain the case forever: as Fiji-Latest continues to move forward, eventually plugin authors may need to choose whether to keep supporting Stable (i.e. stay with Java 8) or jump to Latest only.",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Fiji稳定vs最新</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Fiji稳定vs最新</span>"
     ]
   },
   {
     "objectID": "2026-01-09_Fiji稳定版和最新版的区别.html#fiji-stable的最终命运",
     "href": "2026-01-09_Fiji稳定版和最新版的区别.html#fiji-stable的最终命运",
-    "title": "33  Fiji稳定vs最新",
+    "title": "36  Fiji稳定vs最新",
     "section": "3. Fiji-stable的最终命运",
     "text": "3. Fiji-stable的最终命运\n同样如Curtis Rueden所说(2)：\n\nMy plan for Q1 2026 is to finally enable the Fiji-Stable-to-Fiji-Latest migration tool that is already built into the Updater, but which is disabled by default to avoid breaking people’s Fiji-Stable installations.\n\n\nOnce this migrator is working well for the vast majority of users, we can discontinue Fiji-Stable as a top-level download—i.e. move it into the “More downloads” area and label it as a historical version that is no longer updated.\n\n感觉可能的话，还是下载和使用Fiji-latest。",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Fiji稳定vs最新</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Fiji稳定vs最新</span>"
     ]
   },
   {
     "objectID": "2026-01-09_Fiji稳定版和最新版的区别.html#为什么fiji-stable有两个启动文件",
     "href": "2026-01-09_Fiji稳定版和最新版的区别.html#为什么fiji-stable有两个启动文件",
-    "title": "33  Fiji稳定vs最新",
+    "title": "36  Fiji稳定vs最新",
     "section": "4. 为什么Fiji-stable有两个启动文件",
     "text": "4. 为什么Fiji-stable有两个启动文件\n# Windows版本下的启动文件。\n\n# Fiji-stable的启动文件\n├── fiji-windows-x64.exe\n└── ImageJ-win64.exe\n\n# Fiji-latest的启动文件\n└── fiji-windows-x64.exe\n能够看出来，Fiji-stable有两个.exe启动文件（launchers），分别是fiji-windows-x64.exe和ImageJ-win64.exe，这是为什么？\n如Odinsbane所说(2)：\n\nThe two launchers are two different ways to start fiji. fiji-windows-x64.exe is the shiny new launcher based on jaunch. It uses a different set of config files compared to the old/legacy launcher ImageJ-win64.exe. You shouldn’t notice a difference based on how you start fiji, except you could have different configurations.\n\n\nBoth launchers will start fiji, and load plugins that you’ve installed. Ideally they should both be the same. In some cases the new launcher doesn’t work. For example, I cannot use the Jaunch based launcher on Rocky 8 because GLIBC is too old.\n\n\nIf you’re using the default locations for plugins, then yes both launchers should load the same plugins.\n\n如Curtis Rueden所说(2)：\n\nthe fiji-*-* launcher is the current one, built on Jaunch. It is a complete redesign of the old ImageJ launcher to better support Java 9+. The ImageJ-* launcher is the old one, kept in Fiji-Stable in case the new launcher fails to work on your system. If fiji-*-* is working, use that one.\n\n所以，默认下就用fiji-*-* launcher启动Fiji。\n给我买杯茶🍵",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Fiji稳定vs最新</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Fiji稳定vs最新</span>"
     ]
   },
   {
     "objectID": "2026-01-09_Fiji稳定版和最新版的区别.html#references",
     "href": "2026-01-09_Fiji稳定版和最新版的区别.html#references",
-    "title": "33  Fiji稳定vs最新",
+    "title": "36  Fiji稳定vs最新",
     "section": "References",
     "text": "References\n\n\n\n\n1. J. Schindelin, I. Arganda-Carreras, E. Frise, V. Kaynig, M. Longair, T. Pietzsch, S. Preibisch, C. Rueden, S. Saalfeld, B. Schmid, J.-Y. Tinevez, D. J. White, V. Hartenstein, K. Eliceiri, P. Tomancak, A. Cardona, Fiji: An open-source platform for biological-image analysis. Nature Methods 9, 676–682 (2012).\n\n\n2. JrBr, Odinsbane, R. Curtis, The stable release comes with two ways to start fiji (2025-2026). https://forum.image.sc/t/the-stable-release-comes-with-two-ways-to-start-fiji/118326.",
     "crumbs": [
       "技术相关",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Fiji稳定vs最新</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Fiji稳定vs最新</span>"
     ]
   },
   {
     "objectID": "2025-07-25_很多新2A肽序列-及P2A肽介导的肽键跳跃效率.html",
     "href": "2025-07-25_很多新2A肽序列-及P2A肽介导的肽键跳跃效率.html",
-    "title": "34  新2A肽",
+    "title": "37  新2A肽",
     "section": "",
     "text": "1. 2A肽是做什么的？\n笔者留意到一个（可能）很实用的文章（2025-06-18发表），系统探讨真核和病毒来源的2A肽序列：\n下面是笔者看完后的“干货”：\n简言之：一条mRNA -&gt; 两个蛋白。\n具体原理问AI或者找权威材料😂。",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>新2A肽</span>"
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>新2A肽</span>"
     ]
   },
   {
     "objectID": "2025-07-25_很多新2A肽序列-及P2A肽介导的肽键跳跃效率.html#最常用的p2a肽其n端一定要另外含有gsg肽",
     "href": "2025-07-25_很多新2A肽序列-及P2A肽介导的肽键跳跃效率.html#最常用的p2a肽其n端一定要另外含有gsg肽",
-    "title": "34  新2A肽",
+    "title": "37  新2A肽",
     "section": "2. 最常用的P2A肽，其N端一定要另外含有GSG肽",
     "text": "2. 最常用的P2A肽，其N端一定要另外含有GSG肽\n\n\n\n\n最右侧的这个绿色柱子的序列是：\nGSGATNFSLLKQAGDVEENPGP，其中黄色的GSG是另外的肽/linker，黑色是P2A肽序列。",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>新2A肽</span>"
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>新2A肽</span>"
     ]
   },
   {
     "objectID": "2025-07-25_很多新2A肽序列-及P2A肽介导的肽键跳跃效率.html#其它可用的新的2a肽",
     "href": "2025-07-25_很多新2A肽序列-及P2A肽介导的肽键跳跃效率.html#其它可用的新的2a肽",
-    "title": "34  新2A肽",
+    "title": "37  新2A肽",
     "section": "3. 其它可用的新的2A肽？",
     "text": "3. 其它可用的新的2A肽？\n\n\n\n文章作者新鉴定的B6肽，核糖体跳跃效率&gt;75%。\n如果像P2A一样，在B6肽N端也同样引入GSG，效率会增加多少呢？\n同样的问题，也适用于B1和B17肽。还有下图中的A17肽。\n可惜笔者没有从文章找到数据（文章作者应该没做）。\n\n\n\n大家如果感兴趣，不妨克隆试试？😎\n给我买杯茶🍵",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>新2A肽</span>"
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>新2A肽</span>"
     ]
   },
   {
     "objectID": "2025-08-01_两个长长长尾巴的病毒.html",
     "href": "2025-08-01_两个长长长尾巴的病毒.html",
-    "title": "35  长尾病毒",
+    "title": "38  长尾病毒",
     "section": "",
     "text": "1. Mycobacteriophage Douge\n笔者看到两个病毒的结构图片和/或感染宿主细胞的过程，让没有病毒相关基础的笔者眼前一亮，因此在这里展示出来。\n这两个病毒分别是：",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>35</span>  <span class='chapter-title'>长尾病毒</span>"
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>长尾病毒</span>"
     ]
   },
   {
     "objectID": "2025-08-01_两个长长长尾巴的病毒.html#mycobacteriophage-douge",
     "href": "2025-08-01_两个长长长尾巴的病毒.html#mycobacteriophage-douge",
-    "title": "35  长尾病毒",
+    "title": "38  长尾病毒",
     "section": "",
     "text": "1.1 病毒的样子和“身高”\n\n\n\n这种样子的病毒称为siphophage (有一条长长的、灵活的、不收缩的尾巴）。这个病毒的“身高”是400 nm。\n\n\n1.2 感染分枝杆菌的过程\n\n \n\n病毒把自己的核酸“注射”进分枝杆菌时，其形状没有明显的变化。",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>35</span>  <span class='chapter-title'>长尾病毒</span>"
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>长尾病毒</span>"
     ]
   },
   {
     "objectID": "2025-08-01_两个长长长尾巴的病毒.html#pelv-1",
     "href": "2025-08-01_两个长长长尾巴的病毒.html#pelv-1",
-    "title": "35  长尾病毒",
+    "title": "38  长尾病毒",
     "section": "2. PelV-1",
     "text": "2. PelV-1\n\n2.1 病毒的样子和“身高”\n\n\n\n病毒的“脑袋”（capsid/衣壳）长达216 nm (0.2 μm)，尾巴(tail)长达2292 nm (2.3 μm)，所以“身高”是2.5 μm。\n文章作者声称，其尾巴是“迄今最长的病毒尾巴/the longest virus appendage described to date”。\n给我买杯茶🍵",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>35</span>  <span class='chapter-title'>长尾病毒</span>"
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>长尾病毒</span>"
     ]
   },
   {
     "objectID": "2025-08-01_两个长长长尾巴的病毒.html#references",
     "href": "2025-08-01_两个长长长尾巴的病毒.html#references",
-    "title": "35  长尾病毒",
+    "title": "38  长尾病毒",
     "section": "References",
     "text": "References\n\n\n\n\n1. J. Maharana, C.-H. Wang, L.-A. Tsai, Y.-T. Liao, C.-H. Yang, M. C. Shen, L. S. Macale, T. N. Tran, J. Narsico, R. J. Perez, S. K. Tewary, J.-L. Wu, H.-Y. Lin, S.-W. Chang, A. Franklin, P. J. Moynihan, D. Jacobs-Sera, K. G. Freeman, G. F. Hatfull, T. L. Lowary, M.-C. Ho, Cryo-EM and cryo-ET reveal the molecular architecture and host interactions of mycobacteriophage douge. Cell Reports 44, 116057 (2025).\n\n\n2. A. P. Gajigan, C. R. Schvarcz, A. B. Laughlin, T. M. Weatherby, A. I. Culley, K. F. Edwards, G. F. Steward, A dinoflagellate-infecting giant virus with a micron-length tail. doi: 10.1101/2025.07.19.665647 (2025).",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>35</span>  <span class='chapter-title'>长尾病毒</span>"
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>长尾病毒</span>"
     ]
   },
   {
     "objectID": "2025-08-14_个体免疫反应在生命过程中趋同与分化.html",
     "href": "2025-08-14_个体免疫反应在生命过程中趋同与分化.html",
-    "title": "36  免疫趋同与分化",
+    "title": "39  免疫趋同与分化",
     "section": "",
     "text": "人类生命过程中的免疫变异来源\n“collision/碰撞”这个词用的好。\n一些经商业行为，需要花钱的，本可以避免的环境物质和身体的“collision/碰撞”，无论是思想层面、气味层面、皮肤层面、食物层面、或注射层面，需谨慎。\n你的身体与这些环境物质的“collision/碰撞”，到底会对生命过程，或生命过程中的免疫过程，无论是短期还是长期，产生什么影响呢？\n给我买杯茶🍵",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>36</span>  <span class='chapter-title'>免疫趋同与分化</span>"
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>免疫趋同与分化</span>"
     ]
   },
   {
     "objectID": "2025-08-14_个体免疫反应在生命过程中趋同与分化.html#人类生命过程中的免疫变异来源",
     "href": "2025-08-14_个体免疫反应在生命过程中趋同与分化.html#人类生命过程中的免疫变异来源",
-    "title": "36  免疫趋同与分化",
+    "title": "39  免疫趋同与分化",
     "section": "",
     "text": "Three ingredients create the strikingly variable immune trajectories observed across human populations: (A) genetic variation, (B) individual-scale generation of additional genetic diversity solely in lymphocytes, and (C) collision of these processes with a changing environment through life, triggering plastic responses that can have lasting effects.(1)\n\n\n三种因素造就了在人类群体中观察到的显著变化的免疫轨迹：（A）遗传变异，（B）个体水平上仅在淋巴细胞中产生的额外遗传多样性，以及（C）这些过程与生命过程中变化的环境的碰撞，触发了具有持久影响的可塑性。(1)",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>36</span>  <span class='chapter-title'>免疫趋同与分化</span>"
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>免疫趋同与分化</span>"
     ]
   },
   {
     "objectID": "2025-08-14_个体免疫反应在生命过程中趋同与分化.html#references",
     "href": "2025-08-14_个体免疫反应在生命过程中趋同与分化.html#references",
-    "title": "36  免疫趋同与分化",
+    "title": "39  免疫趋同与分化",
     "section": "References",
     "text": "References\n\n\n\n\n1. C. J. E. Metcalf, A. L. Graham, A. J. Yates, D. A. T. Cummings, Convergence and divergence of individual immune responses over the life course. Science 389, 604–609 (2025).",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>36</span>  <span class='chapter-title'>免疫趋同与分化</span>"
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>免疫趋同与分化</span>"
     ]
   },
   {
     "objectID": "2025-08-19_一种高效鉴定病原抗原表位的新方法PathMHC.html",
     "href": "2025-08-19_一种高效鉴定病原抗原表位的新方法PathMHC.html",
-    "title": "37  PathMHC病原表位",
+    "title": "40  PathMHC病原表位",
     "section": "",
     "text": "1. PathMHC的原理\n留意到一个鉴定病原抗原表位的新方法流程，即PathMHC(1)（这是对应的评论(2)和预印版(3)），该方法结合质谱和生信步骤。\n通过该方法流程鉴定的病原抗原表位，可以用于之后的疫苗候选抗原测试。\n这个是原文(1)的图。\n这个来自原文(1)的图片摘要（graphic abstract）。\n这个是评论(3)的图，特别显示了用于疫苗候选抗原的目的。\n这3个图对比着看，更容易理解。",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>PathMHC病原表位</span>"
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>PathMHC病原表位</span>"
     ]
   },
   {
     "objectID": "2025-08-19_一种高效鉴定病原抗原表位的新方法PathMHC.html#pathmhc的原理",
     "href": "2025-08-19_一种高效鉴定病原抗原表位的新方法PathMHC.html#pathmhc的原理",
-    "title": "37  PathMHC病原表位",
+    "title": "40  PathMHC病原表位",
     "section": "",
     "text": "首先，每个样本被分成两部分，其中一部分（包括感染组和未感染组）通过非靶向质谱（DDA）进行分析。\n\n\n其次，非靶向质谱数据通过生信流程进行分析，该流程找到感染细胞特异的前体离子，而这些前体在未感染对照组中不存在，并排除了在非靶向分析中已识别的离子（见材料与方法部分）。\n\n\n最后，这些推测为感染细胞特异的前体离子被视作清单，在剩余的每个样本上进行靶向质谱分析，采用平行反应监测（PRM）来识别先前在非靶向分析中漏掉的病原衍生肽段。",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>PathMHC病原表位</span>"
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>PathMHC病原表位</span>"
     ]
   },
   {
     "objectID": "2025-08-19_一种高效鉴定病原抗原表位的新方法PathMHC.html#pathmhc解决的问题",
     "href": "2025-08-19_一种高效鉴定病原抗原表位的新方法PathMHC.html#pathmhc解决的问题",
-    "title": "37  PathMHC病原表位",
+    "title": "40  PathMHC病原表位",
     "section": "2. PathMHC解决的问题",
     "text": "2. PathMHC解决的问题\n\n一种新颖的方法，称为PathMHC，该方法先对非靶向质谱数据进行计算分析，然后进行靶向质谱分析，从而比单独使用非靶向方法更高效地发现新型病原体来源的MHC肽段。\n\n给我买杯茶🍵",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>PathMHC病原表位</span>"
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>PathMHC病原表位</span>"
     ]
   },
   {
     "objectID": "2025-08-19_一种高效鉴定病原抗原表位的新方法PathMHC.html#references",
     "href": "2025-08-19_一种高效鉴定病原抗原表位的新方法PathMHC.html#references",
-    "title": "37  PathMHC病原表位",
+    "title": "40  PathMHC病原表位",
     "section": "References",
     "text": "References\n\n\n\n\n1. O. Leddy, Y. Yuki, M. Carrington, B. D. Bryson, F. M. White, Targeting infection-specific peptides in immunopeptidomics studies for vaccine target discovery. Journal of Experimental Medicine 222 (2025).\n\n\n2. O. Leddy, Y. Yuki, M. Carrington, B. D. Bryson, F. M. White, PathMHC: A workflow to selectively target pathogen-derived MHC peptides in discovery immunopeptidomics experiments for vaccine target identification. bioRxiv, doi: 10.1101/2024.09.11.612454 (2024).\n\n\n3. P. Willems, L. Kovalchuke, F. Impens, Target acquired: Lock-on bacterial immunopeptides. Journal of Experimental Medicine 222 (2025).",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>PathMHC病原表位</span>"
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>PathMHC病原表位</span>"
     ]
   },
   {
     "objectID": "2025-08-22_干扰素种类诱导和信号传导.html",
     "href": "2025-08-22_干扰素种类诱导和信号传导.html",
-    "title": "38  干扰素",
+    "title": "41  干扰素",
     "section": "",
     "text": "干扰素种类",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>38</span>  <span class='chapter-title'>干扰素</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>干扰素</span>"
     ]
   },
   {
     "objectID": "2025-08-22_干扰素种类诱导和信号传导.html#干扰素种类",
     "href": "2025-08-22_干扰素种类诱导和信号传导.html#干扰素种类",
-    "title": "38  干扰素",
+    "title": "41  干扰素",
     "section": "",
     "text": "IFN-Is (type I interferons) include 13 IFN-α (14 in mice), IFN-β, IFN-ε, IFN-κ, and IFN-ω.\n\n\nIFN-γ is the only described IFN-II (type II interferon).\n\n\nIFN-IIIs (type III interferons) include IFN-λ1-3 (also known as interleukin [IL]-29, IL-28A, and IL-28B) and IFN-λ4 (only IFN-λ2 and -λ3 exist in mice).\n\n\nA fourth family of IFNs, named type IV interferons (or IFN-υ), has been identified in zebrafish and is present in other non-placental vertebrates but is absent in mice and humans.",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>38</span>  <span class='chapter-title'>干扰素</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>干扰素</span>"
     ]
   },
   {
     "objectID": "2025-08-22_干扰素种类诱导和信号传导.html#干扰素的诱导和信号传导",
     "href": "2025-08-22_干扰素种类诱导和信号传导.html#干扰素的诱导和信号传导",
-    "title": "38  干扰素",
+    "title": "41  干扰素",
     "section": "干扰素的诱导和信号传导",
     "text": "干扰素的诱导和信号传导\n\n这个图信息量比较大，算“工具”图片。\n想深入了解，还是阅读原文(1)吧。\n给我买杯茶🍵",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>38</span>  <span class='chapter-title'>干扰素</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>干扰素</span>"
     ]
   },
   {
     "objectID": "2025-08-22_干扰素种类诱导和信号传导.html#references",
     "href": "2025-08-22_干扰素种类诱导和信号传导.html#references",
-    "title": "38  干扰素",
+    "title": "41  干扰素",
     "section": "References",
     "text": "References\n\n\n\n\n1. B. Daniel, Z. Ivan, Interferons in health and disease. Cell, 4480–4504 (2025).",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>38</span>  <span class='chapter-title'>干扰素</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>干扰素</span>"
     ]
   },
   {
     "objectID": "2025-08-24_疫苗在抗生素抗性病原细菌的重要性.html",
     "href": "2025-08-24_疫苗在抗生素抗性病原细菌的重要性.html",
-    "title": "39  疫苗和病原菌",
+    "title": "42  疫苗和病原菌",
     "section": "",
     "text": "1. 两个配图\n单纯觉得这个综述(1)的两个配图很具有概括性，所以贴出来。\n多数疫苗以预防为目的，也有以治疗为目的的疫苗或疫苗治疗方案。\n多数抗生素以治疗为目的，也有以预防为目的的抗生素预防方案。\n最起码能知道这些病原菌长什么样（长、短、胖、瘦、是否有鞭毛等）。😁\n给我买杯茶🍵",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>疫苗和病原菌</span>"
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>疫苗和病原菌</span>"
     ]
   },
   {
     "objectID": "2025-08-24_疫苗在抗生素抗性病原细菌的重要性.html#两个配图",
     "href": "2025-08-24_疫苗在抗生素抗性病原细菌的重要性.html#两个配图",
-    "title": "39  疫苗和病原菌",
+    "title": "42  疫苗和病原菌",
     "section": "",
     "text": "Mycobacterium tuberculosis：结核分枝杆菌\nStaphylococcus aureus：金黄色葡萄球菌\nEnterococcus faecium：肠球菌\nEscherichia coli：大肠杆菌\nSalmonella species：沙门氏菌属\nShigella species：志贺氏菌属\nKlebsiella pneumoniae：肺炎克雷伯菌\nNeisseria gonorrhoeae：淋病奈瑟菌\nPseudomonas aeruginosa：铜绿假单胞菌\nAcinetobacter baumannii：鲍曼不动杆菌",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>疫苗和病原菌</span>"
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>疫苗和病原菌</span>"
     ]
   },
   {
     "objectID": "2025-08-24_疫苗在抗生素抗性病原细菌的重要性.html#references",
     "href": "2025-08-24_疫苗在抗生素抗性病原细菌的重要性.html#references",
-    "title": "39  疫苗和病原菌",
+    "title": "42  疫苗和病原菌",
     "section": "References",
     "text": "References\n\n\n\n\n1. J. A. Zhang, V. Nizet, The central importance of vaccines to mitigate the threat of antibiotic-resistant bacterial pathogens. Vaccines 13 (2025).",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>疫苗和病原菌</span>"
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>疫苗和病原菌</span>"
     ]
   },
   {
     "objectID": "2025-08-25_肿瘤是异质的_非转移精原细胞癌的肿瘤相关巨噬细胞表型和分布.html",
     "href": "2025-08-25_肿瘤是异质的_非转移精原细胞癌的肿瘤相关巨噬细胞表型和分布.html",
-    "title": "40  巨噬细胞在肿瘤异质",
+    "title": "43  巨噬细胞在肿瘤异质",
     "section": "",
     "text": "1. 结论(1)\n笔者咋没看出来CD68+ TAMs的所描述的分布特征？😳",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>40</span>  <span class='chapter-title'>巨噬细胞在肿瘤异质</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>巨噬细胞在肿瘤异质</span>"
     ]
   },
   {
     "objectID": "2025-08-25_肿瘤是异质的_非转移精原细胞癌的肿瘤相关巨噬细胞表型和分布.html#结论medsci13030129",
     "href": "2025-08-25_肿瘤是异质的_非转移精原细胞癌的肿瘤相关巨噬细胞表型和分布.html#结论medsci13030129",
-    "title": "40  巨噬细胞在肿瘤异质",
+    "title": "43  巨噬细胞在肿瘤异质",
     "section": "",
     "text": "CD68+肿瘤相关巨噬细胞（TAMs）主要局限于肿瘤外围区域，而CD163+ TAMs则在肿瘤中心区域及外围血管周围形成弥漫性聚集。\n\n\n\n在pT1和pT2阶段之间，CD68+ TAMS密度没有显著统计学差异。\n\n\npT2肿瘤显示出CD163+ TAMs密度较高的趋势，提示随着肿瘤分期的进展，M2型极化可能增加。",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>40</span>  <span class='chapter-title'>巨噬细胞在肿瘤异质</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>巨噬细胞在肿瘤异质</span>"
     ]
   },
   {
     "objectID": "2025-08-25_肿瘤是异质的_非转移精原细胞癌的肿瘤相关巨噬细胞表型和分布.html#病例数",
     "href": "2025-08-25_肿瘤是异质的_非转移精原细胞癌的肿瘤相关巨噬细胞表型和分布.html#病例数",
-    "title": "40  巨噬细胞在肿瘤异质",
+    "title": "43  巨噬细胞在肿瘤异质",
     "section": "2. 病例数",
     "text": "2. 病例数\n\n通过免疫组化方法分析了来自96名患者和21个正常睾丸组织的存档石蜡包埋肿瘤样本。(1)",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>40</span>  <span class='chapter-title'>巨噬细胞在肿瘤异质</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>巨噬细胞在肿瘤异质</span>"
     ]
   },
   {
     "objectID": "2025-08-25_肿瘤是异质的_非转移精原细胞癌的肿瘤相关巨噬细胞表型和分布.html#延伸一点_如何采样",
     "href": "2025-08-25_肿瘤是异质的_非转移精原细胞癌的肿瘤相关巨噬细胞表型和分布.html#延伸一点_如何采样",
-    "title": "40  巨噬细胞在肿瘤异质",
+    "title": "43  巨噬细胞在肿瘤异质",
     "section": "3. 延伸一点_如何采样？",
     "text": "3. 延伸一点_如何采样？\n不同个体的同一种癌种异质；同一个体的不同肿瘤灶异质；同一肿瘤灶的不同区域异质(2)。\n以该非转移精原细胞癌为例，CD163+ TAMs主要分布于肿瘤中心区域和外围血管周围，而没有均匀弥散分布于整个肿瘤组织，因此，CD163+ TAMs的分布为异质(1),可以想象其它细胞（包括肿瘤细胞）的分布亦可能异质。\n如果（是通过某种微创手段）进行采样，那么所采的潜在小肿瘤样本，是否具有代表性？也许只能代表“树木”，而不是“森林”。\n也许：\n\n能用大肿瘤组织，那就用大肿瘤组织。\n从大肿瘤组织的多个部位取样 –&gt; 混合 –&gt; 下游实验（比如肿瘤新抗原发现）。\n\n给我买杯茶🍵",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>40</span>  <span class='chapter-title'>巨噬细胞在肿瘤异质</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>巨噬细胞在肿瘤异质</span>"
     ]
   },
   {
     "objectID": "2025-08-25_肿瘤是异质的_非转移精原细胞癌的肿瘤相关巨噬细胞表型和分布.html#references",
     "href": "2025-08-25_肿瘤是异质的_非转移精原细胞癌的肿瘤相关巨噬细胞表型和分布.html#references",
-    "title": "40  巨噬细胞在肿瘤异质",
+    "title": "43  巨噬细胞在肿瘤异质",
     "section": "References",
     "text": "References\n\n\n\n\n1. G. Demyashkin, V. Shchekin, D. Belokopytov, T. Borovaya, I. Zaborsky, K. Safiullin, O. Karyakin, A. Krasheninnikov, N. Vorobyev, P. Shegay, A. Kaprin, Phenotypic and spatial characterization of tumor-associated macrophages in non-metastatic seminoma: Association with local tumor progression. Medical Sciences 13 (2025).\n\n\n2. S. Pounraj, S. Chen, L. Ma, R. Mazzieri, R. Dolcetti, B. H. A. Rehm, Targeting tumor heterogeneity with neoantigen-based cancer vaccines. Cancer Research 84, 353–363 (2023).",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>40</span>  <span class='chapter-title'>巨噬细胞在肿瘤异质</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>巨噬细胞在肿瘤异质</span>"
     ]
   },
   {
     "objectID": "2025-09-11_遗传背景多样的协作杂交小鼠群体.html",
     "href": "2025-09-11_遗传背景多样的协作杂交小鼠群体.html",
-    "title": "41  背景多样小鼠",
+    "title": "44  背景多样小鼠",
     "section": "",
     "text": "1. Outbred（远系繁殖、非亲缘繁殖） vs. inbred（同系繁殖、近亲繁殖）\n读到一篇文献(1)，里面提到了“The genetically diverse Collaborative Cross mouse panel/遗传背景多样的协作杂交小鼠群体”，笔者大概清楚是什么意思，但不是特别清楚，因此大概再了解了一下。\n人类是outbred，而常用的小鼠品系是inbred（比如C57BL/6和Balb/C）。\n但是inbred小鼠同一个品系内几乎是遗传上完全一致的。\n通过inbred小鼠做的疾病模型探索可能不能反应outbred人类的疾病症状和机理，因为忽略了遗传多样性和疾病的相互关系…（此处隐去很多字😃）。\n因此，就有了遗传背景多样的协作杂交小鼠群体。",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>背景多样小鼠</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>背景多样小鼠</span>"
     ]
   },
   {
     "objectID": "2025-09-11_遗传背景多样的协作杂交小鼠群体.html#遗传背景多样的协作杂交小鼠群体",
     "href": "2025-09-11_遗传背景多样的协作杂交小鼠群体.html#遗传背景多样的协作杂交小鼠群体",
-    "title": "41  背景多样小鼠",
+    "title": "44  背景多样小鼠",
     "section": "2. 遗传背景多样的协作杂交小鼠群体",
     "text": "2. 遗传背景多样的协作杂交小鼠群体\n\nThe Collaborative Cross (CC) is a multiparental recombinant inbred panel derived from eight laboratory mouse inbred strains. Breeding of the CC lines was initiated at multiple international sites using mice from The Jackson Laboratory. Currently, this innovative project is breeding independent CC lines at the University of North Carolina (UNC), at Tel Aviv University (TAU), and at Geniad in Western Australia (GND). (2)\n\n\n协作杂交小鼠品系（简称CC）​​ 是一个来源于八种实验室近交系小鼠​的多亲本重组近交系小鼠群体。CC品系的培育工作最初是在多个国际研究机构启动的，所用的小鼠来自​美国杰克逊实验室（The Jackson Laboratory）​。目前，这一创新性项目正在以下机构独立培育CC品系：University of North Carolina（简称UNC）、​​Tel Aviv University（简称TAU）、​以及Geniad in Western Australia（简称GND）。(2)\n\n\n2.1 八种实验室近交系小鼠及其育种方案\n\n图片引自(2)。\n\n\n2.2 一个CC小鼠品系的遗传背景组成\n\n\n\n\nHaplotype mosaic for the sequenced representative of the CC001/Unc strain.(3)\n\n\n\n\n\n2.3 CC小鼠的网站\n\n\n\n\nUNC SYSTEMS GENETICS\n\n\n\n网址：https://csbio.unc.edu/CCstatus/index.py\n给我买杯茶🍵",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>背景多样小鼠</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>背景多样小鼠</span>"
     ]
   },
   {
     "objectID": "2025-09-11_遗传背景多样的协作杂交小鼠群体.html#references",
     "href": "2025-09-11_遗传背景多样的协作杂交小鼠群体.html#references",
-    "title": "41  背景多样小鼠",
+    "title": "44  背景多样小鼠",
     "section": "References",
     "text": "References\n\n\n\n\n1. M. T. P. G. Rachel K Meade Oyindamola O Adefisayo, Cathepsin z is a conserved susceptibility factor underlying tuberculosis severity. PLoS Biol. 23, e3003377 (2025).\n\n\n2. The genome architecture of the collaborative cross mouse genetic reference population. Genetics 190, 389–401 (2012).\n\n\n3. A. Srivastava, A. P. Morgan, M. L. Najarian, V. K. Sarsani, J. S. Sigmon, J. R. Shorter, A. Kashfeen, R. C. McMullan, L. H. Williams, P. Giusti-Rodríguez, M. T. Ferris, P. Sullivan, P. Hock, D. R. Miller, T. A. Bell, L. McMillan, G. A. Churchill, F. P.-M. de Villena, Genomes of the mouse collaborative cross. Genetics 206, 537–556 (2017).",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>背景多样小鼠</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>背景多样小鼠</span>"
     ]
   },
   {
     "objectID": "2025-09-17_STING佐剂化外膜囊泡纳米粒子疫苗对抗绿脓杆菌.html",
     "href": "2025-09-17_STING佐剂化外膜囊泡纳米粒子疫苗对抗绿脓杆菌.html",
-    "title": "42  STING佐剂化纳米疫苗",
+    "title": "45  STING佐剂化纳米疫苗",
     "section": "",
     "text": "1. 一个新颖的纳米颗粒疫苗\n上图这个文献(1)介绍了一种新颖的抗绿脓杆菌的纳米疫苗：\n蛮有意思。\n感觉可以从任何病原菌分离外膜囊泡，进而衍生出该病原菌的潜在治疗或预防性外膜囊泡纳米粒子疫苗。😁",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>STING佐剂化纳米疫苗</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>STING佐剂化纳米疫苗</span>"
     ]
   },
   {
     "objectID": "2025-09-17_STING佐剂化外膜囊泡纳米粒子疫苗对抗绿脓杆菌.html#一个新颖的纳米颗粒疫苗",
     "href": "2025-09-17_STING佐剂化外膜囊泡纳米粒子疫苗对抗绿脓杆菌.html#一个新颖的纳米颗粒疫苗",
-    "title": "42  STING佐剂化纳米疫苗",
+    "title": "45  STING佐剂化纳米疫苗",
     "section": "",
     "text": "… STING-adjuvanted nanoparticle cores from manganese, cyclic di-AMP, and DSPE-H11, a modified phospholipid and then coated with OMVs isolated from PA14 …\n\n\n… STING佐剂化的纳米粒子核心由锰离子、环二-AMP和DSPE-H11（一种改良的磷脂）组成，然后覆盖上从PA14分离出的外膜囊泡（OMVs）…",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>STING佐剂化纳米疫苗</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>STING佐剂化纳米疫苗</span>"
     ]
   },
   {
     "objectID": "2025-09-17_STING佐剂化外膜囊泡纳米粒子疫苗对抗绿脓杆菌.html#he切片的人工主观分析",
     "href": "2025-09-17_STING佐剂化外膜囊泡纳米粒子疫苗对抗绿脓杆菌.html#he切片的人工主观分析",
-    "title": "42  STING佐剂化纳米疫苗",
+    "title": "45  STING佐剂化纳米疫苗",
     "section": "2. H&E切片的人工主观分析",
     "text": "2. H&E切片的人工主观分析\n另外，我们留意到该文章的H&E切片的分析是人工（兽医病理学家）分析（当然切片信息对病理学家是保密的）。\n\n\n\n\nPa-STING：STING佐剂化外膜囊泡纳米粒子疫苗；RBC-STING：red blood cell–coated STING。\n\n\n\n笔者以前做实验的经历，感觉：\n\nF和G的代表性图片覆盖区域太小（这种代表性区域太容易挑选了，懂的都懂😄）。\n\n最好是整个肺或整个胸腺的全片扫描图片。\n\n对于人工分析/评分，对大部分科研人员不太好执行，因为：\n\n需找专业的（兽医）病例学家。\n病理学家需不清楚切片对应的小鼠的组别信息。\n\n\n给我买杯茶🍵",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>STING佐剂化纳米疫苗</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>STING佐剂化纳米疫苗</span>"
     ]
   },
   {
     "objectID": "2025-09-17_STING佐剂化外膜囊泡纳米粒子疫苗对抗绿脓杆菌.html#references",
     "href": "2025-09-17_STING佐剂化外膜囊泡纳米粒子疫苗对抗绿脓杆菌.html#references",
-    "title": "42  STING佐剂化纳米疫苗",
+    "title": "45  STING佐剂化纳米疫苗",
     "section": "References",
     "text": "References\n\n\n\n\n1. E. Bjånes, N. Krishnan, T. Koh, A. T. P. Ngo, J. Cole, J. Olson, I. Cornax, C.-H. Chen, N. Chavarria, S. Dahesh, S. M. Hannah, A. Stream, J. A. Zhang, H. Besançon, D. Sun, S. Yendluri, S. Morrill, J. Zhou, A. Mohapatra, R. H. Fang, V. Nizet, STING-adjuvanted outer membrane vesicle nanoparticle vaccine against pseudomonas aeruginosa. JCI Insight 10 (2025).",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>STING佐剂化纳米疫苗</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>STING佐剂化纳米疫苗</span>"
     ]
   },
   {
     "objectID": "2025-09-19_3个遗传背景多样的小鼠群体.html",
     "href": "2025-09-19_3个遗传背景多样的小鼠群体.html",
-    "title": "43  3个小鼠群体",
+    "title": "46  3个小鼠群体",
     "section": "",
     "text": "1. 群体1：CC群体\n在2025-09-11，我们提到了协作杂交小鼠群体（Collaborative Cross，简称CC）（遗传背景多样的协作杂交小鼠群体）​​。之后，又看到一篇文献(1) (这个文章的预印版应该成稿于2023年)(2)，提到了3种遗传背景多样的小鼠群体，其中包括CC群体。",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>3个小鼠群体</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>3个小鼠群体</span>"
     ]
   },
   {
     "objectID": "2025-09-19_3个遗传背景多样的小鼠群体.html#群体1cc群体",
     "href": "2025-09-19_3个遗传背景多样的小鼠群体.html#群体1cc群体",
-    "title": "43  3个小鼠群体",
+    "title": "46  3个小鼠群体",
     "section": "",
     "text": "The Collaborative Cross (CC) model was founded by crossing five common laboratory lines and three wild-derived lines.\n\n\n协作交叉（Collaborative Cross，简称CC）模型是通过五个常见实验室小鼠品系与三个野生来源品系进行交叉配种所建立的。",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>3个小鼠群体</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>3个小鼠群体</span>"
     ]
   },
   {
     "objectID": "2025-09-19_3个遗传背景多样的小鼠群体.html#群体2diversity-outbreddo群体",
     "href": "2025-09-19_3个遗传背景多样的小鼠群体.html#群体2diversity-outbreddo群体",
-    "title": "43  3个小鼠群体",
+    "title": "46  3个小鼠群体",
     "section": "2. 群体2：Diversity outbred（DO）群体",
     "text": "2. 群体2：Diversity outbred（DO）群体\n\nFurther breeding of the CC lines created the Diversity Outbred (DO) mouse collection, which is maintained as outbred population through random crossings.\n\n\n通过对协作交叉（CC）品系进一步繁育，建立了多样性远交（Diversity Outbred，简称DO）小鼠资源库，该群体通过随机交配的方式维持为一个远交种群。",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>3个小鼠群体</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>3个小鼠群体</span>"
     ]
   },
   {
     "objectID": "2025-09-19_3个遗传背景多样的小鼠群体.html#群体3",
     "href": "2025-09-19_3个遗传背景多样的小鼠群体.html#群体3",
-    "title": "43  3个小鼠群体",
+    "title": "46  3个小鼠群体",
     "section": "3. 群体3",
     "text": "3. 群体3\n\n… a set of 19 new inbred lines derived from wild mice collected … across a latitudinal gradient from Brazil to Canada and show significant phenotypic diversity, including size, body mass index, and lipid and glucose metabolism.\n\n\n……这是一组由从巴西至加拿大的纬度梯度范围内……采集的野生小鼠培育出的19个新建近交系，这些品系展现出显著的表型多样性，包括体型、体重指数以及脂质和葡萄糖代谢等方面的差异。\n\n\n\n\n\n“Mice were collected from five different sites across the Americas and inbred to generate individual genetic lines from each location.”\n\n\n\n\nUnlike CC and DO mice, these new lines are all from the Mus musculus domesticus subspecies of house mouse. The use of a single subspecies to establish this cohort is beneficial, as it limits allelic conflicts that can arise from crossing different subspecies.\n\n\n与CC和DO小鼠不同，这些新建品系均来源于家鼠（house mouse）的Mus musculus domesticus亚种。使用单一亚种建立该群体具有重要优势，因为它能有效避免因不同亚种杂交可能引发的等位基因冲突。\n\n给我买杯茶🍵",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>3个小鼠群体</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>3个小鼠群体</span>"
     ]
   },
   {
     "objectID": "2025-09-19_3个遗传背景多样的小鼠群体.html#references",
     "href": "2025-09-19_3个遗传背景多样的小鼠群体.html#references",
-    "title": "43  3个小鼠群体",
+    "title": "46  3个小鼠群体",
     "section": "References",
     "text": "References\n\n\n\n\n1. M. M. Ravesloot-Chavez, E. Van Dis, D. Fox, A. Anaya-Sanchez, S. Espich, X. H. Nguyenla, S. Rawal, H. Samani, M. Ballinger, H. F. Thomas, D. I. Kotov, R. E. Vance, M. W. Nachman, S. A. Stanley, Tuberculosis susceptibility in genetically diverse mice reveals functional diversity of neutrophils. eLife 13 (2025).\n\n\n2. M. M. Ravesloot-Chávez, E. Van Dis, D. Fox, A. Anaya Sanchez, S. Espich, X. H. Nguyenla, S. L. Rawal, H. Samani, M. A. Ballinger, H. Thomas, D. Kotov, R. Vance, M. W. Nachman, S. A. Stanley, Tuberculosis susceptibility in genetically diverse mice reveals functional diversity of neutrophils. doi: 10.1101/2023.06.29.547125 (2023).",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>3个小鼠群体</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>3个小鼠群体</span>"
     ]
   },
   {
     "objectID": "2025-09-20_黑腹果蝇的Dscam1可以产生38016个不同的蛋白.html",
     "href": "2025-09-20_黑腹果蝇的Dscam1可以产生38016个不同的蛋白.html",
-    "title": "44  Dscam1产生38106个蛋白",
+    "title": "47  Dscam1产生38106个蛋白",
     "section": "",
     "text": "1. 黑腹果蝇（Drosophila melanogaster）Dscam1转录本多态性\n文献[(1)](2)提到黑腹果蝇的Dscam1可以产生38016个不同的转录本和对应的蛋白。\n笔者很惊讶，所以在这里分享一下。\n12 * 48 * 33 * 2\n\n[1] 38016\n至于为什么需要这么多的蛋白变体，如文章题目所示，是因为“fitness and immunity”。\n您感兴趣的话，可以详读该文献(1)。\n给我买杯茶🍵",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Dscam1产生38106个蛋白</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Dscam1产生38106个蛋白</span>"
     ]
   },
   {
     "objectID": "2025-09-20_黑腹果蝇的Dscam1可以产生38016个不同的蛋白.html#黑腹果蝇drosophila-melanogasterdscam1转录本多态性",
     "href": "2025-09-20_黑腹果蝇的Dscam1可以产生38016个不同的蛋白.html#黑腹果蝇drosophila-melanogasterdscam1转录本多态性",
-    "title": "44  Dscam1产生38106个蛋白",
+    "title": "47  Dscam1产生38106个蛋白",
     "section": "",
     "text": "The variable exons or domains are shown in color, while the constant exons or domains are shown in gray./可变外显子或结构域以彩色标示，恒定外显子或结构域则以灰色标示。\n\n\n\n\nThe Drosophila melanogaster Dscam1 gene can generate 38,016 closely related single-transmembrane proteins of the immunoglobulin superfamily via mutually exclusive alternative splicing of 12 exon 4s, 48 exon 6s, 33 exon 9s, and 2 exon 17s …\n\n\n黑腹果蝇（Drosophila melanogaster）的 Dscam1 基因可通过其12个外显子4变体、48个外显子6变体、33个外显子9变体及2个外显子17变体之间的互斥性选择性剪接，产生38,016种结构高度相似、属于免疫球蛋白超家族的单次跨膜蛋白……",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Dscam1产生38106个蛋白</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Dscam1产生38106个蛋白</span>"
     ]
   },
   {
     "objectID": "2025-09-20_黑腹果蝇的Dscam1可以产生38016个不同的蛋白.html#references",
     "href": "2025-09-20_黑腹果蝇的Dscam1可以产生38016个不同的蛋白.html#references",
-    "title": "44  Dscam1产生38106个蛋白",
+    "title": "47  Dscam1产生38106个蛋白",
     "section": "References",
     "text": "References\n\n\n\n\n1. H. Dong, L. Wu, Z. Wang, H. Qu, J. Xie, Y. Liu, J. Lv, N. Bao, J. Zhang, P. Guo, R. Yan, J. Fu, J. Shi, Y. Fu, L. Li, Y. Du, H. Ma, F. Shi, J. Huang, Y. Jin, The modern expansion of Dscam1 isoform diversity in drosophila is linked to fitness and immunity. PLOS Biology 23, e3003383 (2025).\n\n\n2. H. Dong, X. Yang, L. Wu, S. Zhang, J. Zhang, P. Guo, Y. Du, C. Pan, Y. Fu, L. Li, J. Shi, Y. Zhu, H. Ma, L. Bian, B. Xu, G. Li, F. Shi, J. Huang, H. He, Y. Jin, A systematic CRISPR screen reveals redundant and specific roles for Dscam1 isoform diversity in neuronal wiring. PLOS Biology 21, e3002197 (2023).",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Dscam1产生38106个蛋白</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Dscam1产生38106个蛋白</span>"
     ]
   },
   {
     "objectID": "2025-12-08_AI在科研文章写作中的贡献-两个实例和现状.html",
     "href": "2025-12-08_AI在科研文章写作中的贡献-两个实例和现状.html",
-    "title": "45  AI和文章写作",
+    "title": "48  AI和文章写作",
     "section": "",
     "text": "实例1\n来自PANS杂志2025年的一个文献(1)。",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>45</span>  <span class='chapter-title'>AI和文章写作</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>AI和文章写作</span>"
     ]
   },
   {
     "objectID": "2025-12-08_AI在科研文章写作中的贡献-两个实例和现状.html#实例1",
     "href": "2025-12-08_AI在科研文章写作中的贡献-两个实例和现状.html#实例1",
-    "title": "45  AI和文章写作",
+    "title": "48  AI和文章写作",
     "section": "",
     "text": "Use of Large Language Models. We used ChatGPT (OpenAI), model GPT-4o (version gpt-4o-2024-08-06 or gpt-4-turbo-2024-04-09), solely to improve grammar and language clarity during manuscript preparation. The prompt used was “Proofread.” No content, analysis, or interpretation was generated by the tool.",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>45</span>  <span class='chapter-title'>AI和文章写作</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>AI和文章写作</span>"
     ]
   },
   {
     "objectID": "2025-12-08_AI在科研文章写作中的贡献-两个实例和现状.html#实例2",
     "href": "2025-12-08_AI在科研文章写作中的贡献-两个实例和现状.html#实例2",
-    "title": "45  AI和文章写作",
+    "title": "48  AI和文章写作",
     "section": "实例2",
     "text": "实例2\n来自Front Bioinform杂志2025年的一个文献(2)。\n\nGenerative AI statement The author(s) declare that no Generative AI was used in the creation of this manuscript.",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>45</span>  <span class='chapter-title'>AI和文章写作</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>AI和文章写作</span>"
     ]
   },
   {
     "objectID": "2025-12-08_AI在科研文章写作中的贡献-两个实例和现状.html#现状",
     "href": "2025-12-08_AI在科研文章写作中的贡献-两个实例和现状.html#现状",
-    "title": "45  AI和文章写作",
+    "title": "48  AI和文章写作",
     "section": "现状",
     "text": "现状\n来自Sci Adv杂志2025年的一个文献(3)通过分析PubMed 2010 - 2024年的&gt; 1500万个生物医学相关文章的摘要的词汇使用特征后发现：\n\n… at least 13.5% of 2024 abstracts were processed with LLMs. This lower bound differed across disciplines, countries (≈ 20% of China), and journals …\n\n给我买杯茶🍵",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>45</span>  <span class='chapter-title'>AI和文章写作</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>AI和文章写作</span>"
     ]
   },
   {
     "objectID": "2025-12-08_AI在科研文章写作中的贡献-两个实例和现状.html#references",
     "href": "2025-12-08_AI在科研文章写作中的贡献-两个实例和现状.html#references",
-    "title": "45  AI和文章写作",
+    "title": "48  AI和文章写作",
     "section": "References",
     "text": "References\n\n\n\n\n1. T. C. Murakami, N. Belenko, G. Dennis, C. Wang, M. E. Siantoputri, Y. Maeda, C. Pressl, N. Heintz, An open-source photobleacher for fluorescence imaging of large pigment-rich tissues. Proceedings of the National Academy of Sciences 122 (2025).\n\n\n2. A. A. Ruzette, N. Kozlova, K. A. Cruz, T. Muranen, S. F. Nørrelykke, An image analysis pipeline to quantify the spatial distribution of cell markers in stroma-rich tumors. Frontiers in Bioinformatics 5 (2025).\n\n\n3. D. Kobak, R. González-Márquez, E.-Á. Horvát, J. Lause, Delving into LLM-assisted writing in biomedical publications through excess vocabulary. Science Advances 11 (2025).",
     "crumbs": [
       "科学相关",
-      "<span class='chapter-number'>45</span>  <span class='chapter-title'>AI和文章写作</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>AI和文章写作</span>"
     ]
   },
   {
     "objectID": "2025-07-21_客观的HE或PAS切片图像自动分析.html",
     "href": "2025-07-21_客观的HE或PAS切片图像自动分析.html",
-    "title": "46  HE/PAS分析",
+    "title": "49  HE/PAS分析",
     "section": "",
     "text": "1. H&E或PAS切片图像人工主观评分的问题\n拿到H&E或PAS切片的高清扫描图片后，需要对其进行评分，以分析不同组别或不同处理之间的差异。\n通过文献检索，可能会找到类似下面的H&E和PAS切片图像的人工评分方法 (1)。\n但是，可能会觉得：\n总之，担心不能真实反应组间差异。\n还有，从2025年6月1日起，多个Nature系列期刊（即《Nature Communications》、《Nature Cell Biology》、《Nature Methods》、和《Nature Structural & Molecular Biology》）(2)：\n可以想象，在以后的某个时间点，图片相关数据也可能被杂志强制要求共享到公共数据库，以供感兴趣的人员重复和使用。",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>46</span>  <span class='chapter-title'>HE/PAS分析</span>"
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>HE/PAS分析</span>"
     ]
   },
   {
     "objectID": "2025-07-21_客观的HE或PAS切片图像自动分析.html#he或pas切片图像人工主观评分的问题",
     "href": "2025-07-21_客观的HE或PAS切片图像自动分析.html#he或pas切片图像人工主观评分的问题",
-    "title": "46  HE/PAS分析",
+    "title": "49  HE/PAS分析",
     "section": "",
     "text": "人工评分太主观，太随意了（比如区域选择）~\n人工评分因人而异~\n人工评分耗时长（片子比较多），担心前后标准不一致~\n\n\n\n\n鼓励作者将其显微镜数据集存储在公共数据仓库中，正如基因组学和蛋白质组学等其它领域要求的那样 (2)。",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>46</span>  <span class='chapter-title'>HE/PAS分析</span>"
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>HE/PAS分析</span>"
     ]
   },
   {
     "objectID": "2025-07-21_客观的HE或PAS切片图像自动分析.html#客观的分析",
     "href": "2025-07-21_客观的HE或PAS切片图像自动分析.html#客观的分析",
-    "title": "46  HE/PAS分析",
+    "title": "49  HE/PAS分析",
     "section": "2. 客观的分析",
     "text": "2. 客观的分析\n\n客观的H&E切片图像自动分析服务。\n客观的PAS切片图像自动分析服务。\n\n客观的切片分析，能够避免人为主观分析的各种缺点，比如(1)相对随意的切片区域选择；(2)不同分析人员之间的标准差异；(3)同一分析人员不同时间的标准差异等，因此可以保证结果的可重复性。\n\n2.1 客观的H&E切片图像自动分析流程\n\n2.1.1 理论基础\n各种原因导致的炎症都伴随白细胞的浸润 (3)，或直观理解为病灶部位细胞增多，其通常通过H&E切片染色进行鉴别 (4)。\n本流程通过计数H&E切片中的相对细胞（核）总数和相对细胞核总面积，以实现客观的H&E切片自动分析。\n\n\n2.1.2 流程和实例\n\n\n\n说明：示例所用组织切片使用3DHISTECH公司出品的Pannoramic 250 FLASH数字病理切片扫描仪进行扫描，采用20×明场物镜，获得全幅高分辨率数字图像，并保存为.mrxs格式以供分析。本示例切片的.mrxs格式文件大小约600 M。\n\n\n\n2.2 客观的PAS切片图像自动分析流程\n\n2.2.1 理论基础\nPAS染色主要用于染色含有高比例碳水化合物（包括糖原）的结构 (5)，比如用于小鼠肺哮喘模型的粘液分泌鉴别 (6)。\n本流程通过计数PAS切片中的相对PAS阳性颗粒总数和相对PAS阳性颗粒总面积，以实现客观的PAS切片自动分析。\n\n\n2.2.2 流程和实例\n\n\n\n说明：示例所用组织切片使用3DHISTECH公司出品的Pannoramic 250 FLASH数字病理切片扫描仪进行扫描，采用20×明场物镜，获得全幅高分辨率数字图像，并保存为.mrxs格式以供分析。本示例切片的.mrxs格式文件大小约600 M。\n给我买杯茶🍵",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>46</span>  <span class='chapter-title'>HE/PAS分析</span>"
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>HE/PAS分析</span>"
     ]
   },
   {
     "objectID": "2025-07-21_客观的HE或PAS切片图像自动分析.html#references",
     "href": "2025-07-21_客观的HE或PAS切片图像自动分析.html#references",
-    "title": "46  HE/PAS分析",
+    "title": "49  HE/PAS分析",
     "section": "References",
     "text": "References\n\n\n\n\n1. Y. Zhang, Y. Feng, L. Li, X. Ye, J. Wang, Q. Wang, P. Li, N. Li, X. Zheng, X. Gao, C. Li, F. Li, B. Sun, K. Lai, Z. Su, N. Zhong, L. Chen, L. Feng, Immunization with an adenovirus-vectored TB vaccine containing Ag85A-Mtb32 effectively alleviates allergic asthma. Journal of Molecular Medicine 96, 249–263 (2018).\n\n\n2. Editorial, Light microscopy reporting for reproducibility. Nature Cell Biology 27, 877–877 (2025).\n\n\n3. L. M. Coussens, Z. Werb, Inflammation and cancer. Nature 420, 860–867 (2002).\n\n\n4. K. de Haan, Y. Zhang, J. E. Zuckerman, T. Liu, A. E. Sisk, M. F. P. Diaz, K.-Y. Jen, A. Nobori, S. Liou, S. Zhang, R. Riahi, Y. Rivenson, W. D. Wallace, A. Ozcan, Deep learning-based transformation of h&e stained tissues into special stains. Nature Communications 12 (2021).\n\n\n5. I. Singh, A. Weston, A. Kundur, G. Dobie, “Chapter 1 - introduction” in Haematology Case Studies with Blood Cell Morphology and Pathophysiology (Elsevier, 2017; http://dx.doi.org/10.1016/B978-0-12-811911-2.00001-5), pp. 1–8.\n\n\n6. J. Khumalo, F. Kirstein, M. Scibiorek, S. Hadebe, F. Brombacher, Therapeutic and prophylactic deletion of IL‐4Ra‐signaling ameliorates established ovalbumin induced allergic asthma. Allergy 75, 1347–1360 (2020).",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>46</span>  <span class='chapter-title'>HE/PAS分析</span>"
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>HE/PAS分析</span>"
     ]
   },
   {
     "objectID": "2025-07-22_客观的免疫荧光图像自动分析.html",
     "href": "2025-07-22_客观的免疫荧光图像自动分析.html",
-    "title": "47  IF分析",
+    "title": "50  IF分析",
     "section": "",
     "text": "1. 免疫荧光图像人工主观评价的问题\n对于免疫荧光图像分析的方法，通过文献检索，可能会发现很多文章都是通过人工主观评价来验证的。\n比如下面这两篇文章(1), (2)，作者通过眼睛观察图像，来判断胞内菌是否和宿主细胞蛋白共定位。\n笔者曾经也用这种方法统计共定位，但是在操作过程中：\n最终的结果是：担心不能真实反映组间差异。\n还有，从2025年6月1日起，多个Nature系列期刊（即《Nature Communications》、《Nature Cell Biology》、《Nature Methods》、和《Nature Structural & Molecular Biology》）(3)：\n可以想象，在以后的某个时间点，图片相关数据也可能被杂志强制要求共享到公共数据库，以供感兴趣的人员重复和使用。",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>47</span>  <span class='chapter-title'>IF分析</span>"
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>IF分析</span>"
     ]
   },
   {
     "objectID": "2025-07-22_客观的免疫荧光图像自动分析.html#免疫荧光图像人工主观评价的问题",
     "href": "2025-07-22_客观的免疫荧光图像自动分析.html#免疫荧光图像人工主观评价的问题",
-    "title": "47  IF分析",
+    "title": "50  IF分析",
     "section": "",
     "text": "无法客观的选择胞内菌（主观的不由自主的选择期望的共定位或不共定位的胞内菌）。\n\n有点像所谓的：通过“理论”推测来选择数据😂，虽然主观上无造假的想法。\n\n累眼睛，进而累心。\n\n特别是组别多和耗时长的时候。\n\n有时候主观认为某种模式属于共定位，有时候又认为其不属于共定位。\n\n也就是：前后标准不一致。\n\n\n\n\n\n鼓励作者将其显微镜数据集存储在公共数据仓库中，正如基因组学和蛋白质组学等其它领域要求的那样 (3)。",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>47</span>  <span class='chapter-title'>IF分析</span>"
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>IF分析</span>"
     ]
   },
   {
     "objectID": "2025-07-22_客观的免疫荧光图像自动分析.html#客观的分析",
     "href": "2025-07-22_客观的免疫荧光图像自动分析.html#客观的分析",
-    "title": "47  IF分析",
+    "title": "50  IF分析",
     "section": "2. 客观的分析",
     "text": "2. 客观的分析\n\n客观的免疫荧光图像自动分析服务。\n\n客观的图片分析，能够避免人为主观分析的各种缺点，比如(1)相对随意的图片区域选择；(2)不同分析人员之间的标准差异；(3)同一分析人员不同时间的标准差异等，因此可以保证结果的可重复性。\n\n2.1. 客观的免疫荧光图像自动分析流程\n\n2.1.1 理论基础\n免疫荧光（IF）是一种重要的免疫化学技术，能够在不同类型的组织和各种细胞制备中检测和定位多种抗原(4)，比如用于分析胞内菌和宿主细胞互作(2)、用于肿瘤的免疫治疗(5)等。\n本流程通过无差别的选择视野（图片）中的所有胞内菌，并进行特定光通路对应区域的信号强度分析、及共定位分析，以实现客观的免疫荧光图像自动分析。\n\n\n2.1.2 流程和实例\n\n\n\n说明：示例所用共聚焦图片通过莱卡共聚焦显微镜获得，采用40×物镜，图片保存格式为tif。\n给我买杯茶🍵",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>47</span>  <span class='chapter-title'>IF分析</span>"
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>IF分析</span>"
     ]
   },
   {
     "objectID": "2025-07-22_客观的免疫荧光图像自动分析.html#references",
     "href": "2025-07-22_客观的免疫荧光图像自动分析.html#references",
-    "title": "47  IF分析",
+    "title": "50  IF分析",
     "section": "References",
     "text": "References\n\n\n\n\n1. X. Chen, X. Cao, Y. Lei, A. Reheman, W. Zhou, B. Yang, W. Zhang, W. Xu, S. Dong, R. Tyagi, Z. F. Fu, G. Cao, Distinct persistence fate of mycobacterium tuberculosis in various types of cells. mSystems 6 (2021).\n\n\n2. L. H. Franco, V. R. Nair, C. R. Scharn, R. J. Xavier, J. R. Torrealba, M. U. Shiloh, B. Levine, The ubiquitin ligase Smurf1 functions in selective autophagy of mycobacterium tuberculosis and anti-tuberculous host defense. Cell Host &amp; Microbe 21, 59–72 (2017).\n\n\n3. Editorial, Light microscopy reporting for reproducibility. Nature Cell Biology 27, 877–877 (2025).\n\n\n4. K. Im, S. Mareninov, M. F. P. Diaz, W. H. Yong, “An introduction to performing immunofluorescence staining” in Biobanking (Springer New York, 2018; http://dx.doi.org/10.1007/978-1-4939-8935-5_26), pp. 299–311.\n\n\n5. J.-R. Lin, Y.-A. Chen, D. Campton, J. Cooper, S. Coy, C. Yapp, J. B. Tefft, E. McCarty, K. L. Ligon, S. J. Rodig, S. Reese, T. George, S. Santagata, P. K. Sorger, High-plex immunofluorescence imaging and traditional histology of the same tissue section for discovering image-based biomarkers. Nature Cancer 4, 1036–1052 (2023).",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>47</span>  <span class='chapter-title'>IF分析</span>"
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>IF分析</span>"
     ]
   },
   {
     "objectID": "2025-08-08_多重免疫荧光空间蛋白组学切片染色的细胞空间距离分析.html",
     "href": "2025-08-08_多重免疫荧光空间蛋白组学切片染色的细胞空间距离分析.html",
-    "title": "48  mIF距离分析",
+    "title": "51  mIF距离分析",
     "section": "",
     "text": "1. 文献中的一个“多重免疫荧光/空间蛋白组学切片染色的细胞空间距离分析”\n该文献作者就患者肿瘤组织的多重免疫荧光染色/空间蛋白质组学确实发现了联合治疗组（anti-PD-L1+anti-CTLA1）中，CD4+ T细胞和CD8+ T细胞的空间距离更近（相比于anti-PD-L1治疗）(1)。确实是一个有意义的发现🤩。\n实话实说/to be honest😎，该文献作者亦公布了其分析的步骤(2)，该步骤整体上用到了QuPath软件（包括1个深度学习扩展工具）(3) (4)和R语言（包括另外3个R包）(5)。\n今卡-生物图像花了些时间和精力（无法评估算多还是算少😃）了解文献作者的分析思路，并复现了该分析步骤，及做了些许修改。",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>48</span>  <span class='chapter-title'>mIF距离分析</span>"
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>mIF距离分析</span>"
     ]
   },
   {
     "objectID": "2025-08-08_多重免疫荧光空间蛋白组学切片染色的细胞空间距离分析.html#文献中的一个多重免疫荧光空间蛋白组学切片染色的细胞空间距离分析",
     "href": "2025-08-08_多重免疫荧光空间蛋白组学切片染色的细胞空间距离分析.html#文献中的一个多重免疫荧光空间蛋白组学切片染色的细胞空间距离分析",
-    "title": "48  mIF距离分析",
+    "title": "51  mIF距离分析",
     "section": "",
     "text": "… expanding CD4+ (CD3e+/CD4+/Ki67+) and CD8+ (CD3e+/CD8+/Ki67+) T cells were more co-localized in tumors receiving anti-PD-L1+anti-CTLA4 than those (patients) receiving anti-PD-L1 alone … (1)👋\n\n\n… 扩展的CD4+（CD3e+/CD4+/Ki67+）和CD8+（CD3e+/CD8+/Ki67+）T细胞在接受anti-PD-L1+anti-CTLA4治疗的肿瘤中比单独接受anti-PD-L1治疗的肿瘤中有更多的共定位 …(1)👋",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>48</span>  <span class='chapter-title'>mIF距离分析</span>"
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>mIF距离分析</span>"
     ]
   },
   {
     "objectID": "2025-08-08_多重免疫荧光空间蛋白组学切片染色的细胞空间距离分析.html#分析步骤示意图多重免疫荧光空间蛋白组学切片染色的细胞空间距离分析",
     "href": "2025-08-08_多重免疫荧光空间蛋白组学切片染色的细胞空间距离分析.html#分析步骤示意图多重免疫荧光空间蛋白组学切片染色的细胞空间距离分析",
-    "title": "48  mIF距离分析",
+    "title": "51  mIF距离分析",
     "section": "2. 分析步骤示意图：多重免疫荧光/空间蛋白组学切片染色的细胞空间距离分析",
     "text": "2. 分析步骤示意图：多重免疫荧光/空间蛋白组学切片染色的细胞空间距离分析\n\n说明：文献(1) (2)作者未提供原始图片，因此该示例图片下载自别处😎。\n给我买杯茶🍵",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>48</span>  <span class='chapter-title'>mIF距离分析</span>"
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>mIF距离分析</span>"
     ]
   },
   {
     "objectID": "2025-08-08_多重免疫荧光空间蛋白组学切片染色的细胞空间距离分析.html#references",
     "href": "2025-08-08_多重免疫荧光空间蛋白组学切片染色的细胞空间距离分析.html#references",
-    "title": "48  mIF距离分析",
+    "title": "51  mIF距离分析",
     "section": "References",
     "text": "References\n\n\n\n\n1. A. Franken, M. Bila, A. Mechels, S. Kint, J. Van Dessel, V. Pomella, S. Vanuytven, G. Philips, O. Bricard, J. Xiong, B. Boeckx, S. Hatse, T. Van Brussel, R. Schepers, C. Van Aerde, S. Geurs, V. Vandecaveye, E. Hauben, V. Vander Poorten, S. Verbandt, K. Vandereyken, J. Qian, S. Tejpar, T. Voet, P. M. Clement, D. Lambrechts, CD4+ t cell activation distinguishes response to anti-PD-L1+anti-CTLA4 therapy from anti-PD-L1 monotherapy. Immunity 57, 541–558.e7 (2024).\n\n\n2. A. Franken, M. Bila, D. Lambrechts, Protocol for whole-slide image analysis of human multiplexed tumor tissues using QuPath and r. STAR Protocols 5, 103270 (2024).\n\n\n3. P. Bankhead, M. B. Loughrey, J. A. Fernández, Y. Dombrowski, D. G. McArt, P. D. Dunne, S. McQuaid, R. T. Gray, L. J. Murray, H. G. Coleman, J. A. James, M. Salto-Tellez, P. W. Hamilton, QuPath: Open source software for digital pathology image analysis. Scientific Reports 7 (2017).\n\n\n4. M. P. Humphries, P. Maxwell, M. Salto-Tellez, QuPath: The global impact of an open source digital pathology system. Computational and Structural Biotechnology Journal 19, 852–859 (2021).\n\n\n5. R Core Team, R: A Language and Environment for Statistical Computing (R Foundation for Statistical Computing, Vienna, Austria, 2025; https://www.R-project.org/).",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>48</span>  <span class='chapter-title'>mIF距离分析</span>"
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>mIF距离分析</span>"
     ]
   },
   {
     "objectID": "2025-08-30_电泳条带强度值分析.html",
     "href": "2025-08-30_电泳条带强度值分析.html",
-    "title": "49  DNA条带分析",
+    "title": "52  DNA条带分析",
     "section": "",
     "text": "1. 电泳条带强度值分析是常规\n核酸和蛋白的电泳是生物学中常用/常规的实验方法。\n通过对电泳胶上条带的强度值进行分析，可以定量比较不同条带的（相对）表达水平。\n但电泳胶的拍照，涉及到曝光时间的选择。曝光时间越长，条带越清晰，但也可能出现条带过曝的情况。\n比如曝光时间过长，条带颜色饱和（即，组成条带的有些像素光强度达到最大值），会不会影响基于光强度的定量分析，特别是涉及不同条带的相对光强度分析比较时？",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>49</span>  <span class='chapter-title'>DNA条带分析</span>"
+      "<span class='chapter-number'>52</span>  <span class='chapter-title'>DNA条带分析</span>"
     ]
   },
   {
     "objectID": "2025-08-30_电泳条带强度值分析.html#流程和实例测试",
     "href": "2025-08-30_电泳条带强度值分析.html#流程和实例测试",
-    "title": "49  DNA条带分析",
+    "title": "52  DNA条带分析",
     "section": "2. 流程和实例测试",
     "text": "2. 流程和实例测试\n\n通过该流程可知：\n\n随着曝光时间的增加，upper_band的光强度逐渐增加，但在Exposure 5达到完全饱和（第2个方框的表格的“Upper_band_sum_corrected”列）。\n随着曝光时间的增加，lower_band的光强度逐渐增加（第2个方框的表格“Lower_band_sum_corrected”列））。\n随着曝光时间的增加，upper_band与lower_band的光强度比值逐渐减小（第2个方框的表格“Band_ratio”列，第3个方框的柱状图）。\n\n同一个胶，upper_band和lower_band的光强度比值应该是恒定的，不应该随着曝光时间的增加而变化。\n\n\n通过分析upper_band和lower_band像素光强度（第4个方框），发现：\n说明：若像素达到饱和（即，像素光强度达到最大值），则该像素显示为白色；否则，显示为黑色。\n\nExposure 1的像素光强度均较低，几乎未出现像素光强度饱和现象。\nExposure 2 - 5的像素出现严重的像素光强度饱和问题，导致基于此的光强度无法真实反映条带的实际水平。\n\n因此，exposure 1的upper_band与lower_band的光强度比值，最接近真实值。\n给我买杯茶🍵",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>49</span>  <span class='chapter-title'>DNA条带分析</span>"
+      "<span class='chapter-number'>52</span>  <span class='chapter-title'>DNA条带分析</span>"
     ]
   },
   {
     "objectID": "2025-11-11_细菌长度和宽度测量.html",
     "href": "2025-11-11_细菌长度和宽度测量.html",
-    "title": "50  细菌长度和宽度",
+    "title": "53  细菌长度和宽度",
     "section": "",
     "text": "1. 理论基础\n细菌形态的变化可能受制于营养物质可及性、抗生素暴露、基因突变等因素(1)，因此可以为一个评价指标(1),(2)。",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>50</span>  <span class='chapter-title'>细菌长度和宽度</span>"
+      "<span class='chapter-number'>53</span>  <span class='chapter-title'>细菌长度和宽度</span>"
     ]
   },
   {
     "objectID": "2025-11-11_细菌长度和宽度测量.html#流程和实例",
     "href": "2025-11-11_细菌长度和宽度测量.html#流程和实例",
-    "title": "50  细菌长度和宽度",
+    "title": "53  细菌长度和宽度",
     "section": "2. 流程和实例",
     "text": "2. 流程和实例\n\n\n\n说明：示例图片来自Omnipose (3)，且未按照等比例展示。流程部分内容参考自(4)。\n给我买杯茶🍵",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>50</span>  <span class='chapter-title'>细菌长度和宽度</span>"
+      "<span class='chapter-number'>53</span>  <span class='chapter-title'>细菌长度和宽度</span>"
     ]
   },
   {
     "objectID": "2025-11-11_细菌长度和宽度测量.html#references",
     "href": "2025-11-11_细菌长度和宽度测量.html#references",
-    "title": "50  细菌长度和宽度",
+    "title": "53  细菌长度和宽度",
     "section": "References",
     "text": "References\n\n\n\n\n1. N. Ojkic, D. Serbanescu, S. Banerjee, Surface-to-volume scaling and aspect ratio preservation in rod-shaped bacteria. eLife 8 (2019).\n\n\n2. A. N. Bible, B. B. Stephens, D. R. Ortega, Z. Xie, G. Alexandre, Function of a chemotaxis-like signal transduction pathway in modulating motility, cell clumping, and cell length in the alphaproteobacterium azospirillum brasilense. Journal of Bacteriology 190, 6365–6375 (2008).\n\n\n3. K. J. Cutler, C. Stringer, T. W. Lo, L. Rappez, N. Stroustrup, S. Brook Peterson, P. A. Wiggins, J. D. Mougous, Omnipose: A high-precision morphology-independent solution for bacterial cell segmentation. Nature Methods 19, 1438–1448 (2022).\n\n\n4. B. S. Monteiro, K. Wu, The lengths of bacilli after omnipose (2025). https://forum.image.sc/t/the-lengths-of-bacilli-after-omnipose/117452.",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>50</span>  <span class='chapter-title'>细菌长度和宽度</span>"
+      "<span class='chapter-number'>53</span>  <span class='chapter-title'>细菌长度和宽度</span>"
     ]
   },
   {
     "objectID": "2025-11-25_胞内亮点斑点的测量.html",
     "href": "2025-11-25_胞内亮点斑点的测量.html",
-    "title": "51  胞内斑点测量",
+    "title": "54  胞内斑点测量",
     "section": "",
     "text": "1 理论基础\n针对感兴趣分子（比如转录本(1)、蛋白(2)、或其它分子）的（免疫）染色研究会在样本中检出很多亮点或斑点。这些亮点就是所感兴趣的分子。对这些亮点的选择和定量对解释科学问题至关重要。",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>51</span>  <span class='chapter-title'>胞内斑点测量</span>"
+      "<span class='chapter-number'>54</span>  <span class='chapter-title'>胞内斑点测量</span>"
     ]
   },
   {
     "objectID": "2025-11-25_胞内亮点斑点的测量.html#流程和实例",
     "href": "2025-11-25_胞内亮点斑点的测量.html#流程和实例",
-    "title": "51  胞内斑点测量",
+    "title": "54  胞内斑点测量",
     "section": "2 流程和实例",
     "text": "2 流程和实例\n\n\n\n说明：示例图片来自Spotiflow (3)。\n给我买杯茶🍵",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>51</span>  <span class='chapter-title'>胞内斑点测量</span>"
+      "<span class='chapter-number'>54</span>  <span class='chapter-title'>胞内斑点测量</span>"
     ]
   },
   {
     "objectID": "2025-11-25_胞内亮点斑点的测量.html#references",
     "href": "2025-11-25_胞内亮点斑点的测量.html#references",
-    "title": "51  胞内斑点测量",
+    "title": "54  胞内斑点测量",
     "section": "References",
     "text": "References\n\n\n\n\n1. D. Gyllborg, C. M. Langseth, X. Qian, E. Choi, S. M. Salas, M. M. Hilscher, E. S. Lein, M. Nilsson, Hybridization-based in situ sequencing (HybISS) for spatially resolved transcriptomics in human and mouse brain tissue. Nucleic Acids Research 48, e112–e112 (2020).\n\n\n2. W. Sheng, C. Zhang, T. M. Mohiuddin, M. Al-Rawe, F. Zeppernick, F. H. Falcone, I. Meinhold-Heerlein, A. F. Hussain, Multiplex immunofluorescence: A powerful tool in cancer immunotherapy. International Journal of Molecular Sciences 24, 3086 (2023).\n\n\n3. A. Dominguez Mantes, A. Herrera, I. Khven, A. Schlaeppi, E. Kyriacou, G. Tsissios, E. Skoufa, L. Santangeli, E. Buglakova, E. B. Durmus, S. Manley, A. Kreshuk, D. Arendt, C. Aztekin, J. Lingner, G. La Manno, M. Weigert, Spotiflow: Accurate and efficient spot detection for fluorescence microscopy with deep stereographic flow regression. Nature Methods 22, 1495–1504 (2025).",
     "crumbs": [
       "生物图像分析流程",
-      "<span class='chapter-number'>51</span>  <span class='chapter-title'>胞内斑点测量</span>"
+      "<span class='chapter-number'>54</span>  <span class='chapter-title'>胞内斑点测量</span>"
     ]
   },
   {
     "objectID": "2025-08-27_Hadley对RStudio公司的一种评价.html",
     "href": "2025-08-27_Hadley对RStudio公司的一种评价.html",
-    "title": "52  Hadley对Posit评价",
+    "title": "55  Hadley对Posit评价",
     "section": "",
     "text": "1. 一种评价\n——Hadley Wickham, 来自《Advanced R》\ns",
     "crumbs": [
       "其它",
-      "<span class='chapter-number'>52</span>  <span class='chapter-title'>Hadley对Posit评价</span>"
+      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Hadley对Posit评价</span>"
     ]
   },
   {
     "objectID": "2025-08-27_Hadley对RStudio公司的一种评价.html#一种评价",
     "href": "2025-08-27_Hadley对RStudio公司的一种评价.html#一种评价",
-    "title": "52  Hadley对Posit评价",
+    "title": "55  Hadley对Posit评价",
     "section": "",
     "text": "RStudio, the company, which makes money by selling professional products to teams of R users, and turns around and invests much of that money back into the open source community (over 50% of software engineers at RStudio work on open source projects). I work for RStudio because I fundamentally believe in its mission.\n\n\nRStudio这家公司通过向R用户团队销售专业产品来盈利，并将其中很大一部分资金重新投入到开源社区（RStudio超过50%的软件工程师从事开源项目的开发）。我之所以在RStudio工作，是因为我从根本上认同它的使命。\n\n\n\n\n\n\n图源：https://hadley.nz/",
     "crumbs": [
       "其它",
-      "<span class='chapter-number'>52</span>  <span class='chapter-title'>Hadley对Posit评价</span>"
+      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Hadley对Posit评价</span>"
     ]
   },
   {
     "objectID": "2025-08-27_Hadley对RStudio公司的一种评价.html#大家常接触的来自posit公司的集成开发环境ide",
     "href": "2025-08-27_Hadley对RStudio公司的一种评价.html#大家常接触的来自posit公司的集成开发环境ide",
-    "title": "52  Hadley对Posit评价",
+    "title": "55  Hadley对Posit评价",
     "section": "2. 大家常接触的来自Posit公司的集成开发环境（IDE）",
     "text": "2. 大家常接触的来自Posit公司的集成开发环境（IDE）\n\n2.1 RStudio IDE\n\n\n\n\n图源：https://en.wikipedia.org/wiki/RStudio\n\n\n\n\n\n2.2 Positron IDE\n\nPositron IDE今年刚发布不久。Positron IDE是：\n\na free, next-generation data science IDE that makes it easy to work in both R and Python.\n\n引自：https://posit.co/blog/a-quick-tour-of-positron/\n给我买杯茶🍵",
     "crumbs": [
       "其它",
-      "<span class='chapter-number'>52</span>  <span class='chapter-title'>Hadley对Posit评价</span>"
+      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Hadley对Posit评价</span>"
     ]
   },
   {
     "objectID": "2025-08-31_生物医学文章发表的几个历史干货.html",
     "href": "2025-08-31_生物医学文章发表的几个历史干货.html",
-    "title": "53  文章发表历史干货",
+    "title": "56  文章发表历史干货",
     "section": "",
     "text": "1. 关于作者Richard Sever\n最近留意到一个2023年发表的一个文章/essay (1)。作者是Richard Sever。\n通过(1)这个文章，知道作者来自冷泉港实验室。\n通过作者的Bluesky账号，知道作者是bioRxiv和medRxiv的联合创始人；同时，作者是openRxiv的首席科学和战略官。",
     "crumbs": [
       "其它",
-      "<span class='chapter-number'>53</span>  <span class='chapter-title'>文章发表历史干货</span>"
+      "<span class='chapter-number'>56</span>  <span class='chapter-title'>文章发表历史干货</span>"
     ]
   },
   {
     "objectID": "2025-08-31_生物医学文章发表的几个历史干货.html#什么是openrxiv",
     "href": "2025-08-31_生物医学文章发表的几个历史干货.html#什么是openrxiv",
-    "title": "53  文章发表历史干货",
+    "title": "56  文章发表历史干货",
     "section": "2. 什么是openRxiv？",
     "text": "2. 什么是openRxiv？\n\nopenRxiv is an independent non-profit, the new organizational home for bioRxiv and medRxiv, enabling researchers to instantly share groundbreaking findings with the global scientific community.\n\n引自openRxiv官网。",
     "crumbs": [
       "其它",
-      "<span class='chapter-number'>53</span>  <span class='chapter-title'>文章发表历史干货</span>"
+      "<span class='chapter-number'>56</span>  <span class='chapter-title'>文章发表历史干货</span>"
     ]
   },
   {
     "objectID": "2025-08-31_生物医学文章发表的几个历史干货.html#这个文章的若干干货或知识点",
     "href": "2025-08-31_生物医学文章发表的几个历史干货.html#这个文章的若干干货或知识点",
-    "title": "53  文章发表历史干货",
+    "title": "56  文章发表历史干货",
     "section": "3. 这个文章的若干“干货”或“知识点”",
     "text": "3. 这个文章的若干“干货”或“知识点”\n\n\n\n图1：科学出版的时间线。该时间线展示了科学出版历史中的几个重要里程碑，包括多个期刊的创刊。它并非旨在全面涵盖所有里程碑。为了简明起见，未显示一些关键事件，如《Nature Genetics》的创刊（1992年，Nature的第一个成功的衍生期刊）、BioMed Central的成立（2000年，第一个开放获取出版社）、F1000R的创办（2013年，第一个出版后（post-publication）同行评审）以及PLOS ONE的创刊（2004年，第一个超大期刊（mega journal））。这些也应被视为重要里程碑。时间线还显示了外部同行评审的实施进程。同行评审最早出现在18世纪初，但直到20世纪末才成为标准。预印本服务器（例如arXiv和bioRxiv）的推出使得科学文章再次可以在没有正式同行评审的情况下公开。在图中，虚线表示同行评审的存在，破折线表示其开始变得更为普及，而实线则表示它在科研传播中几乎是普遍存在的。\n\n\n\n… articles are critical not only for communication between scientists but also for them to demonstrate their productivity and thereby secure grants, jobs, and promotions in a hypercompetitive academic environment.\n\n\nUp until the 17th century, scientific discoveries were communicated primarily in private letters and monographs.\n\n\nThe first scientific journal—Philosophical Transactions of the Royal Society—was launched in 1665 by Henry Oldenburg (Journal Des Sçavans was launched earlier the same year but was broader in scope).\n\n\nIn 1850, there were approximately 1,400 journals; come the 21st century the number had risen to more than 20,000.\n\n\nJournals continued to proliferate into the early 21st century, with a series of mergers and acquisitions among the big commercial publishers resulting in a “big five”—Springer Nature, Elsevier, John Wiley, Sage, and Taylor & Francis—controlling most of the industry.\n\n\nIn fact, the practice of consulting external referees was only introduced in the 18th century…\n\n给我买杯茶🍵",
     "crumbs": [
       "其它",
-      "<span class='chapter-number'>53</span>  <span class='chapter-title'>文章发表历史干货</span>"
+      "<span class='chapter-number'>56</span>  <span class='chapter-title'>文章发表历史干货</span>"
     ]
   },
   {
     "objectID": "2025-08-31_生物医学文章发表的几个历史干货.html#references",
     "href": "2025-08-31_生物医学文章发表的几个历史干货.html#references",
-    "title": "53  文章发表历史干货",
+    "title": "56  文章发表历史干货",
     "section": "References",
     "text": "References\n\n\n\n\n1. R. Sever, Biomedical publishing: Past historic, present continuous, future conditional. PLOS Biology 21, e3002234 (2023).",
     "crumbs": [
       "其它",
-      "<span class='chapter-number'>53</span>  <span class='chapter-title'>文章发表历史干货</span>"
+      "<span class='chapter-number'>56</span>  <span class='chapter-title'>文章发表历史干货</span>"
     ]
   },
   {
     "objectID": "2025-10-20_中美研究机构的研究多样性比较.html",
     "href": "2025-10-20_中美研究机构的研究多样性比较.html",
-    "title": "54  中美研究多样性",
+    "title": "57  中美研究多样性",
     "section": "",
     "text": "1. 中美研究机构的研究多样性比较\n在领英看到一个作者（Chiaki Miura）发布的一条信息，特异比较和展示了中美研究机构的研究多样性。\n下图是比较后的结果：\n说明：作者收集的是2010-2015年的摘要做的分析(1)。\n如何解读这个结果？😎\nUC Berkeley（加州大学伯克利分校）的论文数量和研究多样性整体都很高，也难怪UC说：\n给我买杯茶🍵",
     "crumbs": [
       "其它",
-      "<span class='chapter-number'>54</span>  <span class='chapter-title'>中美研究多样性</span>"
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>中美研究多样性</span>"
     ]
   },
   {
     "objectID": "2025-10-20_中美研究机构的研究多样性比较.html#中美研究机构的研究多样性比较",
     "href": "2025-10-20_中美研究机构的研究多样性比较.html#中美研究机构的研究多样性比较",
-    "title": "54  中美研究多样性",
+    "title": "57  中美研究多样性",
     "section": "",
     "text": "https://www.linkedin.com/in/chiaki-miura-265b15264/\n\n\n\n\n\n![我们能否仅通过压缩一个机构的文献库来衡量其研究多样性？如果压缩得容易，说明写作更加集中，即许多论文重复使用相似的短语、方法、和概念。如果压缩困难，说明写作内容更加多样化，即有一个充满不可预测思想的学术生态系统。CAS：中国科学院大学；Electronic Science and Technology of China：电子科技大学]。\n\n\n\n\n\nUniversity of California sets world record with five Nobel Prizes in one week(2)😄.\n\n\n加利福尼亚大学在一周内创下五个诺贝尔奖的世界纪录(2)😄。",
     "crumbs": [
       "其它",
-      "<span class='chapter-number'>54</span>  <span class='chapter-title'>中美研究多样性</span>"
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>中美研究多样性</span>"
     ]
   },
   {
     "objectID": "2025-10-20_中美研究机构的研究多样性比较.html#references",
     "href": "2025-10-20_中美研究机构的研究多样性比较.html#references",
-    "title": "54  中美研究多样性",
+    "title": "57  中美研究多样性",
     "section": "References",
     "text": "References\n\n\n\n\n1. M. Chiaki, DNA barcoding of research diversity (2025). https://millephilosoph.xyz/posts/dna-barcoding-research-diversity/.\n\n\n2. V. Aidin, University of california sets world record with five nobel prizes in one week (2025). https://ls.berkeley.edu/news/university-california-sets-world-record-five-nobel-prizes-one-week.",
     "crumbs": [
       "其它",
-      "<span class='chapter-number'>54</span>  <span class='chapter-title'>中美研究多样性</span>"
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>中美研究多样性</span>"
     ]
   },
   {
     "objectID": "2025-10-22_对生信分析时间的合理看法.html",
     "href": "2025-10-22_对生信分析时间的合理看法.html",
-    "title": "55  生信分析时效",
+    "title": "58  生信分析时效",
     "section": "",
     "text": "1. Ming Tommy Tang的观点\n声明：转载和翻译（用AI😎）。\n转载自：https://bsky.app/profile/tommytang.bsky.social/post/3m33cbba3tz2h\n“生物信息学分析要多久？”\n如果你曾被问到这个问题……那你肯定知道答案是：\n​看情况。​​\n原因如下：🧵\n1/\n你的合作者：“RNA-seq分析需要多久完成？”\n你：“这取决于你想深入挖掘多少？”\n2/\n生物信息学不仅仅是数据处理。它不是：“加载 → 分析 → 发布。”它是探索、解读、反复重复。它是艺术。\n3/\n当然，我们可以做“常规”分析：差异表达、火山图、通路富集、热图。\n这只是冰山一角。\n4/\n但你有4个条件：\n对照组、处理1、处理2、联合组。\n现在问题来了…\n5/\n哪些基因对处理1有反应，但对处理2没有？联合组中有什么协同效应？哪些是加性作用，哪些是独特的？\n6/\n你尝试聚类：可能是k-means或层次聚类。你把基因按相似的表达动态进行分组。每个聚类讲述了一个故事——如果你愿意倾听。\n7/\n然后生物学召唤你：“看这个基因——我们知道它是处理的靶标。它在做什么？”\n突然之间，你开始深入挖掘特定的基因。\n8/\n合作者问：“我们能在另一个数据集中验证这个吗？”\n现在你开始下载GEO数据，统一格式，重新运行分析。\n9/\n你检查批次效应。你想知道不同的标准化方法是否会改变结论。\n剧透：可能会。\n10/\n你从DESeq2开始。试试edgeR。也许用limma-voom。结果有重叠，但依然存在差异。这就是艺术：通过不同工具建立信心。\n11/\n然后是可视化讲故事： 清晰的图表。 准确的图例。 PCA、UMAP、小提琴图。 你不仅仅是在分析，你在沟通。\n12/\n这一切？可能需要几周。几个月。有时是整个博士生涯的长度。\n13/\n关键要点：\n14/\n所以下次有人问：“需要多久？”\n你可以微笑着说：“这取决于——我们准备好揭示多少真相？”",
     "crumbs": [
       "其它",
-      "<span class='chapter-number'>55</span>  <span class='chapter-title'>生信分析时效</span>"
+      "<span class='chapter-number'>58</span>  <span class='chapter-title'>生信分析时效</span>"
     ]
   },
   {
     "objectID": "2025-10-22_对生信分析时间的合理看法.html#ming-tommy-tang的观点",
     "href": "2025-10-22_对生信分析时间的合理看法.html#ming-tommy-tang的观点",
-    "title": "55  生信分析时效",
+    "title": "58  生信分析时效",
     "section": "",
     "text": "“生物信息学”不仅仅是一个步骤。\n常规图表很快——而洞察力需要时间。\n分析的深度取决于生物学问题。\n解读随着科学的展开而演变。",
     "crumbs": [
       "其它",
-      "<span class='chapter-number'>55</span>  <span class='chapter-title'>生信分析时效</span>"
+      "<span class='chapter-number'>58</span>  <span class='chapter-title'>生信分析时效</span>"
     ]
   },
   {
     "objectID": "2025-10-22_对生信分析时间的合理看法.html#dean-lee的观点",
     "href": "2025-10-22_对生信分析时间的合理看法.html#dean-lee的观点",
-    "title": "55  生信分析时效",
+    "title": "58  生信分析时效",
     "section": "2. Dean Lee的观点",
     "text": "2. Dean Lee的观点\n\n转载自：https://www.linkedin.com/posts/deanslee_compbio-computationalbiology-bioinformatics-activity-7384211590969151488-GsA6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFtehQ0BmHPTS7q53cC23EgAUacQwHPewDg\n我们不会要求科学家在实验台上做一个“快速实验”，因为定义问题/假设、规划实验、订购试剂、修改协议、排除实验设备问题、预留时间进行实验、解读结果、整理报告并在会议中展示这些，哪一部分能算得上“快速”？每一个实验，无论多么“简单”，都代表着在金钱、时间和精力上的巨大投入。\n那么，为什么我们会要求计算生物学家做一个“快速”分析呢？\n即使在实验台上做常规的小鼠基因分型PCR，几乎不需要故障排除，仍然是我耗费了数小时的时间。我不能随便做这些实验。我必须预留整个上午或一天的时间，将它们高效地分批处理，同时挤进其他“真正”的实验中。常规的计算分析也有相同的感觉。\n所以，下次当你需要计算生物学家做一个分析时，不管多么常规，对他们的过程表示一点同情，会大大有助于建立良好的关系，并帮助你得到想要的结果。\n给我买杯茶🍵",
     "crumbs": [
       "其它",
-      "<span class='chapter-number'>55</span>  <span class='chapter-title'>生信分析时效</span>"
+      "<span class='chapter-number'>58</span>  <span class='chapter-title'>生信分析时效</span>"
     ]
   },
   {
     "objectID": "2025-12-23_关于获得顶级高光表现的最新发现.html",
     "href": "2025-12-23_关于获得顶级高光表现的最新发现.html",
-    "title": "56  顶级高光表现",
+    "title": "59  顶级高光表现",
     "section": "",
-    "text": "直接展示这个2025年底的Science综述(1)的图片和结论，不做解读。\n\n… findings on the development of more than 34,000 adult international top performers in different domains, including Nobel laureates, the most renowned classical music composers, Olympic champions, and the world’s best chess players.\n\n\n结论基于34000多名国际级的成年人员，他们包括诺贝尔奖得主、著名古典音乐作曲家、奥林匹克冠军、和世界最好的国际象棋选手。\n\n\n\n\n\n顶级高光表现者的时间脉络。在科学领域、国际象棋领域、音乐领域、和体育领域，和同龄人相比，顶级高光表现的成年人员（有相对更广泛的跨学科实践）在其早期阶段的表现相对较低。\n\n\n\n\n1. Early exceptional performers and later exceptional performers within a domain are rarely the same individuals but are largely discrete populations over time. For example,\n\n\n1. 在同一领域内，早期的高光表现者与后期的高光表现者极少为同一群人。比如：\n\n\nworld top-10 youth chess players and later world top-10 adult chess players are nearly 90% different individuals across time.\n\n\n世界青年棋手排名前十的选手，与日后成为世界成人排名前十的选手，在时间跨度上重合率仅为约10%。\n\n\nTop secondary students and later top university students are also nearly 90% different people.\n\n\n最顶尖的中学生与日后最顶尖的大学生，其重合率仅为约10%。\n\n\nLikewise, international-level youth athletes and later international-level adult athletes are nearly 90% different individuals.\n\n\n同样，国际级青年运动员与后来的国际级成年运动员，其重合率约为10%。\n\n\n2. Most top achievers (Nobel laureates and world-class musicians, athletes, and chess players) demonstrated lower performance than many peers during their early years.\n\n\n2. 大多数顶级高光表现者（包括诺贝尔奖得主、世界级音乐家、运动员、和国际象棋选手）在早期阶段的表现往往劣于许多同龄人。\n\n\nAcross the highest adult performance levels, peak performance is negatively correlated with early performance.\n\n\n在成人顶级高光表现者中，其高光表现与早期表现呈负相关。\n\n\n3. The pattern of predictors that distinguishes among the highest levels of adult performance is different from the pattern of predictors of early performance.\n\n\n3. 区分成年顶级高光表现的关键预测因子模式，与早期高光表现的预测模式存在差异。\n\n\nHigher early performance in a domain is associated with larger amounts of discipline-specific practice, smaller amounts of multidisciplinary practice, and faster early discipline-specific performance progress.\n\n\n早期在特定领域内的高光表现者通常与更多该领域的专门训练、更少的跨学科实践以及更快的早期专项进步速度相关。\n\n\nBy contrast, across high levels of adult performance, world-class performance in a domain is associated with smaller amounts of discipline-specific practice, larger amounts of early multidisciplinary practice, and more gradual early discipline-specific performance progress.\n\n\n与此相反，在成年阶段的顶级高光表现者则与较少的专项训练、更多的早期跨学科实践以及更平缓的早期专项进步轨迹相关联。\n\n给我买杯茶🍵\n\n\n\n\n1. A. Güllich, M. Barth, D. Z. Hambrick, B. N. Macnamara, Recent discoveries on the acquisition of the highest levels of human performance. Science 390 (2025).",
+    "text": "References\n直接展示这个2025年底的Science综述(1)的图片和结论，不做解读。\n给我买杯茶🍵",
     "crumbs": [
       "其它",
-      "<span class='chapter-number'>56</span>  <span class='chapter-title'>顶级高光表现</span>"
+      "<span class='chapter-number'>59</span>  <span class='chapter-title'>顶级高光表现</span>"
+    ]
+  },
+  {
+    "objectID": "2025-12-23_关于获得顶级高光表现的最新发现.html#references",
+    "href": "2025-12-23_关于获得顶级高光表现的最新发现.html#references",
+    "title": "59  顶级高光表现",
+    "section": "",
+    "text": "1. A. Güllich, M. Barth, D. Z. Hambrick, B. N. Macnamara, Recent discoveries on the acquisition of the highest levels of human performance. Science 390 (2025).",
+    "crumbs": [
+      "其它",
+      "<span class='chapter-number'>59</span>  <span class='chapter-title'>顶级高光表现</span>"
     ]
   }
 ]

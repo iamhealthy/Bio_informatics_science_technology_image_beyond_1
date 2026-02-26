@@ -120,7 +120,7 @@ xinjiang <- xinjiang |>
     )
 
 xinjiang |> ggplot() +
-    geom_sf(aes(fill = label_color, group = label_color)) +
+    geom_sf(aes(fill = label_color)) +
     scale_fill_identity() +
     geom_text(data = xinjiang_labels, aes(x = x, y = y, label = z), color = c("black", "#3437c5ff", "black", "black")) +
     geom_text(data = what_you_ate, aes(x = x, y = y, label = z), hjust = "left", vjust = "center", size = 6, color = "red") +

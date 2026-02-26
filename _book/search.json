@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "【生物】信息、科技、和图像分析（1）",
     "section": "",
-    "text": "前言\n看到了，如果有感触，就写点。\n内容可能涉及：\n\nR v4.5.2（Python v3.13.9）；\n\ntidyverse v2.0.0;\nRColorBrewer v1.1.3;\npatchwork v1.3.2;\npracma v2.4.6;\nterra v1.8.80;\ngrid v4.5.2;\ntidyplots v0.4.0;\nhexSticker v0.5.2;\nmagick v2.9.0;\nggforce v0.5.0;\nggstar v1.0.6;\nfs v1.6.6;\npandas (Python) v3.0.0\n\nQuPath v0.6.0（ImageJ）；\n生物医学相关的科技；\n生物图像处理；\n其它。\n\n因为六十一甲子，所以六十一本书。🚶🏻‍➡️\n📧：15821314790@126.com",
+    "text": "前言\n看到了，如果有感触，就写点。\n内容可能涉及：\n\nR v4.5.2（Python v3.13.9）；\n\ntidyverse v2.0.0;\nRColorBrewer v1.1.3;\npatchwork v1.3.2;\npracma v2.4.6;\nterra v1.8.80;\ngrid v4.5.2;\ntidyplots v0.4.0;\nhexSticker v0.5.2;\nmagick v2.9.0;\nggforce v0.5.0;\nggstar v1.0.6;\nfs v1.6.6;\nsf v1.0.22;\npandas (Python) v3.0.0\n\nQuPath v0.6.0（ImageJ）；\n生物医学相关的科技；\n生物图像处理；\n其它。\n\n因为六十一甲子，所以六十一本书。🚶🏻‍➡️\n📧：15821314790@126.com",
     "crumbs": [
       "前言"
     ]
@@ -36,7 +36,7 @@
     "href": "2025-08-12_ggplot2等高线图版本的银河系.html#增加一个random_color列用于每个细胞核颜色的随机分配",
     "title": "1  ggplot2“银河系”",
     "section": "3. 增加一个“random_color”列，用于每个细胞核颜色的随机分配",
-    "text": "3. 增加一个“random_color”列，用于每个细胞核颜色的随机分配\n\npalette &lt;- brewer.pal(8, \"Set2\") # get a color palette\n\ndf &lt;- df |&gt; \n  mutate(random_color = sample(palette, nrow(df), replace = TRUE)) # add a random color column\n\ndf |&gt; head() # Display the first six rows of the updated data frame\n\n# A tibble: 6 × 3\n  `Centroid X µm` `Centroid Y µm` random_color\n            &lt;dbl&gt;           &lt;dbl&gt; &lt;chr&gt;       \n1            131.            88.4 #FFD92F     \n2            118.            90.2 #FFD92F     \n3            169.            90.9 #FC8D62     \n4            179.            95.0 #8DA0CB     \n5            230.            96.5 #8DA0CB     \n6            119.            96.8 #66C2A5",
+    "text": "3. 增加一个“random_color”列，用于每个细胞核颜色的随机分配\n\npalette &lt;- brewer.pal(8, \"Set2\") # get a color palette\n\ndf &lt;- df |&gt; \n  mutate(random_color = sample(palette, nrow(df), replace = TRUE)) # add a random color column\n\ndf |&gt; head() # Display the first six rows of the updated data frame\n\n# A tibble: 6 × 3\n  `Centroid X µm` `Centroid Y µm` random_color\n            &lt;dbl&gt;           &lt;dbl&gt; &lt;chr&gt;       \n1            131.            88.4 #FC8D62     \n2            118.            90.2 #8DA0CB     \n3            169.            90.9 #E78AC3     \n4            179.            95.0 #E5C494     \n5            230.            96.5 #E5C494     \n6            119.            96.8 #B3B3B3",
     "crumbs": [
       "R",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>ggplot2“银河系”</span>"
@@ -212,7 +212,7 @@
     "href": "2025-08-23_ggplot2版本的银河系-无细胞核面积的加权-vs-细胞核面积的加权.html#增加一个random_color列用于每个细胞核颜色的随机分配",
     "title": "4  ggplot2“银河系”加权有无",
     "section": "2. 增加一个“random_color”列，用于每个细胞核颜色的随机分配",
-    "text": "2. 增加一个“random_color”列，用于每个细胞核颜色的随机分配\n\npalette &lt;- brewer.pal(8, \"Set2\") # get a color palette\n\ndf &lt;- df |&gt; \n  mutate(Random_color = sample(palette, nrow(df), replace = TRUE)) # add a random color column\n\ndf |&gt; head() # Display the first six rows of the updated data frame\n\n# A tibble: 6 × 4\n  `Centroid X µm` `Centroid Y µm` `Area µm^2` Random_color\n            &lt;dbl&gt;           &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;       \n1            131.            88.4        29.2 #A6D854     \n2            118.            90.2        55.5 #E78AC3     \n3            169.            90.9        55.5 #E5C494     \n4            179.            95.0        61   #FC8D62     \n5            230.            96.5        69.8 #FFD92F     \n6            119.            96.8        53.8 #66C2A5",
+    "text": "2. 增加一个“random_color”列，用于每个细胞核颜色的随机分配\n\npalette &lt;- brewer.pal(8, \"Set2\") # get a color palette\n\ndf &lt;- df |&gt; \n  mutate(Random_color = sample(palette, nrow(df), replace = TRUE)) # add a random color column\n\ndf |&gt; head() # Display the first six rows of the updated data frame\n\n# A tibble: 6 × 4\n  `Centroid X µm` `Centroid Y µm` `Area µm^2` Random_color\n            &lt;dbl&gt;           &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;       \n1            131.            88.4        29.2 #E78AC3     \n2            118.            90.2        55.5 #E78AC3     \n3            169.            90.9        55.5 #FFD92F     \n4            179.            95.0        61   #8DA0CB     \n5            230.            96.5        69.8 #FC8D62     \n6            119.            96.8        53.8 #E78AC3",
     "crumbs": [
       "R",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>ggplot2“银河系”加权有无</span>"
@@ -663,7 +663,7 @@
     "href": "2026-02-24_春节在hometown吃了啥.html#在新疆的哪些地方吃了啥",
     "title": "16  春节吃了啥",
     "section": "2. 在新疆的哪些地方吃了啥？",
-    "text": "2. 在新疆的哪些地方吃了啥？\n在天地图网站下载新疆维吾尔自治区_市.geojson；在mapshaper网站将新疆维吾尔自治区_市.geojson转为shapefile格式文件。\n解压缩后如下：\nraw_data/\n├── 新疆维吾尔自治区_市2.dbf\n├── 新疆维吾尔自治区_市2.prj\n├── 新疆维吾尔自治区_市2.shp\n└── 新疆维吾尔自治区_市2.shx\n\nxinjiang &lt;- \"raw_data/新疆维吾尔自治区_市2.shp\" |&gt;\n    sf::read_sf()\n\n# Set positions to label \"昌吉回族自治州\", \"博尔塔拉蒙古自治州\", and \"石河子市\".\nxinjiang_labels &lt;- data.frame(\n    x = c(82, 85, 86.5, 89.8),\n    y = c(44.5, 43.8, 45, 44.4),\n    z = c(\"博州\", \"石河子市\", \"昌吉州\", \"昌吉州\")\n)\n\n# Set positions to list what I ate in XinJiang\nwhat_you_ate &lt;- data.frame(\n    x = c(73, 73, 73, 73, 73),\n    y = c(49, 48, 47, 46, 45),\n    z = c(\"拌面*2\", \"汤饭*3\", \"丸子汤*2\", \"丁丁炒面*2\", \"马有鱼(烤鱼)*2\")\n)\n\n# Set a new column to label \"博尔塔拉蒙古自治州\", \"昌吉回族自治州\", and \"石河子市\".\nxinjiang &lt;- xinjiang |&gt; \n    mutate(\n        label_color = case_when(\n            name == \"博尔塔拉蒙古自治州\" ~ \"#b1cce6ff\",\n            name == \"昌吉回族自治州\" ~ \"#df938fff\",\n            name == \"石河子市\" ~ \"#3437c5ff\",\n            TRUE ~ \"#F3F3F3\"\n        )\n    )\n\nxinjiang |&gt; ggplot() +\n    geom_sf(aes(fill = label_color, group = label_color)) +\n    scale_fill_identity() +\n    geom_text(data = xinjiang_labels, aes(x = x, y = y, label = z), color = c(\"black\", \"#3437c5ff\", \"black\", \"black\")) +\n    geom_text(data = what_you_ate, aes(x = x, y = y, label = z), hjust = \"left\", vjust = \"center\", size = 6, color = \"red\") +\n    labs(x = \"Longitude\", y = \"Latitude\") +\n    labs(title = \"在标注的州/市吃的。\") +\n    theme_void()\n\n\n\n\n\n\n\nggsave(\"images/xinjiang_what_you_ate.png\", bg = \"white\")\n\n\n\n\n\n\n\nCaution\n\n\n\n昌吉州由两片互不相连的区域组成。\n\n\n给我买杯茶🍵",
+    "text": "2. 在新疆的哪些地方吃了啥？\n在天地图网站下载新疆维吾尔自治区_市.geojson；在mapshaper网站将新疆维吾尔自治区_市.geojson转为shapefile格式文件。\n解压缩后如下：\nraw_data/\n├── 新疆维吾尔自治区_市2.dbf\n├── 新疆维吾尔自治区_市2.prj\n├── 新疆维吾尔自治区_市2.shp\n└── 新疆维吾尔自治区_市2.shx\n\nxinjiang &lt;- \"raw_data/新疆维吾尔自治区_市2.shp\" |&gt;\n    sf::read_sf()\n\n# Set positions to label \"昌吉回族自治州\", \"博尔塔拉蒙古自治州\", and \"石河子市\".\nxinjiang_labels &lt;- data.frame(\n    x = c(82, 85, 86.5, 89.8),\n    y = c(44.5, 43.8, 45, 44.4),\n    z = c(\"博州\", \"石河子市\", \"昌吉州\", \"昌吉州\")\n)\n\n# Set positions to list what I ate in XinJiang\nwhat_you_ate &lt;- data.frame(\n    x = c(73, 73, 73, 73, 73),\n    y = c(49, 48, 47, 46, 45),\n    z = c(\"拌面*2\", \"汤饭*3\", \"丸子汤*2\", \"丁丁炒面*2\", \"马有鱼(烤鱼)*2\")\n)\n\n# Set a new column to label \"博尔塔拉蒙古自治州\", \"昌吉回族自治州\", and \"石河子市\".\nxinjiang &lt;- xinjiang |&gt; \n    mutate(\n        label_color = case_when(\n            name == \"博尔塔拉蒙古自治州\" ~ \"#b1cce6ff\",\n            name == \"昌吉回族自治州\" ~ \"#df938fff\",\n            name == \"石河子市\" ~ \"#3437c5ff\",\n            TRUE ~ \"#F3F3F3\"\n        )\n    )\n\nxinjiang |&gt; ggplot() +\n    geom_sf(aes(fill = label_color)) +\n    scale_fill_identity() +\n    geom_text(data = xinjiang_labels, aes(x = x, y = y, label = z), color = c(\"black\", \"#3437c5ff\", \"black\", \"black\")) +\n    geom_text(data = what_you_ate, aes(x = x, y = y, label = z), hjust = \"left\", vjust = \"center\", size = 6, color = \"red\") +\n    labs(x = \"Longitude\", y = \"Latitude\") +\n    labs(title = \"在标注的州/市吃的。\") +\n    theme_void()\n\n\n\n\n\n\n\nggsave(\"images/xinjiang_what_you_ate.png\", bg = \"white\")\n\n\n\n\n\n\n\nCaution\n\n\n\n昌吉州由两片互不相连的区域组成。\n\n\n给我买杯茶🍵",
     "crumbs": [
       "R",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>春节吃了啥</span>"
@@ -2493,6 +2493,116 @@
     "crumbs": [
       "其它",
       "<span class='chapter-number'>59</span>  <span class='chapter-title'>顶级高光表现</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-26_拒付高版面费.html",
+    "href": "2026-02-26_拒付高版面费.html",
+    "title": "60  拒付高版面费？",
+    "section": "",
+    "text": "1. 中科院的“江湖”地位\n这几天时不时的从手机能够看到关于“据付高版面费”的相关新闻，也没细看。\n刚好偶尔看到Science杂志的一个scienceinsider (1)，因此认真读了读，并提取些“干货”，并“有机”的调整结构，便于理解。",
+    "crumbs": [
+      "其它",
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>拒付高版面费？</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-26_拒付高版面费.html#中科院的江湖地位",
+    "href": "2026-02-26_拒付高版面费.html#中科院的江湖地位",
+    "title": "60  拒付高版面费？",
+    "section": "",
+    "text": "the Chinese Academy of Sciences (CAS，中科院), the world’s largest research institution … employs more than 50,000 researchers across some 100 institutes.",
+    "crumbs": [
+      "其它",
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>拒付高版面费？</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-26_拒付高版面费.html#中科院的新版面费政策",
+    "href": "2026-02-26_拒付高版面费.html#中科院的新版面费政策",
+    "title": "60  拒付高版面费？",
+    "section": "2. 中科院的新版面费政策",
+    "text": "2. 中科院的新版面费政策\n\nCAS … plans to stop paying to publish their papers in dozens of international free-to-read journals it regards as too expensive … include Nature Communications, Cell Reports, and Science Advances … expected to take effect on 1 March.\n\n\nthe draft policy (of CAS) would prevent CAS scientists from using academy funds to pay article-processing charges (APCs) … for more than 30 journals ( &gt; at least $5000 per paper).\n\n\nThe policy also bars them from using funds from other central government sources—presumably the Ministry of Science and Technology and the National Natural Science Foundation of China—to cover APCs in the proscribed journals.\n\n\nScience Advances (SA) … charges an APC of $5450.\n\n\nNature Communications (NC), and … Cell Reports … charge APCs of $7350 and $5790, respectively.\n\n\nGlobally the average APC is about $2000.",
+    "crumbs": [
+      "其它",
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>拒付高版面费？</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-26_拒付高版面费.html#nc和sa的来自中国的文章占比",
+    "href": "2026-02-26_拒付高版面费.html#nc和sa的来自中国的文章占比",
+    "title": "60  拒付高版面费？",
+    "section": "3. NC和SA的来自中国的文章占比",
+    "text": "3. NC和SA的来自中国的文章占比\n\nIn 2025, approximately 10% of papers in Nature Communications and Science Advances had a CAS-affiliated author, and about 40% of papers in each had an author at any institution in China.",
+    "crumbs": [
+      "其它",
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>拒付高版面费？</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-26_拒付高版面费.html#中科院的新版面费政策补充",
+    "href": "2026-02-26_拒付高版面费.html#中科院的新版面费政策补充",
+    "title": "60  拒付高版面费？",
+    "section": "4. 中科院的新版面费政策补充",
+    "text": "4. 中科院的新版面费政策补充\n\nThey can also publish in “hybrid” open-access journals, such as Nature, that offer both paid open-access and paywalled options, but because that journal’s APC is $12,690, authors must publish behind the paywall, for which there is no charge.",
+    "crumbs": [
+      "其它",
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>拒付高版面费？</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-26_拒付高版面费.html#中国有多少英文的开放访问期刊且不收版面费",
+    "href": "2026-02-26_拒付高版面费.html#中国有多少英文的开放访问期刊且不收版面费",
+    "title": "60  拒付高版面费？",
+    "section": "5. 中国有多少英文的开放访问期刊且不收版面费",
+    "text": "5. 中国有多少英文的开放访问期刊且不收版面费\n\nby 2023 the country (China) had about 178 English-language open-access journals, nearly half of which charged no APC.",
+    "crumbs": [
+      "其它",
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>拒付高版面费？</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-26_拒付高版面费.html#对其他中国机构的影响",
+    "href": "2026-02-26_拒付高版面费.html#对其他中国机构的影响",
+    "title": "60  拒付高版面费？",
+    "section": "6. 对其他中国机构的影响",
+    "text": "6. 对其他中国机构的影响\n\nOther institutions in China may follow CAS’s lead.",
+    "crumbs": [
+      "其它",
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>拒付高版面费？</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-26_拒付高版面费.html#中科院做的其他引领的政策",
+    "href": "2026-02-26_拒付高版面费.html#中科院做的其他引领的政策",
+    "title": "60  拒付高版面费？",
+    "section": "7. 中科院做的其他引领的政策",
+    "text": "7. 中科院做的其他引领的政策\n\nthe institute (CAS) releases an Early Warning Journal List each year naming journals that bear signs of research misconduct, charge expensive APCs, or both.\n\n\nthe latest policy (of CAS) also prevents the outlays (支出) for an additional 120 journals that have been flagged for research-integrity problems.",
+    "crumbs": [
+      "其它",
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>拒付高版面费？</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-26_拒付高版面费.html#其他国家对于高版面费的态度和做法",
+    "href": "2026-02-26_拒付高版面费.html#其他国家对于高版面费的态度和做法",
+    "title": "60  拒付高版面费？",
+    "section": "8. 其他国家对于高版面费的态度和做法",
+    "text": "8. 其他国家对于高版面费的态度和做法\n\nFor now, APC revenue flows mainly to international publishers, which many in China and elsewhere see as an unsustainable practice that allows some of the world’s largest publishers to reap excessive profits.\n\n\nGermany’s national science funder, the German Research Foundation, for example, caps its reimbursements for APCs, an approach that the U.S. National Institutes of Health is considering adopting.\n\n给我买杯茶🍵",
+    "crumbs": [
+      "其它",
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>拒付高版面费？</span>"
+    ]
+  },
+  {
+    "objectID": "2026-02-26_拒付高版面费.html#references",
+    "href": "2026-02-26_拒付高版面费.html#references",
+    "title": "60  拒付高版面费？",
+    "section": "References",
+    "text": "References\n\n\n\n\n1. Major chinese funder to stop paying fees for 30 pricey open-access journals. Science, doi: 10.1126/science.zobbgx9 (2026).",
+    "crumbs": [
+      "其它",
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>拒付高版面费？</span>"
     ]
   }
 ]

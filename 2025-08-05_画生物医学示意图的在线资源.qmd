@@ -1,7 +1,7 @@
 ---
 title: 生物图资源
 subtitle: 画生物医学示意图的在线资源
-date: 2026-02-15
+date: last-modified
 toc-depth: 4
 toc-expand: true
 lang: en
@@ -11,32 +11,34 @@ lang: en
 
 ## 直接上“干货”(这些都是笔者时不时收集的)
 
-01. SMART servier。https://smart.servier.com/。可从该网站下载原始矢量图素材(免费)，之后用Adobe illustrator或Inkscape等软件操作。
+01. SMART servier。<https://smart.servier.com/>。可从该网站下载原始矢量图素材(免费)，之后用Adobe illustrator或Inkscape等软件操作。
 
-- Inkscape是免费的。
+    - Inkscape是免费的。
 
-02. 绘科研FIG DRAW。https://www.figdraw.com/static/index.html#/。在线绘画。收费。可输出tiff格式图片，不能输出矢量图。来自中国。
+02. 绘科研FIG DRAW。<https://www.figdraw.com/static/index.html#/>。在线绘画。收费。可输出tiff格式图片，不能输出矢量图。来自中国。
 
-03. BioRender。https://biorender.com/。在线绘画，收费。没测试过。
+03. BioRender。<https://biorender.com/>。在线绘画，收费。没测试过。
 
-04. GDP (Generic Diagramming Platform)。https://biogdp.com/。在线绘图。可以输出PDF。来自中国。
+04. GDP (Generic Diagramming Platform)。<https://biogdp.com/>。在线绘图。可以输出PDF。来自中国。
 
-05. NIH BIOART SOURCE。https://bioart.niaid.nih.gov/。可以下载矢量图。
+05. NIH BIOART SOURCE。<https://bioart.niaid.nih.gov/>。可以下载矢量图。
 
-06. SciDraw。https://scidraw.io/。可以下载矢量图。
+06. SciDraw。<https://scidraw.io/>。可以下载矢量图。
 
-07. OpenScienceArt。https://openscienceart.com/。可以下载矢量图。
+07. OpenScienceArt。<https://openscienceart.com/>。可以下载矢量图。
 
-08. AlphaFold Protein Structure Database。https://alphafold.ebi.ac.uk/。关于蛋白3D结构的，肯定可以下载相关的图片。
+08. AlphaFold Protein Structure Database。<https://alphafold.ebi.ac.uk/>。关于蛋白3D结构的，肯定可以下载相关的图片。
 
-09. VISIBLE BODY。https://www.visiblebody.com/。这个网站有一些生物体的示意图，2D和3D，也不错。
+09. VISIBLE BODY。<https://www.visiblebody.com/>。这个网站有一些生物体的示意图，2D和3D，也不错。
 
-10. Bioicons。https://bioicons.com/。可以下载矢量图。
+10. Bioicons。<https://bioicons.com/>。可以下载矢量图。
 
-11. Reactome --> icon-lib。https://reactome.org/icon-lib。可以下载矢量图。
+11. Reactome --> icon-lib。<https://reactome.org/icon-lib>。可以下载矢量图。
 
-12. BioDraws。https://biodraws.com/。可以下载矢量图。
+12. BioDraws。<https://biodraws.com/>。可以下载矢量图。
 
-13. 另外，也可以关注一些图片素材网站，比如pixabay (https://pixabay.com/)，里面亦含有矢量图素材。
+13. Excalidraw。<https://excalidraw.com/>。可以在线绘画，之后导出为png图片或svg矢量图。
+
+14. 另外，也可以关注一些图片素材网站，比如pixabay (https://pixabay.com/)，里面亦含有矢量图素材。
 
 [给我买杯茶🍵](给我买杯茶.qmd)
